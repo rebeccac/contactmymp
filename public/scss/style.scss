@@ -1,0 +1,626 @@
+@import 'foundation';
+@import 'normalize';
+
+@mixin HelveticaNeue {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+}
+@mixin Helvetica {
+   font-family: 'Helvetica', sans-serif;
+   font-weight: 400;
+}
+
+@mixin Submit {
+   width: 150px;
+   height: 30px;
+   background-color: $orange;
+   border: 0;
+   color: $white;
+   font-size: 1em;
+}
+
+$white: #f2f2eb;
+$dark_text: #5c5c5c;
+$light: #d1dbbd;
+$medium: #91aa9d;
+$dark: #3e606f;
+$senate_light: lighten(rgb(133, 73, 72), 50%);
+$senate_medium: lighten(rgb(133, 73, 72), 5%);
+$senate_dark: darken(rgb(133, 73, 72), 10%);
+$orange: #f8720a;
+$blue: #0072bc;
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  background-color: $white;
+}
+
+
+/* Basic Layout Boxes */
+
+.row, .column, .columns {
+   padding: 0;
+   margin: 0;
+}
+
+.container {
+   width: 100%;
+   height: 100%;
+   border-right: 130px solid transparent;
+   border-left: 130px solid transparent;
+}
+
+.content {
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   padding-top: 200px;
+}
+
+
+
+/* General classes */
+
+.clear {
+  clear: both;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.centre {
+  text-align: center;
+}
+
+.right {
+   float: right;
+}
+
+.white_text {
+  color: $white;
+}
+
+.dark_text {
+   color: $dark_text;
+}
+
+.smt { // twitter colour
+  color: #55acee;
+}
+.smf { // facebook colour
+  color: #3b5998;
+}
+
+// a {
+//   color: $white;
+//   &, &:hover, &:active {
+// 			color: $white;
+//       text-decoration: none;
+// 		}
+// }
+h1 {
+  width: 100%;
+  text-align: center;
+  // font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+h2 {
+  @include HelveticaNeue;
+  font-weight: 100;
+  font-size: 3.5em;
+}
+
+h3 {
+  @include HelveticaNeue;
+  color: $dark;
+  font-size: 2em;
+}
+
+
+
+/* Header */
+
+.header {
+   position: relative;
+   top: 0;
+   z-index: 0;
+}
+
+.heading {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: $dark_text;
+  text-align: right;
+  padding-right: 20px;
+}
+
+
+/* Left vertical menu */
+
+.menu {
+   z-index: 999;
+   width: 120px;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(29,29,29,1);
+   float: left;
+   a {
+      color: $white;
+      text-decoration: none;
+      border: 0;
+      &:link,
+		&:visited,
+		&:hover,
+		&:active {
+      color: $white;
+      text-decoration: none;
+      border: 0;
+      }
+   }
+   ul {
+      margin: 0;
+      padding: 0;
+      li.blank {
+         list-style: none;
+         width: 120px;
+      }
+      li.menu-section {
+         list-style: none;
+         text-align: center;
+         width: 120px;
+         border-bottom: 1px solid #444;
+         font-family: 'Helvetica Neue', sans-serif;
+         color: #f2f2eb;
+         display: table;
+         position: relative;
+         border-right: 5px solid transparent;
+         .section-contents {
+            display: table-cell;
+            vertical-align: middle;
+            width: 120px;
+            padding: 3px;
+         }
+      }
+      li.top {
+         border-top: 1px solid #444;
+      }
+   }
+   i {
+      color: #555;
+   }
+   ul.sub-menu {
+      display: block;
+      width: 120px;
+      min-height: 120px;
+      list-style: none;
+      position: absolute;
+      left: -9999px;
+      background-color: rgba(29,29,29,1);
+      li.sub-menu-section {
+         width: 120px;
+         height: 50px;
+         border-bottom: 1px solid #444;
+         border-right: 5px solid transparent;
+         display: table;
+         position: relative;
+         font-family: 'Helvetica Neue', sans-serif;
+         font-size: 0.775em;
+         .sub-menu-contents {
+            display: inline;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3px;
+         }
+      }
+      .sub-menu-section:hover,
+      .sub-menu-section:active {
+         border-right: 5px solid #f8720a;
+      }
+   }
+   ul li.menu-section:hover {
+      border-right: 5px solid #f8720a;
+      i {
+         color: #999;
+      }
+   }
+   ul li.menu-section:hover > ul.sub-menu {
+      position: absolute;
+      left: 120px;
+   }
+}
+
+
+/* Select My MP Page */
+
+.contents {
+   position: relative;
+   left: -130px;
+   z-index: 1;
+   width: 100%;
+   border-left: 130px solid transparent;
+
+}
+
+h2.sub-heading {
+  margin-left: 8%;
+  letter-spacing: 2px;
+}
+
+.constituency-form {
+   position: relative;
+  img.map {
+    height: 117px;
+    width: auto;
+    border: 0;
+  }
+  .constituency {
+     margin: 20px auto;
+     width: 100%;
+     max-width: 300px;
+     @include HelveticaNeue;
+     color: $dark;
+     background-color: $light;
+    .title {
+      width: 100%;
+      position: relative;
+      background-color: $medium;
+      .constituency_title {
+         font-family: 'Helvetica Neue', sans-serif;
+         font-weight: 200;
+         font-size: 1.5em;
+         color: $white;
+         letter-spacing: 2px;
+         padding-left: 10px;
+      }
+    }
+    .title:after {
+      top: 100%;
+    	left: 10%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+       border-color: rgba(92, 92, 92, 0);
+       border-top-color: $medium;
+    	border-width: 8px;
+    	margin-left: -8px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 1em;
+      @include Helvetica;
+      li:first-child {
+         margin-top: 0;
+      }
+      li {
+         margin-top: 10px;
+         color: $dark_text;
+      }
+    }
+  }
+
+  .radio_button {
+     width: 100%;
+     position: relative;
+     top: 0;
+    fieldset {
+      width: 100%;
+      position: relative;
+      left: -2px;
+      bottom: 0;
+      border: 0;
+      input[type=radio] {
+         width: 25px;
+         margin: 20px auto 0 auto;
+         display: block;
+      }
+    }
+  }
+
+  .submit_button {
+    margin-top: 50px;
+    text-align: left;
+  }
+}
+
+
+/* Submit buttons - Select your constituency & Email your MP */
+#electorate_submit,
+#mp_email_submit {
+   @include Submit;
+   margin-left: 8%;
+   text-align: center;
+}
+
+.light-bg {
+   background-color: $light;
+}
+
+.no-bg {
+   background-color: transparent;
+}
+
+.pol_info1 {
+   font-family: 'Helvetica Neue', sans-serif;
+   letter-spacing: 2px;
+   font-weight: 200;
+   color: $white;
+   font-size: 1.5em;
+   line-height: 1.5em;
+   // background-color: $medium;
+   padding: 5px 5px 5px 10px;
+   height: 46px;
+   margin: 0;
+}
+
+.row.spacing {
+   padding: 15px 10px 10px 10px;
+}
+
+.pol_info2 {
+   @include HelveticaNeue;
+   letter-spacing: 2px;
+   // background-color: #193441;
+   color: $light;
+   font-size: 1.1em;
+   line-height: 1.1em;
+   padding: 5px 5px 5px 10px;
+   height: 46px;
+   margin: 0;
+}
+
+.pol_info3 {
+   @include Helvetica;
+   font-weight: 400;
+   color: $dark_text;
+   font-size: 1.1em;
+  i {
+     margin-right: 7px;
+     font-size: 1.3em;
+  }
+  a {
+     color: $dark_text;
+  }
+}
+
+hr.med_grey {
+   margin-top: 20px;
+   border: 0;
+   height: 1px;
+   background: #ccc;
+   background-image: -webkit-linear-gradient(left, #ccc, #aaa, #ccc);
+   background-image:    -moz-linear-gradient(left, #ccc, #aaa, #ccc);
+   background-image:     -ms-linear-gradient(left, #ccc, #aaa, #ccc);
+   background-image:      -o-linear-gradient(left, #ccc, #aaa, #ccc);
+}
+
+.contact_form {
+   margin: 20px auto;
+   width: 95%;
+   label {
+      @include Helvetica;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: $dark;
+   }
+   input[type=text],
+   input[type=email],
+   textarea {
+      @include Helvetica;
+      font-size: 1em;
+      color: $dark;
+      border: 1px solid $medium;
+      background-color: $white;
+      padding:5px 3px;
+   }
+   textarea {
+      height: 250px;
+      margin-bottom: 30px;
+   }
+}
+
+.email_mp_title {
+   margin-top: 70px;
+   font-family: 'Helvetica', sans-serif;
+   letter-spacing: 2px;
+   font-weight: 100;
+   color: $dark;
+   font-size: 1.6em;
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+
+.contact-form-content {
+   width: 100%;
+   height: auto;
+   margin-bottom: 50px;
+  .image {
+     background-color: transparent;
+    img {
+      float: right;
+      padding: 0;
+    }
+  }
+}
+
+.empty {
+   height: auto;
+   min-height: 20px;
+}
+
+.info-section {
+   padding-top: 30px;
+}
+
+
+
+/* All Politicians Pages */
+
+
+form.selection-form {
+   padding: 0 20px;
+   label {
+      display: inline-block;
+      @include Helvetica;
+      font-size: 1em;
+      color: $dark_text;
+   }
+   select {
+      width:120px;
+      display: inline-block;
+   }
+   input[type=submit] {
+      @include Submit;
+      display: inline-block;
+      width: 80px;
+      background-color: #5c5c5c;
+      margin-left: 15px;
+   }
+   input[type=submit].show_individual {
+      margin: 10px auto 0 auto;
+      display: block;
+      padding: 5px 10px;
+      border-color: #ccc;
+      @include HelveticaNeue;
+      color: $white;
+   }
+
+   input[type=submit].mp_dark:hover {
+      background-color: $dark;
+   }
+
+   input[type=submit].senator_dark:hover {
+      background-color: $senate_dark;
+   }
+}
+
+/* Background colours */
+.mp_light {
+   background-color: $light;
+}
+.mp_medium {
+   background-color: $medium;
+}
+.mp_dark {
+   background-color: $dark;
+}
+.senator_light {
+   background-color: $senate_light;
+}
+.senator_medium {
+   background-color: $senate_medium;
+}
+.senator_dark {
+   background-color: $senate_dark;
+}
+
+#politicians_container {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   margin: 0 auto;
+   text-align: center;
+   .politician {
+      height: 330px;
+      min-width: 273px;
+      margin: 2px 0;
+      border: 1px solid #bbb;
+      display: inline-block;
+      .mp_name, .senator_name, .constituency {
+         display: inline-block;
+         width: 100%;
+         position: relative;
+         margin: 0;
+         line-height: 2.6em;
+         height: 2.6em;
+         text-align: left;
+      }
+      .politician_title {
+         font-family: 'Helvetica Neue', sans-serif;
+         font-weight: 200;
+         font-size: 1.2em;
+         color: $white;
+         letter-spacing: 1px;
+         padding-left: 10px;
+      }
+      .mp_name:after,
+      .senator_name:after {
+         top: 100%;
+         left: 10%;
+         border: solid transparent;
+         content: " ";
+         height: 0;
+         width: 0;
+         position: absolute;
+         pointer-events: none;
+         border-color: rgba(92, 92, 92, 0);
+         border-width: 8px;
+         margin-left: -8px;
+      }
+      .mp_name:after {
+         border-top-color: $medium;
+      }
+      .senator_name:after {
+         border-top-color: $senate_medium;
+      }
+   }
+   img.politician_img {
+      height: 140px;
+      width: auto;
+      margin: 10px;
+   }
+}
+.sm-links {
+   height: auto;
+   width: 50%;
+   display: inline-block;
+   padding: 20px;
+   text-align: left;
+   i {
+      font-size: 1.4em;
+   }
+   a {
+      color: $dark_text;
+   }
+}
+
+.politician_row1 {
+   width: 100%;
+   display: block;
+}
+
+.politician_row2 {
+   width: 100%;
+   display: block;
+   margin: 10px auto;
+   text-align: center;
+
+   .party {
+      height: 100%;
+      font-family: 'Helvetica', sans-serif;
+      font-size: 1em;
+      font-weight: 400;
+      letter-spacing: 1px;
+      padding: 10px;
+   }
+
+   .button_link {
+      margin-top: 25px;
+      padding: 5px 15px;
+      border: 0;
+      color: $white;
+   }
+}

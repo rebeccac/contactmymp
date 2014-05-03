@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Sertig;
+  src: url(../fonts/Sertig.otf); }
+
+@font-face {
+  font-family: Mohave;
+  src: url(../fonts/Mohave.otf); }
+
+@font-face {
+  font-family: RBNo2Light;
+  src: url(../fonts/RBNo2Light.otf); }
+
+@font-face {
+  font-family: RBNo2Light_a;
+  src: url(../fonts/RBNo2Light_a.otf); }
+
+header {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  padding-top: 20px; }
+  header h1 {
+    font-family: 'RBNo2Light', sans-serif;
+    font-size: 4.5em;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: #f2f2eb; }
+
+p {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.1em;
+  color: #121212;
+  font-weight: 200;
+  line-height: 1.2em;
+  margin-bottom: 25px; }
+
+.content {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 20%; }
+  .content .text_box {
+    width: 65%;
+    height: auto;
+    padding: 30px;
+    background-color: #ccc;
+    margin: 20px auto;
+    text-align: justify; }
+    .content .text_box p:last-child {
+      margin-bottom: 0; }
