@@ -9,8 +9,7 @@
      </head>
      <body>
         <div class="row container">
-
-            @include('includes/menu')
+              @include('includes/menu')
             <div id="menu-button" class="menu-button-left"><i class="fa fa-bars"></i></div>
       <div class="row header" data-equalizer>
         <div class="large-3 medium-3 columns" data-equalizer-watch></div>

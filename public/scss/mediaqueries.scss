@@ -332,11 +332,19 @@ $white: #f2f2eb;
 
 /* All Politicians Layout */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
    #politicians_container {
       .politician {
          width: 33%;
       }
+   }
+
+   .slidermenu {
+      display: none;
+   }
+
+   .menu {
+      display: block;
    }
 }
 

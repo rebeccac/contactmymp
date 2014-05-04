@@ -58,7 +58,7 @@ body {
 .postcode-search {
   width: 100%;
   position: absolute;
-  top: 25%;
+  top: 35%;
 
   .postcode-form {
     background-color: rgba(255,255,255,0.2);
@@ -211,7 +211,7 @@ footer {
          display: table;
          position: relative;
          font-family: 'Helvetica Neue', sans-serif;
-         font-size: 0.775em;
+         font-size: 1.1em;
          .sub-menu-contents {
             display: inline;
             display: table-cell;
@@ -390,7 +390,7 @@ footer {
         display: table;
         position: relative;
         font-family: 'Helvetica Neue', sans-serif;
-        font-size: 0.775em;
+        font-size: 1.1em;
         .sub-menu-contents {
            display: inline;
            display: table-cell;
@@ -425,6 +425,18 @@ ul {
 }
 
 }
+
+@media screen and (min-width: 769px) {
+
+   .slidermenu {
+      display: none;
+   }
+
+   .menu {
+      display: block;
+   }
+}
+
 
 /* iPads (portrait and landscape) ----------- */
 @media all and (max-width: 1024px) and (min-width: 768px) {
