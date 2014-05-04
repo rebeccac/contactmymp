@@ -1,28 +1,17 @@
 <!doctype html>
    <html>
      <head>
-       <title></title>
+       <title>Contact My MP</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1, content=minimal-ui">
+
        <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.css') }}">
-       <link rel="stylesheet" href="{{ URL::asset('css/jquery.slidermenu.css') }}">
-       <link rel="stylesheet" href="{{ URL::asset('css/general.css') }}">
-       <link rel="stylesheet" href="{{ URL::asset('css/theme.css') }}">
-       <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
-       <style>
-          .sliderButton a {
-             color: #f2f2eb;
-         }
-         .sliderButton a:hover,
-         .sliderButton a:active {
-            color: #f2f2eb;
-            text-decoration: none;
-         }
-       </style>
+      <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
      </head>
      <body>
         <div class="row container">
 
             @include('includes/menu')
-
+            <div id="menu-button" class="menu-button-left"><i class="fa fa-bars"></i></div>
       <div class="row header" data-equalizer>
         <div class="large-3 medium-3 columns" data-equalizer-watch></div>
         <div class="large-9 medium-9 columns title" data-equalizer-watch>
@@ -75,6 +64,7 @@
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
       <script src="{{ URL::asset('js/foundation/foundation.js') }}"></script>
       <script src="{{ URL::asset('js/foundation/foundation.equalizer.js') }}"></script>
+      <script src="{{ URL::asset('js/jquery.menu.js')}}"></script>
       <script>
         $(document).foundation();
       </script>
