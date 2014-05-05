@@ -16,6 +16,10 @@ Route::get('/contact', function()
 	return View::make('contact')->with('page_title', "Contact Us - Contact My MP");
 });
 
+Route::get('/select', 'PageController@getSelect');
+
+Route::post('/select', 'PageController@postSelect');
+
 Route::resource('lowerhouse', 'MPController');
 Route::resource('upperhouse', 'SenatorController');
 Route::controller('lowerhouse', 'MPController');

@@ -2,6 +2,63 @@
 
 class PageController extends \BaseController {
 
+
+	public function initialise() {
+		return $oaapi = new OAAPI('ERBsLBGARbXsEeaUWdCEjDuy');
+	}
+
+	public function divisions($oaapi, $postcode) {
+			return $divisions = $oaapi->query('getDivisions', array('output' => 'js', 'postcode' => $postcode));
+	}
+
+	public function representatives($oaapi, $postcode) {
+			return $mps = $oaapi->query('getRepresentatives', array('output' => 'js', 'postcode' => $postcode));
+	}
+
+	public function senators($oaapi, $state) {
+		return $senators = $oaapi->query('getSenators', array('output' => 'js', 'state' => $state));
+	}
+
+	public function validateForm($input, $rules) {
+
+	$v = Validator::make($input, $rules);
+	return $v->fails()
+		? $v
+		: true;
+	}
+
+	public function getSelect() {
+		$page_title = "Select your Politician - Contact My MP";
+		return View::make('getselect')->with('page_title', $page_title);
+	}
+
+	public function postSelect() {
+		$page_title = "Select your Politician - Contact My MP";
+		if(!isset($_POST['electorate_submit'])) {
+			$postcode = e(Input::get('postcode'));
+			$oaapi = $this->initialise();
+			$divisions = $this->divisions($oaapi, $postcode);
+			$mps = $this->representatives($oaapi, $postcode);
+			$reps = json_decode($mps);
+			$divs = json_decode($divisions);
+
+      if (isset($reps->error)) {
+        $error = "Invalid postcode";
+      }
+
+      if(isset($error)) {
+        return View::make('index', array('error' => $error));
+      }
+      else {
+				$state = Electorate::where('constituency', '=', $reps[0]->constituency)->first()->electorate_address_state;
+				$senators = Senator::where('state', '=', $state)->get();
+				$reps = Electorate::queryValues($reps);
+				return View::make('select', array('senators' => $senators, 'postcode' => $postcode, 'reps' => $reps, 'page_title' => $page_title));
+      }
+    }
+	}
+
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -91,5 +148,7 @@ class PageController extends \BaseController {
 		$page_title = "Contact Us - Contact My MP";
 		return View::make('page.contact')->with('page_title', $page_title);
 	}
+
+
 
 }

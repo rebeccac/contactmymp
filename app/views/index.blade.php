@@ -24,7 +24,7 @@
       <div class="row postcode-search" data-equalizer>
         <div class="large-9 medium-9 columns" data-equalizer-watch></div>
         <div class="large-3 medium-3 columns postcode-form" data-equalizer-watch>
-          <form class='form' action='/mp' method='post'>
+          <form class='form' action='/select' method='post'>
             <div class="top-row">
               <label for='postcode'>Your Postcode: </label>
               <input type='text' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
