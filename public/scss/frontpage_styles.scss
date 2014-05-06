@@ -2,8 +2,14 @@
 @import 'foundation';
 @import 'normalize';
 
+@mixin HelveticaNeue {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+}
+
 $white: #f2f2f2;
 $orange: #f8720a;
+$dark_text: #5c5c5c;
 
 html,
 body {
@@ -24,12 +30,20 @@ body {
   clear: both;
 }
 
+#menu-button.white_text {
+   i {
+      color: rgba(255,255,255,0.8);
+   }
+}
+
 .error {
    font-family: 'Helvetica Neue', sans-serif;
-   font-weight: 200;
-   color: red;
-   font-size: 0.8em;
+   font-weight: 600;
+   color: $dark_text;
+   font-size: 0.9em;
    letter-spacing: 1px;
+   display: block;
+   text-align: right;
 }
 
 .container {
@@ -44,21 +58,20 @@ body {
   vertical-align: middle;
 }
 
-
 .heading {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 100;
+  font-size: 6em;
   letter-spacing: 2px;
   color: $white;
   text-align: right;
   padding-right: 20px;
 }
 
-
 .postcode-search {
   width: 100%;
   position: absolute;
-  top: 35%;
+  top: 30%;
 
   .postcode-form {
     background-color: rgba(255,255,255,0.2);
@@ -84,20 +97,21 @@ body {
         width: 90px;
         display: inline-block;
       }
-    }
-    input[type=submit] {
-      font-family: 'Helvetica Neue', sans-serif;
-      width: 120px;
-      float: right;
-      clear: both;
-      background-color: $orange;
-      color: $white;
-      border: 0;
-      padding: 5px 0;
+      input[type=submit] {
+        font-family: 'Helvetica Neue', sans-serif;
+        width: 90px;
+        float: right;
+        clear: both;
+        background-color: $orange;
+        color: $white;
+        border: 0;
+        margin: 3px 0 3px 8px;
+        padding: 9px 0;
+        display: inline-block;
+      }
     }
   }
 }
-
 
 footer {
   position: absolute;
@@ -127,474 +141,77 @@ footer {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* Left vertical menu */
-
-.menu {
-   z-index: 999;
-   width: 120px;
-   height: 100%;
-   position: fixed;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   background-color: rgba(29,29,29,1);
-   float: left;
-   a {
-      color: $white;
-      text-decoration: none;
-      border: 0;
-      &:link,
-      &:visited,
-      &:hover,
-      &:active {
-      color: $white;
-      text-decoration: none;
-      border: 0;
-      }
-   }
-   ul {
-      margin: 0;
-      padding: 0;
-      li.blank {
-         list-style: none;
-         width: 120px;
-      }
-      li.menu-section {
-         list-style: none;
-         text-align: center;
-         width: 120px;
-         border-bottom: 1px solid #444;
-         font-family: 'Helvetica Neue', sans-serif;
-         color: #f2f2eb;
-         display: table;
-         position: relative;
-         border-right: 5px solid transparent;
-         .section-contents {
-            display: table-cell;
-            vertical-align: middle;
-            width: 120px;
-            padding: 3px;
-         }
-      }
-      li.top {
-         border-top: 1px solid #444;
-      }
-   }
-   i {
-      color: #555;
-   }
-   ul.sub-menu {
-      display: block;
-      width: 120px;
-      min-height: 120px;
-      list-style: none;
-      position: absolute;
-      left: -9999px;
-      background-color: rgba(29,29,29,1);
-      li.sub-menu-section {
-         width: 120px;
-         height: 50px;
-         border-bottom: 1px solid #444;
-         border-right: 5px solid transparent;
-         display: table;
-         position: relative;
-         font-family: 'Helvetica Neue', sans-serif;
-         font-size: 1.1em;
-         .sub-menu-contents {
-            display: inline;
-            display: table-cell;
-            vertical-align: middle;
-            padding: 3px;
-         }
-      }
-      .sub-menu-section:hover,
-      .sub-menu-section:active {
-         border-right: 5px solid #f8720a;
-      }
-   }
-   ul li.menu-section:hover {
-      border-right: 5px solid #f8720a;
-      i {
-         color: #999;
-      }
-   }
-   ul li.menu-section:hover > ul.sub-menu {
-      position: absolute;
-      left: 120px;
-   }
-}
-
-
-
-
-
-
-
 /* Media Queries */
 
-/*
-* From css-tricks.com
-* http://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-*/
-
-/* Smartphones (portrait and landscape) ----------- */
-@media all and (max-device-width : 480px) and (min-device-width : 320px) {
-/* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media all and (min-width : 321px) {
-/* Styles */
-
-
-}
-
-/* Smartphones (portrait) ----------- */
-@media all and (max-width : 320px) {
-/* Styles */
-
-}
-
-@media all and (max-width : 768px ) {
-.heading {
-  font-size: 3.7em;
-}
-
-.mobile {
-  display: block;
-}
-.desktop {
-  display: none;
-}
-
-
-.menu {
-   display: none;
-}
-
-.slidermenu-left {
-   left: -120px;
-}
-
-.slidermenu-pushed {
-   left: 0px;
-}
-
-#menu-button {
-   position: absolute;
-   display: inline-block;
-   z-index: 1000;
-   top: 10px;
-   color: #f2f2eb;
-   font-size: 2em;
-   i {
-      color: $white;
+@media all and (max-width: 1024px) {
+   .heading {
+      font-size: 4.85em;
    }
 }
 
-.menu-button-left {
-   left: 20px;
-}
-
-.menu-button-pushed {
-   left: 140px;
-}
-
-.slidermenu,
-#menu-button {
-   -webkit-transition: all 0.2s linear !important;
-   -moz-transition: all 0.2s linear !important;
-   -ms-transition: all 0.2s linear !important;
-   -o-transition: all 0.2s linear !important;
-   transition: all 0.2s linear !important;
-}
-
-.slidermenu {
-  z-index: 999;
-  width: 120px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(29,29,29,1);
-  float: left;
-  a {
-     color: $white;
-     text-decoration: none;
-     border: 0;
-     &:link,
-     &:visited,
-     &:hover,
-     &:active {
-     color: $white;
-     text-decoration: none;
-     border: 0;
-     }
-  }
-  ul {
-     margin: 0;
-     padding: 0;
-     li.blank {
-        list-style: none;
-        width: 120px;
-     }
-     li.menu-section {
-        list-style: none;
-        text-align: center;
-        width: 120px;
-        border-bottom: 1px solid #444;
-        font-family: 'Helvetica Neue', sans-serif;
-        color: #f2f2eb;
-        display: table;
-        position: relative;
-        border-right: 5px solid transparent;
-        .section-contents {
-           display: table-cell;
-           vertical-align: middle;
-           width: 120px;
-           padding: 3px;
-        }
-     }
-     li.top {
-        border-top: 1px solid #444;
-     }
-  }
-  i {
-     color: #555;
-  }
-  ul.sub-menu {
-     display: block;
-     width: 120px;
-     min-height: 120px;
-     list-style: none;
-     position: absolute;
-     left: -9999px;
-     background-color: rgba(29,29,29,1);
-     li.sub-menu-section {
-        width: 120px;
-        height: 50px;
-        border-bottom: 1px solid #444;
-        border-right: 5px solid transparent;
-        display: table;
-        position: relative;
-        font-family: 'Helvetica Neue', sans-serif;
-        font-size: 1.1em;
-        .sub-menu-contents {
-           display: inline;
-           display: table-cell;
-           vertical-align: middle;
-           padding: 3px;
-        }
-     }
-     .sub-menu-section:hover,
-     .sub-menu-section:active {
-        border-right: 5px solid #f8720a;
-     }
-  }
-  ul li.menu-section:hover {
-     border-right: 5px solid #f8720a;
-     i {
-        color: #999;
-     }
-  }
-  ul li.menu-section:hover > ul.sub-menu {
-     position: absolute;
-     left: 120px;
-  }
-}
-
-
-}
-
-.menu {
-ul {
-   width: 100%;
-   font-size: 0.9em;
-}
-
-}
-
-@media screen and (min-width: 769px) {
-
-   .slidermenu {
-      display: none;
+@media all and (max-width: 768px) {
+   .heading {
+      font-size: 4.8em;
+      font-weight: 100;
    }
 
-   .menu {
-      display: block;
-   }
-}
-
-
-/* iPads (portrait and landscape) ----------- */
-@media all and (max-width: 1024px) and (min-width: 768px) {
-.heading {
-  font-size: 4.5em;
-}
-
-.mobile {
-  display: block;
-}
-.desktop {
-  display: none;
-}
-
-}
-
-
-/* iPads (landscape) ----------- */
-@media all and (max-device-width : 1024px) and (min-device-width : 768px) and (orientation : landscape) {
-/* Styles */
-
-}
-
-/* iPads (portrait) ----------- */
-@media all and (max-device-width : 1024px) and (min-device-width : 768px) and (orientation : portrait) {
-/* Styles */
-
-}
-
-/* Desktops and laptops ----------- */
-@media all and (min-width : 1024px) {
-  .heading {
-    font-size: 5.5em;
-  }
-
-  .mobile {
-    display: none;
-  }
-  .desktop {
-    display: block;
-  }
-}
-
-@media all and (min-width : 1200px) {
-  .heading {
-    font-size: 6.5em;
-  }
-
-  .mobile {
-    display: none;
-  }
-  .desktop {
-    display: block;
-  }
-}
-/* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
-/* Styles */
-
-.mobile {
-  display: none;
-}
-.desktop {
-  display: block;
-}
-}
-
-/* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-.mobile {
-  display: block;
-}
-.desktop {
-  display: none;
-}
-}
-
-/* iPhone 5 ----------- */
-@media screen and (device-aspect-ratio: 40/71) {
-  /* Styles */
-  .mobile {
-    display: block;
-  }
-  .desktop {
-    display: none;
-  }
-}
-
-
-
-@media screen and (max-height: 499px) {
-
-   .menu {
-      ul {
-         li.blank {
-            height: 50px;
-         }
-         li.menu-section {
-            height: 50px;
-            font-size: 0.775em;
-            font-weight: 200;
-            letter-spacing: 2px;
-            .section-contents {
-               height: 50px;
+   .postcode-search  {
+      top: 20%;
+      .postcode-form {
+         position: absolute;
+         top: 50px;
+         width: 100%;
+         background-color: rgba(255,255,255,0.35);
+         border-radius: 0;
+      }
+      .form {
+         .top-row {
+            width: auto;
+            margin: 0 auto;
+            input[type=submit] {
+               margin: 3px 8px;
+               padding: 9px 0;
+               display: inline-block;
             }
          }
       }
-      i {
-         font-size: 2em;
-      }
+   }
+
+   .error {
+      font-size: 0.8em;
+   }
+
+   input[type=submit]#submit {
+      width: 90px;
    }
 }
 
-@media screen and (min-height: 500px) {
 
-   .menu {
-      ul {
-         li.blank {
-            height: 80px;
-         }
-         li.menu-section {
-            height: 80px;
-            font-size: 0.775em;
-            font-weight: 200;
-            letter-spacing: 2px;
-            .section-contents {
-               height: 80px;
+@media all and (max-width: 640px) {
+
+   .heading {
+      font-size: 3.5em;
+   }
+
+   .postcode-search  {
+      .postcode-form {
+         background-color: rgba(255,255,255,0.35);
+         border-radius: 0;
+      }
+      .form {
+         .top-row {
+            width: auto;
+            margin: 0 auto;
+            input[type=submit] {
+               margin: 3px 8px;
+               padding: 9px 0;
+               display: inline-block;
             }
          }
       }
-      i {
-         font-size: 3em;
-      }
    }
 }
 
 
 
-@media screen and (min-height: 680px) {
-
-   .menu {
-      ul {
-         li.blank {
-            height: 80px;
-         }
-         li.menu-section {
-            height: 120px;
-            font-size: 0.775em;
-            font-weight: 200;
-            letter-spacing: 2px;
-            .section-contents {
-               height: 120px;
-            }
-         }
-      }
-      i {
-         font-size: 4.4em;
-      }
-   }
-}
+@import 'menu_mediaqueries'

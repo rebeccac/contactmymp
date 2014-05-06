@@ -8,3 +8,7 @@ Thumbs.db
 /app/storage
 /app/config/app.php
 /app/config/database.php
+/public/scss/mediaqueries2.scss
+/public/css/mediaqueries2.css
+/public/scss/frontpage_styles2.scss
+/public/css/frontpage_styles2.css

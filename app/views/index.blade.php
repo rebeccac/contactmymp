@@ -4,16 +4,17 @@
        <title>Contact My MP</title>
        <meta name="viewport" content="width=device-width, initial-scale=1, content=minimal-ui">
 
+      <link rel "stylesheet" href="{{ URL::asset('css/menu_mediaqueries.css') }}">
        <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
      </head>
      <body>
         <div class="row container">
               @include('includes/menu')
-            <div id="menu-button" class="menu-button-left"><i class="fa fa-bars"></i></div>
+            <div id="menu-button" class="menu-button-left white_text"><i class="fa fa-bars"></i></div>
       <div class="row header" data-equalizer>
-        <div class="large-3 medium-3 columns" data-equalizer-watch></div>
-        <div class="large-9 medium-9 columns title" data-equalizer-watch>
+        <div class="large-1 medium-1 small-1 columns" data-equalizer-watch></div>
+        <div class="large-11 medium-11 small-11 columns title" data-equalizer-watch>
           <h1 class="heading">Contact My MP</h1>
         </div>
       </div> <!-- row header -->
@@ -28,12 +29,12 @@
             <div class="top-row">
               <label for='postcode'>Your Postcode: </label>
               <input type='text' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
-              <br>
+              <input type='submit' id='submit' name='submit' value='Submit'>
               @if (isset($error))
-                <p class="error">{{ $error }}</p>
+                <div class="error">
+                   {{ $error }}
+                </div>
               @endif
-            </div>
-            <div class='submit'><input type='submit' id='submit' name='submit' value='Submit'></div>
           </form>
         </div>
       </div>

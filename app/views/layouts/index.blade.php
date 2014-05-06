@@ -16,7 +16,7 @@
      </div>
    </div> <!-- row header -->
    @include('includes/menu')
-   <div id="menu-button" class="menu-button-left"><i class="fa fa-bars"></i></div>
+   <div id="menu-button" class="menu-button-left"><i class="fa fa-bars dark_text"></i></div>
   <div class="content">
 
 
