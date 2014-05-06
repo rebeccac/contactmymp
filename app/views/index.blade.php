@@ -8,7 +8,7 @@
        <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
      </head>
-     <body>
+     <body class="page-body page-body-left">
         <div class="row container">
               @include('includes/menu')
             <div id="menu-button" class="menu-button-left white_text"><i class="fa fa-bars"></i></div>

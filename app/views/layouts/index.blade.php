@@ -8,7 +8,7 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="page-body page-body-left">
 <div class="container">
    <div class="row header">
      <div class="large-12 medium-12 columns">

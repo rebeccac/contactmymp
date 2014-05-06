@@ -52,7 +52,7 @@
 
                <span class="party">{{ $mp['party'] }}</span>
                <br><br>
-               <a href="/lowerhouse/{{ $mp->id }}" class="button_link mp_dark">View</a>
+               <a href="/lowerhouse/{{ $mp->id }}" class="button_link mp_dark">Contact</a>
             </div>
          </div>
       @endforeach

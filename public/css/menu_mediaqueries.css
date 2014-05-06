@@ -21,11 +21,8 @@
   .menu-button-left {
     left: 20px; }
 
-  .menu-button-pushed {
-    left: 140px; }
-
   .slidermenu,
-  #menu-button {
+  .page-body {
     -webkit-transition: all 0.2s linear !important;
     -moz-transition: all 0.2s linear !important;
     -ms-transition: all 0.2s linear !important;

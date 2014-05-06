@@ -150,6 +150,19 @@ footer {
 }
 
 @media all and (max-width: 768px) {
+   .page-body {
+      overflow-x: hidden;
+        position: relative;
+   }
+
+   .page-body-left {
+      left: 0px;
+   }
+
+   .page-body-pushed {
+      left: 120px;
+   }
+
    .heading {
       font-size: 4.8em;
       font-weight: 100;
@@ -188,6 +201,18 @@ footer {
 
 
 @media all and (max-width: 640px) {
+   .page-body {
+      overflow-x: hidden;
+        position: relative;
+   }
+
+   .page-body-left {
+      left: 0px;
+   }
+
+   .page-body-pushed {
+      left: 120px;
+   }
 
    .heading {
       font-size: 3.5em;
@@ -212,6 +237,13 @@ footer {
    }
 }
 
+
+@media all and (max-width: 320px) {
+   .heading {
+      position: absolute;
+      top: 20px;
+   }
+}
 
 
 @import 'menu_mediaqueries'

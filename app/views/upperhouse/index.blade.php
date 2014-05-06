@@ -50,7 +50,7 @@
             <div class="politician_row2">
                <span class="party">{{ $senator['party'] }}</span>
                <br><br>
-               <a href="/upperhouse/{{ $senator->id }}" class="button_link senator_dark">View</a>
+               <a href="/upperhouse/{{ $senator->id }}" class="button_link senator_dark">Contact</a>
             </div>
          </div>
       @endforeach

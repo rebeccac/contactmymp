@@ -4673,6 +4673,16 @@ footer {
   .heading {
     font-size: 4.85em; } }
 @media all and (max-width: 768px) {
+  .page-body {
+    overflow-x: hidden;
+    position: relative; }
+
+  .page-body-left {
+    left: 0px; }
+
+  .page-body-pushed {
+    left: 120px; }
+
   .heading {
     font-size: 4.8em;
     font-weight: 100; }
@@ -4699,6 +4709,16 @@ footer {
   input[type=submit]#submit {
     width: 90px; } }
 @media all and (max-width: 640px) {
+  .page-body {
+    overflow-x: hidden;
+    position: relative; }
+
+  .page-body-left {
+    left: 0px; }
+
+  .page-body-pushed {
+    left: 120px; }
+
   .heading {
     font-size: 3.5em; }
 
@@ -4712,6 +4732,10 @@ footer {
       margin: 3px 8px;
       padding: 9px 0;
       display: inline-block; } }
+@media all and (max-width: 320px) {
+  .heading {
+    position: absolute;
+    top: 20px; } }
 @media all and (max-width: 768px) {
   .menu {
     display: none; }
@@ -4735,11 +4759,8 @@ footer {
   .menu-button-left {
     left: 20px; }
 
-  .menu-button-pushed {
-    left: 140px; }
-
   .slidermenu,
-  #menu-button {
+  .page-body {
     -webkit-transition: all 0.2s linear !important;
     -moz-transition: all 0.2s linear !important;
     -ms-transition: all 0.2s linear !important;
