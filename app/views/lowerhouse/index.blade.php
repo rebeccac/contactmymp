@@ -1,23 +1,13 @@
 @extends('layouts.index')
 @section('content')
 
-
-      {{ Form::open(array('action' => 'MPController@postIndex', 'class' => 'selection-form right')) }}
-      {{ Form::label('mp', 'Select an MP: ') }}
-      <select id="mp" name="mp">
-         <option value=""> -- </option>
-         @foreach($mps as $mp)
-            <option value="{{$mp['member_id']}}">{{ $mp['last_name'] }}, {{ $mp['first_name'] }} ({{ $mp['constituency'] }})</option>
-         @endforeach
-      </select>
-      {{ Form::submit('Submit'); }}
-   {{ Form::close() }}
-
-   {{ Form::open(array('action' => 'MPController@postIndex', 'class' => 'selection-form'))}}
-      {{ Form::label('order', 'Sort MPs by: ') }}
-      {{ Form::select('order', array('constituency' => 'Electorate', 'last_name' => 'Last Name')); }}
-      {{ Form::submit('Submit'); }}
-   {{ Form::close() }}
+   <div class="box">
+      {{ Form::open(array('action' => 'MPController@postIndex', 'class' => 'selection-form'))}}
+         {{ Form::label('order', 'Sort MPs by: ') }}
+         {{ Form::select('order', array('constituency' => 'Electorate', 'last_name' => 'Last Name')); }}
+         {{ Form::submit('Submit'); }}
+      {{ Form::close() }}
+   </div>
 
    <div id="politicians_container">
       @foreach( $mps as $mp )

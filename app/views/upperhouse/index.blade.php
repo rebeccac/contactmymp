@@ -1,22 +1,13 @@
 @extends('layouts.index')
 @section('content')
 
-      {{ Form::open(array('action' => 'SenatorController@postIndex', 'class' => 'selection-form right')) }}
-      {{ Form::label('mp', 'Select a Senator: ') }}
-      <select id="senator" name="senator">
-         <option value=""> -- </option>
-         @foreach($senators as $senator)
-            <option value="{{$senator['member_id']}}">{{ $senator['last_name'] }}, {{ $senator['first_name'] }} ({{ $senator['state'] }})</option>
-         @endforeach
-      </select>
-      {{ Form::submit('Submit'); }}
-   {{ Form::close() }}
-
-   {{ Form::open(array('action' => 'SenatorController@postIndex', 'class' => 'selection-form'))}}
-      {{ Form::label('order', 'Sort Senators by: ') }}
-      {{ Form::select('order', array('state' => 'State', 'last_name' => 'Last Name')); }}
-      {{ Form::submit('Submit'); }}
-   {{ Form::close() }}
+   <div class="box">
+      {{ Form::open(array('action' => 'SenatorController@postIndex', 'class' => 'selection-form'))}}
+         {{ Form::label('order', 'Sort Senators by: ') }}
+         {{ Form::select('order', array('state' => 'State', 'last_name' => 'Last Name')); }}
+         {{ Form::submit('Submit'); }}
+      {{ Form::close() }}
+   </div>
 
    <div id="politicians_container">
       @foreach( $senators as $senator )

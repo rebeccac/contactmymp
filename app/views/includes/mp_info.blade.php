@@ -1,6 +1,6 @@
 @if(isset($reps))
    @if(count($reps) > 1)
-      <div class="notice">
+      <div class="box">
          <i class="fa fa-map-marker"></i>
          <br>
          Your postcode returned more than one possible electorate.

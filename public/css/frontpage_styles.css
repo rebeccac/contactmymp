@@ -4735,7 +4735,8 @@ footer {
 @media all and (max-width: 320px) {
   .heading {
     position: absolute;
-    top: 20px; } }
+    top: 0;
+    font-size: 2.2em; } }
 @media all and (max-width: 768px) {
   .menu {
     display: none; }

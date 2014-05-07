@@ -1,4 +1,5 @@
 <?php
+require 'oaapi.php';
 
 class PageController extends \BaseController {
 

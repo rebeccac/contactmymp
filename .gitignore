@@ -12,3 +12,5 @@ Thumbs.db
 /public/css/mediaqueries2.css
 /public/scss/frontpage_styles2.scss
 /public/css/frontpage_styles2.css
+/app/views/lowerhouse/show2.blade.php
+/app/views/upperhouse/show2.blade.php

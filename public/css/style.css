@@ -4779,14 +4779,14 @@ body {
 
 .container {
   width: 100%;
-  height: 100%;
-  border-right: 130px solid transparent;
-  border-left: 130px solid transparent; }
+  height: 100%; }
 
 .content {
   height: 100%;
   width: 100%;
+  max-width: calc(100% - 120px);
   position: absolute;
+  left: 120px;
   top: 0;
   padding-top: 120px; }
 
@@ -4817,6 +4817,22 @@ strong {
 
 .smf {
   color: #3b5998; }
+
+.box {
+  width: 33%;
+  min-width: 450px;
+  max-width: 450px;
+  background-color: #e6e6e6;
+  border: 3px solid #5c5c5c;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 200;
+  color: #5c5c5c;
+  font-size: 1em;
+  margin: 20px auto 20px auto;
+  padding: 20px; }
+  .box i {
+    font-size: 2em;
+    color: #b2b2b2; }
 
 h1 {
   width: 100%;
@@ -4855,10 +4871,8 @@ h3 {
 /* Select My MP Page */
 .contents {
   position: relative;
-  left: -130px;
   z-index: 1;
-  width: 100%;
-  border-left: 130px solid transparent; }
+  width: 100%; }
 
 .sub-heading {
   margin-left: 8%;
@@ -4872,21 +4886,6 @@ h3 {
   font-weight: 200;
   font-size: 2em;
   font-weight: 200; }
-
-.notice {
-  width: 33%;
-  max-width: 450px;
-  background-color: #e6e6e6;
-  border: 3px solid #5c5c5c;
-  font-family: 'Helvetica', sans-serif;
-  font-weight: 200;
-  color: #5c5c5c;
-  font-size: 1em;
-  margin: 20px auto 20px auto;
-  padding: 20px; }
-  .notice i {
-    font-size: 2em;
-    color: #b2b2b2; }
 
 .house-results {
   margin-bottom: 100px; }
@@ -4960,9 +4959,9 @@ h3 {
 /* Submit buttons - Select your constituency & Email your MP */
 #electorate_submit,
 #mp_email_submit {
-  width: 150px;
+  width: 120px;
   height: 30px;
-  background-color: #f8720a;
+  background-color: #5c5c5c;
   border: 0;
   color: #f2f2eb;
   font-size: 1em;
@@ -4974,6 +4973,9 @@ h3 {
 
 .no-bg {
   background-color: transparent; }
+
+.politician-info-container {
+  margin: 0 10px; }
 
 .pol_info1 {
   font-family: 'Helvetica Neue', sans-serif;
@@ -4993,7 +4995,7 @@ h3 {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 200;
   letter-spacing: 2px;
-  color: #d1dbbd;
+  color: #f2f2eb;
   font-size: 1.1em;
   line-height: 1.1em;
   padding: 5px 5px 5px 10px;
@@ -5024,12 +5026,13 @@ hr.med_grey {
 
 .contact_form {
   margin: 20px auto;
+  padding-bottom: 30px;
   width: 95%; }
   .contact_form label {
     font-family: 'Helvetica', sans-serif;
     font-weight: 400;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 500;
+    font-size: 1em;
     color: #3e606f; }
   .contact_form input[type=text],
   .contact_form input[type=email],
@@ -5073,8 +5076,14 @@ hr.med_grey {
   padding-top: 30px; }
 
 /* All Politicians Pages */
+.dropdown-menu {
+  margin: 0 auto;
+  background-color: #ccc;
+  width: 50%; }
+
 form.selection-form {
-  padding: 0 20px; }
+  padding: 0 20px;
+  margin: 0; }
   form.selection-form label {
     display: inline-block;
     font-family: 'Helvetica', sans-serif;
@@ -5085,9 +5094,9 @@ form.selection-form {
     width: 120px;
     display: inline-block; }
   form.selection-form input[type=submit] {
-    width: 150px;
+    width: 120px;
     height: 30px;
-    background-color: #f8720a;
+    background-color: #5c5c5c;
     border: 0;
     color: #f2f2eb;
     font-size: 1em;
@@ -5227,22 +5236,67 @@ form.selection-form {
   .page-body-pushed {
     left: 120px; }
 
+  /* View a Politician */
+  .small {
+    display: none; }
+
+  .medium {
+    display: block; }
+    .medium img {
+      height: 160px; }
+    .medium .s-l-icons {
+      width: 100%;
+      height: 160px; }
+      .medium .s-l-icons .section {
+        position: relative;
+        top: 43%;
+        width: 23.9%;
+        text-align: center;
+        display: inline-block; }
+        .medium .s-l-icons .section i {
+          font-size: 2em;
+          color: #ccc; }
+
+  .padding {
+    padding: 0 8px; }
+
+  .large {
+    display: none; }
+
   .heading {
     font-size: 4em; }
+
+  .sub-heading {
+    font-size: 2.8em; }
 
   .container {
     width: 100%;
     height: 100%;
-    border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
+
+  .content {
+    max-width: 100%;
+    left: 0; }
 
   .contents {
     left: 0;
     border: 0; }
 
-  .politician {
-    max-width: 220px;
-    width: 30%; } }
+  #politicians_container .politician {
+    margin-bottom: 10px;
+    min-width: 230px;
+    max-width: 230px;
+    width: 230px;
+    height: auto; }
+    #politicians_container .politician img.politician_img {
+      height: 100px;
+      vertical-align: top; }
+    #politicians_container .politician .sm-links {
+      width: 60%; }
+      #politicians_container .politician .sm-links i {
+        font-size: 1.1em; }
+      #politicians_container .politician .sm-links a {
+        font-size: 0.9em; } }
 @media all and (max-width: 640px) {
   .page-body {
     overflow-x: hidden;
@@ -5257,7 +5311,6 @@ form.selection-form {
   .container {
     width: 100%;
     height: 100%;
-    border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
 
   .contents {
@@ -5267,9 +5320,48 @@ form.selection-form {
   .heading {
     font-size: 3.5em; }
 
-  .politician {
-    max-width: 220px;
-    width: 30%; } }
+  .sub-heading {
+    font-size: 2.5em; }
+
+  .box {
+    width: 60%; }
+
+  #politicians_container .politician {
+    margin-bottom: 10px;
+    min-width: 280px;
+    max-width: 280px;
+    width: 280px;
+    height: auto; }
+    #politicians_container .politician img.politician_img {
+      height: 100px;
+      vertical-align: top; }
+    #politicians_container .politician .sm-links {
+      width: 60%; }
+      #politicians_container .politician .sm-links i {
+        font-size: 1.1em; }
+      #politicians_container .politician .sm-links a {
+        font-size: 0.9em; } }
+@media all and (max-width: 570px) {
+  .box {
+    min-width: 399px;
+    max-width: 399px;
+    width: 70%; }
+
+  #politicians_container .politician {
+    margin-bottom: 10px;
+    min-width: 70%;
+    max-width: 70%;
+    width: 70%;
+    height: auto; }
+    #politicians_container .politician img.politician_img {
+      height: 100px;
+      vertical-align: top; }
+    #politicians_container .politician .sm-links {
+      width: 60%; }
+      #politicians_container .politician .sm-links i {
+        font-size: 1.1em; }
+      #politicians_container .politician .sm-links a {
+        font-size: 1em; } }
 @media all and (max-width: 480px) {
   .page-body {
     overflow-x: hidden;
@@ -5284,16 +5376,113 @@ form.selection-form {
   .container {
     width: 100%;
     height: 100%;
-    border-right: 10px solid transparent;
     border-left: 10px solid transparent; }
 
   .contents {
     left: 0;
     border: 0; }
 
+  /* View a Politician */
+  .small {
+    display: block; }
+    .small .links {
+      padding-left: 30px;
+      padding-top: 20px; }
+      .small .links .s-l {
+        margin-bottom: 25px; }
+        .small .links .s-l a {
+          font-size: 0.9em; }
+        .small .links .s-l i {
+          font-size: 1em; }
+
+  .padding {
+    padding: 0 8px; }
+
+  .pol_info1 {
+    font-size: 1em;
+    height: auto;
+    padding: 3px; }
+
+  .pol_info2 {
+    font-size: 0.8em;
+    font-weight: 100;
+    height: auto;
+    padding: 3px; }
+
+  .pol_info3 {
+    font-size: 1em; }
+    .pol_info3 a[href^=tel] {
+      color: blue; }
+
+  .medium {
+    display: none; }
+
+  .large {
+    display: none; }
+
   .heading {
     font-size: 3em; }
 
-  .politician {
+  .box {
     width: 80%;
-    max-width: 400px; } }
+    min-width: 384px;
+    max-width: 384px;
+    padding: 10px; }
+
+  #politicians_container .politician {
+    margin-bottom: 10px;
+    min-width: 80%;
+    max-width: 80%;
+    width: 80%;
+    height: auto; }
+    #politicians_container .politician img.politician_img {
+      height: 100px;
+      vertical-align: top; }
+    #politicians_container .politician .sm-links {
+      width: 60%; }
+      #politicians_container .politician .sm-links i {
+        font-size: 1.1em; }
+      #politicians_container .politician .sm-links a {
+        font-size: 1em; } }
+@media all and (max-width: 320px) {
+  .heading {
+    font-size: 2.05em; }
+
+  .sub-heading {
+    font-size: 1.7em; }
+
+  .content {
+    padding-top: 70px; }
+
+  .sub-heading {
+    font-size: 2.4em; }
+
+  .box {
+    width: 90%;
+    min-width: 288px;
+    max-width: 288px;
+    padding: 10px; }
+
+  #politicians_container .politician {
+    margin-bottom: 10px;
+    min-width: 90%;
+    max-width: 90%;
+    width: 90%;
+    height: auto; }
+    #politicians_container .politician img.politician_img {
+      height: 100px;
+      vertical-align: top; }
+    #politicians_container .politician .sm-links {
+      width: 60%; }
+      #politicians_container .politician .sm-links i {
+        font-size: 1.1em; }
+      #politicians_container .politician .sm-links a {
+        font-size: 1em; }
+  #politicians_container .house-results {
+    margin-bottom: 30px; }
+    #politicians_container .house-results .house-sub-heading {
+      font-size: 1.3em; }
+
+  /* View a Politician */
+  .pol_info1 {
+    font-size: 0.9em; } }
