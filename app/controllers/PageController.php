@@ -167,6 +167,11 @@ class PageController extends \BaseController {
 			$id = $_POST['senator'];
 			return Redirect::action('SenatorController@show', array('id' => $id));
 		}
+
+		if(isset($_POST['postcode'])) {
+			$postcode = $_POST['postcode'];
+			return Redirect::action('PageController@postSelect', array('postcode' => $postcode));
+		}
 	}
 
 }

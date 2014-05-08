@@ -5332,6 +5332,52 @@ form.selection-form {
     border: 0;
     color: #f2f2eb; }
 
+.search {
+  width: auto;
+  height: auto;
+  margin: 80px auto 30px auto;
+  text-align: center; }
+
+.search-box {
+  width: 30%;
+  min-width: 300px;
+  height: auto;
+  min-height: 300px;
+  margin: 10px;
+  display: inline-block;
+  background-color: #e6e6e6;
+  border: 3px solid #5c5c5c;
+  vertical-align: top; }
+  .search-box form.politician-selection-form {
+    width: 95%;
+    margin: 0 auto; }
+    .search-box form.politician-selection-form label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 200;
+      font-size: 1.7em;
+      display: block;
+      text-align: center;
+      margin: 15px 0 50px 0; }
+    .search-box form.politician-selection-form select {
+      width: auto;
+      display: block;
+      margin: 0 auto 50px auto;
+      height: 40px;
+      font-family: 'Helvetica', sans-serif;
+      font-weight: 400; }
+    .search-box form.politician-selection-form input[type=number] {
+      width: 150px;
+      margin: 0 auto 50px auto; }
+    .search-box form.politician-selection-form input[type=submit] {
+      display: block;
+      width: 120px;
+      height: 30px;
+      background-color: #5c5c5c;
+      border: 0;
+      color: #f2f2eb;
+      font-size: 1em;
+      margin: 0 auto; }
+
 @media all and (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
   .contact-form-content {
     max-width: 900px;

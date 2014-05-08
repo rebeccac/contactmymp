@@ -563,6 +563,52 @@ form.selection-form {
    }
 }
 
+.search {
+   width: auto;
+   height: auto;
+   margin: 80px auto 30px auto;
+   text-align: center;
+}
+.search-box {
+   width: 30%;
+   min-width: 300px;
+   height: auto;
+   min-height: 300px;
+   margin: 10px;
+   display: inline-block;
+   background-color: lighten(#ccc, 10%);
+   border: 3px solid $dark_text;
+   vertical-align: top;
+   form.politician-selection-form {
+      width: 95%;
+      margin: 0 auto;
+      label {
+         @include HelveticaNeue;
+         font-size: 1.7em;
+         display: block;
+         text-align: center;
+         margin: 15px 0 50px 0;
+      }
+      select {
+         width: auto;
+         display: block;
+         margin: 0 auto 50px auto;
+         height: 40px;
+         @include Helvetica;
+
+      }
+      input[type=number] {
+         width: 150px;
+         margin: 0 auto 50px auto;
+      }
+      input[type=submit] {
+         display: block;
+         @include Submit;
+         margin: 0 auto;
+      }
+   }
+
+}
 
 
 @media all and (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
