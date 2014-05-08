@@ -39,6 +39,7 @@
                          @else
                            N/A
                          @endif
+                         <br>
                       </div>
                       <div class="s-l">
                         <i class="fa fa-envelope"></i>
@@ -47,6 +48,7 @@
                          @else
                            N/A
                          @endif
+                         <br>
                       </div>
                       <div class="s-l">
                          <i class="fa fa-twitter smt"></i>
@@ -55,6 +57,7 @@
                          @else
                            N/A
                          @endif
+                         <br>
                      </div>
                      <div class="s-l">
                          <i class="fa fa-facebook smf"></i>
@@ -63,6 +66,7 @@
                          @else
                            N/A
                          @endif
+                         <br>
                      </div>
                    </div>
                    <div class="clear"></div>
@@ -125,9 +129,6 @@
                         <br>
                       </div>
                    </div>
-
-
-
                 </div>
              </div><!-- 12 pol_info3 senator_light -->
 
@@ -135,8 +136,8 @@
 
 
 
-            <!-- 768px - 1023px -->
-             <div class="medium">
+            <!-- 768px+ -->
+             <div class="medium-large">
                 <div class="row" data-equalizer>
                    <div class="large-3 medium-3 small-3 columns" data-equalizer-watch>
                       <img src="/images/mp/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}">
@@ -237,13 +238,10 @@
                       </div>
                       </div>
 
-
+                  </div>
              </div>
 
-             <!-- end 768px - 1023px -->
-
-             <div class="large">
-             </div>
+             <!-- end 768px+ -->
 
 
             <!-- all sizes -->

@@ -4766,6 +4766,116 @@ th {
     .menu ul li.menu-section:hover > ul.sub-menu {
       position: absolute;
       left: 120px; } }
+@media all and (max-height: 360px) {
+  .menu {
+    display: none; }
+
+  .slidermenu-left {
+    left: -120px; }
+
+  .slidermenu-pushed {
+    left: 0px; }
+
+  #menu-button {
+    position: absolute;
+    display: inline-block;
+    z-index: 1000;
+    top: 10px;
+    color: #5c5c5c;
+    font-size: 2em; }
+    #menu-button i {
+      color: #f2f2f2; }
+
+  .menu-button-left {
+    left: 20px; }
+
+  .slidermenu,
+  .page-body {
+    -webkit-transition: all 0.2s linear !important;
+    -moz-transition: all 0.2s linear !important;
+    -ms-transition: all 0.2s linear !important;
+    -o-transition: all 0.2s linear !important;
+    transition: all 0.2s linear !important; }
+
+  .slidermenu {
+    z-index: 999;
+    width: 120px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #1d1d1d;
+    float: left; }
+    .slidermenu a {
+      color: #f2f2f2;
+      text-decoration: none;
+      border: 0; }
+      .slidermenu a:link, .slidermenu a:visited, .slidermenu a:hover, .slidermenu a:active {
+        color: #f2f2f2;
+        text-decoration: none;
+        border: 0; }
+    .slidermenu ul {
+      margin: 0;
+      padding: 0; }
+      .slidermenu ul li.blank {
+        list-style: none;
+        width: 120px;
+        min-height: 5px; }
+      .slidermenu ul li.menu-section {
+        list-style: none;
+        text-align: center;
+        width: 120px;
+        min-height: 50px;
+        border-bottom: 1px solid #444;
+        font-family: 'Helvetica Neue', sans-serif;
+        color: #f2f2eb;
+        display: table;
+        position: relative;
+        border-right: 5px solid transparent; }
+        .slidermenu ul li.menu-section .section-contents {
+          display: table-cell;
+          vertical-align: middle;
+          width: 120px;
+          padding: 3px;
+          min-height: 50px;
+          font-size: 0.9em; }
+      .slidermenu ul li.top {
+        border-top: 1px solid #444; }
+    .slidermenu i {
+      color: #555;
+      font-size: 1.7em; }
+    .slidermenu ul.sub-menu {
+      display: block;
+      width: 120px;
+      min-height: 120px;
+      list-style: none;
+      position: absolute;
+      left: -9999px;
+      background-color: #1d1d1d; }
+      .slidermenu ul.sub-menu li.sub-menu-section {
+        width: 120px;
+        height: 50px;
+        border-bottom: 1px solid #444;
+        border-right: 5px solid transparent;
+        display: table;
+        position: relative;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 0.9em; }
+        .slidermenu ul.sub-menu li.sub-menu-section .sub-menu-contents {
+          display: inline;
+          display: table-cell;
+          vertical-align: middle;
+          padding: 3px; }
+      .slidermenu ul.sub-menu .sub-menu-section:hover,
+      .slidermenu ul.sub-menu .sub-menu-section:active {
+        border-right: 5px solid #f8720a; }
+    .slidermenu ul li.menu-section:hover {
+      border-right: 5px solid #f8720a; }
+      .slidermenu ul li.menu-section:hover i {
+        color: #999; }
+    .slidermenu ul li.menu-section:hover > ul.sub-menu {
+      position: absolute;
+      left: 120px; } }
 body {
   width: 100%;
   height: 100%;
@@ -5222,7 +5332,37 @@ form.selection-form {
     border: 0;
     color: #f2f2eb; }
 
-@media all and (max-width: 1024px) {
+@media all and (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
+  .contact-form-content {
+    max-width: 900px;
+    margin: 0 auto; }
+
+  .small {
+    display: none; }
+
+  .medium-large {
+    display: block; }
+    .medium-large img {
+      height: 160px; }
+    .medium-large .s-l-icons {
+      width: 100%;
+      height: 160px; }
+      .medium-large .s-l-icons .section {
+        position: relative;
+        top: 43%;
+        width: 23.9%;
+        text-align: center;
+        display: inline-block; }
+        .medium-large .s-l-icons .section i {
+          font-size: 2em;
+          color: #ccc; }
+
+  .pol_info3 a[href^=tel] {
+    color: blue; }
+
+  .padding {
+    padding: 0 8px; } }
+@media all and (max-width: 1023px) {
   .heading {
     font-size: 4.85em; } }
 @media all and (max-width: 768px) {
@@ -5240,28 +5380,28 @@ form.selection-form {
   .small {
     display: none; }
 
-  .medium {
+  .medium-large {
     display: block; }
-    .medium img {
+    .medium-large img {
       height: 160px; }
-    .medium .s-l-icons {
+    .medium-large .s-l-icons {
       width: 100%;
       height: 160px; }
-      .medium .s-l-icons .section {
+      .medium-large .s-l-icons .section {
         position: relative;
         top: 43%;
         width: 23.9%;
         text-align: center;
         display: inline-block; }
-        .medium .s-l-icons .section i {
+        .medium-large .s-l-icons .section i {
           font-size: 2em;
           color: #ccc; }
 
+  .pol_info3 a[href^=tel] {
+    color: blue; }
+
   .padding {
     padding: 0 8px; }
-
-  .large {
-    display: none; }
 
   .heading {
     font-size: 4em; }
@@ -5361,26 +5501,7 @@ form.selection-form {
       #politicians_container .politician .sm-links i {
         font-size: 1.1em; }
       #politicians_container .politician .sm-links a {
-        font-size: 1em; } }
-@media all and (max-width: 480px) {
-  .page-body {
-    overflow-x: hidden;
-    position: relative; }
-
-  .page-body-left {
-    left: 0px; }
-
-  .page-body-pushed {
-    left: 120px; }
-
-  .container {
-    width: 100%;
-    height: 100%;
-    border-left: 10px solid transparent; }
-
-  .contents {
-    left: 0;
-    border: 0; }
+        font-size: 1em; }
 
   /* View a Politician */
   .small {
@@ -5414,14 +5535,30 @@ form.selection-form {
     .pol_info3 a[href^=tel] {
       color: blue; }
 
-  .medium {
-    display: none; }
+  .medium-large {
+    display: none; } }
+@media all and (max-width: 480px) {
+  .page-body {
+    overflow-x: hidden;
+    position: relative; }
 
-  .large {
-    display: none; }
+  .page-body-left {
+    left: 0px; }
+
+  .page-body-pushed {
+    left: 120px; }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    border-left: 10px solid transparent; }
+
+  .contents {
+    left: 0;
+    border: 0; }
 
   .heading {
-    font-size: 3em; }
+    font-size: 2.2em; }
 
   .box {
     width: 80%;
@@ -5446,7 +5583,7 @@ form.selection-form {
         font-size: 1em; } }
 @media all and (max-width: 320px) {
   .heading {
-    font-size: 2.05em; }
+    font-size: 1.9em; }
 
   .sub-heading {
     font-size: 1.7em; }

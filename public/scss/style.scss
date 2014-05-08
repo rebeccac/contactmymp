@@ -564,7 +564,51 @@ form.selection-form {
 }
 
 
-@media all and (max-width: 1024px) {
+
+@media all and (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
+   .contact-form-content {
+      max-width: 900px;
+      margin: 0 auto;
+   }
+
+   .small {
+      display: none;
+   }
+
+   .medium-large {
+      display: block;
+      img {
+         height: 160px;
+      }
+      .s-l-icons {
+         width: 100%;
+         height: 160px;
+         .section {
+            position: relative;
+            top: 43%;
+            width: 23.9%;
+            text-align: center;
+            display: inline-block;
+            i {
+               font-size: 2em;
+               color: #ccc;
+            }
+         }
+      }
+   }
+
+   .pol_info3 {
+      a[href^=tel]{
+         color: blue;
+      }
+   }
+
+   .padding {
+      padding: 0 8px;
+   }
+}
+
+@media all and (max-width: 1023px) {
    .heading {
       font-size: 4.85em;
    }
@@ -590,7 +634,7 @@ form.selection-form {
       display: none;
    }
 
-   .medium {
+   .medium-large {
       display: block;
       img {
          height: 160px;
@@ -612,14 +656,15 @@ form.selection-form {
       }
    }
 
+   .pol_info3 {
+      a[href^=tel]{
+         color: blue;
+      }
+   }
+
    .padding {
       padding: 0 8px;
    }
-
-   .large {
-      display: none;
-   }
-
 
    .heading {
       font-size: 4em;
@@ -759,35 +804,8 @@ form.selection-form {
          }
       }
    }
-}
 
 
-
-@media all and (max-width: 480px) {
-
-   .page-body {
-      overflow-x: hidden;
-       position: relative;
-   }
-
-   .page-body-left {
-      left: 0px;
-   }
-
-   .page-body-pushed {
-      left: 120px;
-   }
-
-   .container {
-      width: 100%;
-      height: 100%;
-      border-left: 10px solid transparent;
-   }
-
-   .contents {
-      left: 0;
-      border: 0;
-   }
 
    /* View a Politician */
    .small {
@@ -830,16 +848,39 @@ form.selection-form {
          color: blue;
       }
    }
-   .medium {
+   .medium-large {
       display: none;
    }
-   .large {
-      display: none;
+}
+
+@media all and (max-width: 480px) {
+
+   .page-body {
+      overflow-x: hidden;
+       position: relative;
    }
 
+   .page-body-left {
+      left: 0px;
+   }
+
+   .page-body-pushed {
+      left: 120px;
+   }
+
+   .container {
+      width: 100%;
+      height: 100%;
+      border-left: 10px solid transparent;
+   }
+
+   .contents {
+      left: 0;
+      border: 0;
+   }
 
    .heading {
-      font-size: 3em;
+      font-size: 2.2em;
    }
 
    .box {
@@ -876,7 +917,7 @@ form.selection-form {
 @media all and (max-width: 320px) {
 
    .heading {
-      font-size: 2.05em;
+      font-size: 1.9em;
    }
 
    .sub-heading {

@@ -39,6 +39,7 @@
                          @else
                            N/A
                          @endif
+                         <br>
                       </div>
                       <div class="s-l">
                         <i class="fa fa-envelope"></i>
@@ -47,6 +48,7 @@
                          @else
                            N/A
                          @endif
+                         <br>
                       </div>
                       <div class="s-l">
                          <i class="fa fa-twitter smt"></i>
@@ -55,6 +57,7 @@
                          @else
                            N/A
                          @endif
+                         <br>
                      </div>
                      <div class="s-l">
                          <i class="fa fa-facebook smf"></i>
@@ -63,6 +66,7 @@
                          @else
                            N/A
                          @endif
+                         <br>
                      </div>
                    </div>
                    <div class="clear"></div>
@@ -130,8 +134,8 @@
           </div>
              <!-- end 320px -->
 
-             <!-- 768px - 1023px -->
-             <div class="medium">
+             <!-- 768px+ -->
+             <div class="medium-large">
                  <div class="row" data-equalizer>
                     <div class="large-3 medium-3 small-3 columns" data-equalizer-watch>
                        <img src="/images/senator/{{ $senator['image'] }}" alt="Photo of {{$senator['first_name']}} {{$senator['last_name']}}, Senator for {{$senator['state']}}">
@@ -231,16 +235,9 @@
                         <br>
                        </div>
                      </div>
-
                  </div>
              </div>
-
-             <!-- end 768px - 1023px -->
-
-            <!-- 1024px+ -->
-             <div class="large">
-             </div>
-
+             <!-- end 768px+ -->
 
             <!-- all sizes -->
              <div class="row" data-equalizer>
@@ -269,8 +266,7 @@
                 </div>
              </div>
            </div>
-
-</div><!-- politician-container-box -->
+      </div><!-- politician-container-box -->
   </div>
 </div>
 

@@ -28,7 +28,7 @@
           <form class='form' action='/select' method='post'>
             <div class="top-row">
               <label for='postcode'>Your Postcode: </label>
-              <input type='text' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
+              <input type='number' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
               <input type='submit' id='submit' name='submit' value='Submit'>
               @if (isset($error))
                 <div class="error">
