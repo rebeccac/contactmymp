@@ -104,4 +104,8 @@ class MPController extends \BaseController {
 		//
 	}
 
+	public function search() {
+
+	}
+
 }

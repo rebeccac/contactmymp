@@ -16,6 +16,9 @@ Route::get('/contact', function()
 	return View::make('contact')->with('page_title', "Contact Us - Contact My MP");
 });
 
+Route::get('findpolitician', 'PageController@findPolitician');
+Route::post('postFindPolitician', 'PageController@postFindPolitician');
+
 Route::get('/select', 'PageController@getSelect');
 
 Route::post('/select', 'PageController@postSelect');

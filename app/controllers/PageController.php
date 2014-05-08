@@ -150,6 +150,23 @@ class PageController extends \BaseController {
 		return View::make('page.contact')->with('page_title', $page_title);
 	}
 
+	public function findPolitician() {
+		$page_title = "Find a Politician - Contact My MP";
+		$mps = Electorate::orderBy('last_name')->get();
+		$senators = Senator::orderBy('last_name')->get();
+		return View::make('page.findpolitician', array('page_title' => $page_title, 'mps' => $mps, 'senators' => $senators));
+	}
 
+	public function postFindPolitician() {
+		$page_title = "Find a Politician - Contact My MP";
+		if(isset($_POST['mp'])) {
+			$id = $_POST['mp'];
+			return Redirect::action('MPController@show', array('id' => $id));
+		}
+		if(isset($_POST['senator'])) {
+			$id = $_POST['senator'];
+			return Redirect::action('SenatorController@show', array('id' => $id));
+		}
+	}
 
 }
