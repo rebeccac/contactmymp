@@ -150,6 +150,11 @@ class PageController extends \BaseController {
 		return View::make('page.contact')->with('page_title', $page_title);
 	}
 
+	public function getMinisters() {
+		$page_title = "Email Ministers - Contact My MP";
+		return View::make('page.ministers')->with('page_title', $page_title);
+	}
+
 	public function findPolitician() {
 		$page_title = "Find a Politician - Contact My MP";
 		$mps = Electorate::orderBy('last_name')->get();

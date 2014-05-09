@@ -47,14 +47,16 @@
          </a>
       </li>
       <li class="menu-section">
-         <div class="section-contents">
-            <i class="fa fa-user"></i>
-            <br>
-            Email Ministers
-         </div>
+         <a href="{{ URL::to('ministers') }}">
+            <div class="section-contents">
+               <i class="fa fa-user"></i>
+               <br>
+               Email Ministers
+            </div>
+         </a>
       </li>
       <li class="menu-section">
-         <a href="{{ URL::to('/contact') }}">
+         <a href="{{ URL::to('contact') }}">
             <div class="section-contents">
                <i class="fa fa-envelope"></i>
                <br>
@@ -79,7 +81,7 @@
             </a>
          </li>
          <li class="menu-section">
-            <a href="{{ URL::to('/about') }}">
+            <a href="{{ URL::to('about') }}">
                <div class="section-contents">
                   <i class="fa fa-info"></i>
                   <br>
@@ -91,12 +93,7 @@
          <ul class="sub-menu">
             <li class="sub-menu-section top">
                <div class="sub-menu-contents">
-                  Find my MP
-               </div>
-            </li>
-            <li class="sub-menu-section">
-               <div class="sub-menu-contents">
-                  Find my Senators
+                  <a href="{{ URL::to('findpolitician') }}">Find a Politician</a>
                </div>
             </li>
             <li class="sub-menu-section">
@@ -119,14 +116,16 @@
          </a>
       </li>
       <li class="menu-section">
-         <div class="section-contents">
-            <i class="fa fa-user"></i>
-            <br>
-            Email Ministers
-         </div>
+         <a href="{{ URL::to('ministers') }}">
+            <div class="section-contents">
+               <i class="fa fa-user"></i>
+               <br>
+               Email Ministers
+            </div>
+         </a>
       </li>
       <li class="menu-section">
-         <a href="{{ URL::to('/contact') }}">
+         <a href="{{ URL::to('contact') }}">
             <div class="section-contents">
                <i class="fa fa-envelope"></i>
                <br>
