@@ -24,12 +24,7 @@
          <ul class="sub-menu">
             <li class="sub-menu-section top">
                <div class="sub-menu-contents">
-                  Find my MP
-               </div>
-            </li>
-            <li class="sub-menu-section">
-               <div class="sub-menu-contents">
-                  Find my Senators
+                  <a href="{{ URL::to('findpolitician') }}">Find a Politician</a>
                </div>
             </li>
             <li class="sub-menu-section">
@@ -63,7 +58,7 @@
             <div class="section-contents">
                <i class="fa fa-envelope"></i>
                <br>
-               Contact Us
+               <a href="{{ URL::to('contact') }}">Contact Us</a>
             </div>
          </a>
       </li>

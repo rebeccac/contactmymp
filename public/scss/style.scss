@@ -582,6 +582,13 @@ form.selection-form {
    form.politician-selection-form {
       width: 95%;
       margin: 0 auto;
+      .title {
+         @include HelveticaNeue;
+         font-size: 1.7em;
+         display: block;
+         text-align: center;
+         margin: 15px 0 50px 0;
+      }
       label {
          @include HelveticaNeue;
          font-size: 1.7em;
