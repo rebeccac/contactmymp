@@ -3,7 +3,7 @@
 @import 'menu_mediaqueries';
 
 @mixin HelveticaNeue {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 200;
 }
 @mixin Helvetica {
@@ -148,7 +148,7 @@ h3 {
 }
 
 .heading {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 100;
   letter-spacing: 2px;
   color: $dark_text;
@@ -202,8 +202,7 @@ h3 {
       position: relative;
       background-color: $medium;
       .constituency_title {
-         font-family: 'Helvetica Neue', sans-serif;
-         font-weight: 200;
+font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;         font-weight: 200;
          font-size: 1.5em;
          color: $white;
          letter-spacing: 2px;
@@ -265,7 +264,8 @@ h3 {
 
 /* Submit buttons - Select your constituency & Email your MP */
 #electorate_submit,
-#mp_email_submit {
+#mp_email_submit,
+#contact_form_submit {
    @include Submit;
    margin-left: 8%;
    text-align: center;
@@ -284,7 +284,7 @@ h3 {
 }
 
 .pol_info1 {
-   font-family: 'Helvetica Neue', sans-serif;
+   font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
    letter-spacing: 2px;
    font-weight: 200;
    color: $white;
@@ -482,7 +482,7 @@ form.selection-form {
          text-align: left;
       }
       .politician_title {
-         font-family: 'Helvetica Neue', sans-serif;
+         font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
          font-weight: 200;
          font-size: 1.2em;
          color: $white;

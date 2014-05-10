@@ -59,7 +59,7 @@
         width: 120px;
         min-height: 60px;
         border-bottom: 1px solid #444;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -91,7 +91,7 @@
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-size: 0.9em; }
         .slidermenu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;
@@ -149,7 +149,7 @@
         width: 120px;
         min-height: 100px;
         border-bottom: 1px solid #444;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -162,7 +162,7 @@
           padding: 3px;
           font-size: 0.9em;
           letter-spacing: 1px;
-          font-family: 'Helvetica Neue', sans-serif;
+          font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
           font-weight: 200; }
       .menu ul li.top {
         border-top: 1px solid #444; }
@@ -184,7 +184,7 @@
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-size: 0.9em; }
         .menu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;
@@ -262,7 +262,7 @@
         width: 120px;
         min-height: 50px;
         border-bottom: 1px solid #444;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -294,7 +294,7 @@
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-size: 0.9em; }
         .slidermenu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;

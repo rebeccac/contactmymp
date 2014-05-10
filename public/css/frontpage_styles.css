@@ -4584,7 +4584,7 @@ body {
   color: rgba(255, 255, 255, 0.8); }
 
 .error {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 600;
   color: #5c5c5c;
   font-size: 0.9em;
@@ -4603,7 +4603,7 @@ body {
   vertical-align: middle; }
 
 .heading {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 6em;
   letter-spacing: 2px;
@@ -4624,7 +4624,7 @@ body {
     clear: both;
     text-align: right; }
     .postcode-search .form .top-row label {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
       font-weight: 200;
       color: #f2f2f2;
       font-size: 1.2em;
@@ -4636,7 +4636,7 @@ body {
       width: 90px;
       display: inline-block; }
     .postcode-search .form .top-row input[type=submit] {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
       width: 90px;
       float: right;
       clear: both;
@@ -4663,7 +4663,7 @@ footer {
   footer .copyright {
     text-align: center;
     color: #f2f2f2;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 0.8em;
     letter-spacing: 1px;
@@ -4799,7 +4799,7 @@ footer {
         width: 120px;
         min-height: 60px;
         border-bottom: 1px solid #444;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -4831,7 +4831,7 @@ footer {
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-size: 0.9em; }
         .slidermenu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;
@@ -4889,7 +4889,7 @@ footer {
         width: 120px;
         min-height: 100px;
         border-bottom: 1px solid #444;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -4902,7 +4902,7 @@ footer {
           padding: 3px;
           font-size: 0.9em;
           letter-spacing: 1px;
-          font-family: 'Helvetica Neue', sans-serif;
+          font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
           font-weight: 200; }
       .menu ul li.top {
         border-top: 1px solid #444; }
@@ -4924,7 +4924,7 @@ footer {
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-size: 0.9em; }
         .menu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;
@@ -5002,7 +5002,7 @@ footer {
         width: 120px;
         min-height: 50px;
         border-bottom: 1px solid #444;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -5034,7 +5034,7 @@ footer {
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'Helvetica Neue', sans-serif;
+        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-size: 0.9em; }
         .slidermenu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;

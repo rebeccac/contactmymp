@@ -150,6 +150,39 @@ class PageController extends \BaseController {
 		return View::make('page.contact')->with('page_title', $page_title);
 	}
 
+	public function postContact() {
+		$page_title = "Contact Us - Contact My MP";
+		$data = Input::all();
+		//Validation
+		$rules = array (
+		'name' => 'required|alpha',
+		'email' => 'required|email',
+		'subject' => 'required',
+		'message' => 'required|min:25'
+		);
+
+		//Validate data
+		$validator = Validator::make ($data, $rules);
+
+		//If everything is correct than run passes.
+		if ($validator -> passes()){
+
+			//Send email using Laravel send function
+			Mail::send('emails.hello', $data, function($message) use ($data) {
+				//email 'From' field: Get users email add and name
+				$message->from($data['email'] , $data['name']);
+				//email 'To' field: change this to emails that you want to be notified.
+				$message->to('support@contactmymp.com', 'Rebecca')->cc('rebecca.j.cordingley@gmail.com')->subject('Contact My MP Feedback');
+
+			});
+			return View::make('page.thankyou', array('page_title' => "Thank you for your feedback", 'data' => $data));
+		}
+		else {
+			//return contact form with errors
+			return Redirect::to('/contact')->withErrors($validator)->with('page_title', $page_title);
+		}
+	}
+
 	public function getMinisters() {
 		$page_title = "Email Ministers - Contact My MP";
 		return View::make('page.ministers')->with('page_title', $page_title);
@@ -177,6 +210,11 @@ class PageController extends \BaseController {
 			$postcode = $_POST['postcode'];
 			return Redirect::action('PageController@postSelect', array('postcode' => $postcode));
 		}
+	}
+
+	public function getThankYou() {
+		$page_title = "Thank you for your feedback - Contact My MP";
+		return View::make('page.thankyou', array('page_title' => $page_title, 'data' => $data));
 	}
 
 }
