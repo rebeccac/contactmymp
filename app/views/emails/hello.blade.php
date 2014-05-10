@@ -7,7 +7,7 @@ $date_time = date("F j, Y, g:i a");
 $userIpAddress = Request::getClientIp();
 ?>
 
-<h1>The following feedback has been sent:</h1>
+<h2 class="sub-heading">The following feedback has been sent:</h2>
 
 <p>
 Name: <?php echo ($name); ?> <br>

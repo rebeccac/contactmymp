@@ -360,6 +360,12 @@ hr.med_grey {
       margin-bottom: 30px;
    }
 }
+/* Contact form error */
+.error {
+   @include Helvetica;
+   color: red;
+   font-size: 0.9em;
+}
 
 .email_mp_title {
    margin-top: 70px;

@@ -153,25 +153,23 @@ class PageController extends \BaseController {
 	public function postContact() {
 		$page_title = "Contact Us - Contact My MP";
 		$data = Input::all();
+
 		//Validation
 		$rules = array (
-		'name' => 'required|alpha',
+		'name' => 'required',
 		'email' => 'required|email',
 		'subject' => 'required',
 		'message' => 'required|min:25'
 		);
 
-		//Validate data
+		// Validate data
 		$validator = Validator::make ($data, $rules);
 
-		//If everything is correct than run passes.
 		if ($validator -> passes()){
 
-			//Send email using Laravel send function
+			// Send email using Laravel send function
 			Mail::send('emails.hello', $data, function($message) use ($data) {
-				//email 'From' field: Get users email add and name
 				$message->from($data['email'] , $data['name']);
-				//email 'To' field: change this to emails that you want to be notified.
 				$message->to('support@contactmymp.com', 'Rebecca')->cc('rebecca.j.cordingley@gmail.com')->subject('Contact My MP Feedback');
 
 			});
@@ -179,7 +177,7 @@ class PageController extends \BaseController {
 		}
 		else {
 			//return contact form with errors
-			return Redirect::to('/contact')->withErrors($validator)->with('page_title', $page_title);
+			return Redirect::to('/contact')->withErrors($validator)->with('page_title', $page_title)->withInput();
 		}
 	}
 
