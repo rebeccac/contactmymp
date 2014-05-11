@@ -623,6 +623,19 @@ form.selection-form {
 
 }
 
+/* Contact Us */
+
+.thankyou {
+   width: 75%;
+   height: auto;
+   padding: 20px;
+   @include Helvetica;
+   font-size: 1em;
+   margin: 0 auto;
+   line-height: 1.5em;
+   background-color: lighten(#ccc, 10%);
+   border: 3px solid $dark_text;
+}
 
 @media all and (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
    .contact-form-content {

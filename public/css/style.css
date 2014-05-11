@@ -4624,7 +4624,7 @@ th {
         width: 120px;
         min-height: 60px;
         border-bottom: 1px solid #444;
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -4656,7 +4656,7 @@ th {
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
         font-size: 0.9em; }
         .slidermenu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;
@@ -4714,7 +4714,7 @@ th {
         width: 120px;
         min-height: 100px;
         border-bottom: 1px solid #444;
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -4727,7 +4727,7 @@ th {
           padding: 3px;
           font-size: 0.9em;
           letter-spacing: 1px;
-          font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+          font-family: 'Helvetica Neue', sans-serif;
           font-weight: 200; }
       .menu ul li.top {
         border-top: 1px solid #444; }
@@ -4749,7 +4749,7 @@ th {
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
         font-size: 0.9em; }
         .menu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;
@@ -4827,7 +4827,7 @@ th {
         width: 120px;
         min-height: 50px;
         border-bottom: 1px solid #444;
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
         color: #f2f2eb;
         display: table;
         position: relative;
@@ -4859,7 +4859,7 @@ th {
         border-right: 5px solid transparent;
         display: table;
         position: relative;
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
         font-size: 0.9em; }
         .slidermenu ul.sub-menu li.sub-menu-section .sub-menu-contents {
           display: inline;
@@ -5392,6 +5392,19 @@ form.selection-form {
       color: #f2f2eb;
       font-size: 1em;
       margin: 0 auto; }
+
+/* Contact Us */
+.thankyou {
+  width: 75%;
+  height: auto;
+  padding: 20px;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 auto;
+  line-height: 1.5em;
+  background-color: #e6e6e6;
+  border: 3px solid #5c5c5c; }
 
 @media all and (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
   .contact-form-content {
