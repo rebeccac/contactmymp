@@ -5255,6 +5255,15 @@ form.selection-form {
 .senator_dark {
   background-color: #643736; }
 
+.minister_light {
+  background-color: #add6eb; }
+
+.minister_medium {
+  background-color: #3399cc; }
+
+.minister_dark {
+  background-color: #1f5c7a; }
+
 #politicians_container {
   width: 100%;
   height: 100%;
@@ -5264,10 +5273,11 @@ form.selection-form {
   #politicians_container .politician {
     height: 330px;
     min-width: 273px;
-    margin: 2px 0;
+    max-width: 273px;
+    margin: 5px 0;
     border: 1px solid #bbb;
     display: inline-block; }
-    #politicians_container .politician .mp_name, #politicians_container .politician .senator_name, #politicians_container .politician .constituency {
+    #politicians_container .politician .mp_name, #politicians_container .politician .senator_name, #politicians_container .politician .constituency, #politicians_container .politician .minister_name {
       display: inline-block;
       width: 100%;
       position: relative;
@@ -5275,15 +5285,36 @@ form.selection-form {
       line-height: 2.6em;
       height: 2.6em;
       text-align: left; }
+    #politicians_container .politician .politician_position {
+      display: inline-block;
+      font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: #f2f2eb;
+      font-weight: 200;
+      letter-spacing: 2px;
+      padding-left: 10px;
+      width: 100%;
+      position: relative;
+      margin: 0;
+      height: 3.3em;
+      text-align: left; }
     #politicians_container .politician .politician_title {
       font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
       font-weight: 200;
       font-size: 1.2em;
       color: #f2f2eb;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       padding-left: 10px; }
+    #politicians_container .politician .minister-position {
+      font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      font-weight: 200;
+      color: #f2f2eb;
+      letter-spacing: 1px;
+      padding-left: 10px;
+      line-height: 4em;
+      font-size: 1em; }
     #politicians_container .politician .mp_name:after,
-    #politicians_container .politician .senator_name:after {
+    #politicians_container .politician .senator_name:after,
+    #politicians_container .politician .minister_name:after {
       top: 100%;
       left: 10%;
       border: solid transparent;
@@ -5299,6 +5330,8 @@ form.selection-form {
       border-top-color: #91aa9d; }
     #politicians_container .politician .senator_name:after {
       border-top-color: #965251; }
+    #politicians_container .politician .minister_name:after {
+      border-top-color: #3399cc; }
   #politicians_container img.politician_img {
     height: 140px;
     width: auto;
@@ -5514,6 +5547,12 @@ form.selection-form {
     max-width: 230px;
     width: 230px;
     height: auto; }
+    #politicians_container .politician .politician_position {
+      height: 3.5em; }
+      #politicians_container .politician .politician_position .minister_position {
+        padding-top: 3px;
+        font-size: 1em;
+        line-height: 1em; }
     #politicians_container .politician img.politician_img {
       height: 100px;
       vertical-align: top; }

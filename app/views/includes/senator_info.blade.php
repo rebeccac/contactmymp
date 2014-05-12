@@ -10,7 +10,7 @@
          </div>
          <div class="row politician_row1">
             <div class="large-6 medium-6 small-6 columns">
-               <img class="politician_img" src="/images/senator/{{ $senator['image'] }}">
+               <img class="politician_img" src="/images/politicians/{{ $senator['image'] }}">
             </div>
             <div class="large-6 medium-6 small-6 columns">
                <img class="senate_map" src="/images/state_thumbs/{{ $senator['map_thumb'] }}">

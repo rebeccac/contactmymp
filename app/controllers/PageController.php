@@ -186,6 +186,8 @@ class PageController extends \BaseController {
 		$outerministers = Outerminister::orderBy('last_name')->get();
 		$secretaries = Secretary::orderBy('last_name')->get();
 		$page_title = "Email Ministers - Contact My MP";
+
+		$ministers = Minister::getMinistersDetails($ministers);
 		return View::make('page.ministers', array('page_title' => $page_title, 'ministers' => $ministers, 'outerministers' => $outerministers, 'secretaries' => $secretaries));
 	}
 

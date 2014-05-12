@@ -15,4 +15,5 @@ Thumbs.db
 /app/views/lowerhouse/show2.blade.php
 /app/views/upperhouse/show2.blade.php
 /public/js/jquery.slidermenu.js
+/public/images/oldphotos
 /node_modules

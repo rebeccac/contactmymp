@@ -20,7 +20,7 @@
                <p class="politician_title">{{ $senator['first_name'] }} {{ $senator['last_name'] }}</p>
             </div>
             <div class="politician_row1">
-               <img class="politician_img" src="/images/senator/{{ $senator['image'] }}">
+               <img class="politician_img" src="/images/politicians/{{ $senator['image'] }}">
                <div class="sm-links">
                   <i class="fa fa-twitter smt"></i>
                   @if(!is_null($senator['twitter']))

@@ -29,7 +29,7 @@
                 <div class="small">
                 <div class="row" data-equalizer>
                    <div class="large-6 medium-6 small-6 columns" data-equalizer-watch>
-                      <img src="/images/mp/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}">
+                      <img src="/images/politicians/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}">
                    </div>
                    <div class="large-6 medium-6 small-6 columns links" data-equalizer-watch>
                       <div class="s-l">
@@ -140,7 +140,7 @@
              <div class="medium-large">
                 <div class="row" data-equalizer>
                    <div class="large-3 medium-3 small-3 columns" data-equalizer-watch>
-                      <img src="/images/mp/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}">
+                      <img src="/images/politicians/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}">
                    </div>
                    <div class="large-9 medium-9 small-9 columns" data-equalizer-watch>
                       <div class="s-l-icons">

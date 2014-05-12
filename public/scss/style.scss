@@ -28,6 +28,9 @@ $dark: #3e606f;
 $senate_light: lighten(rgb(133, 73, 72), 50%);
 $senate_medium: lighten(rgb(133, 73, 72), 5%);
 $senate_dark: darken(rgb(133, 73, 72), 10%);
+$minister_light: lighten(#3399cc, 30%);
+$minister_medium: #3399cc;
+$minister_dark: darken(#3399cc, 20%);
 $orange: #f8720a;
 $blue: #0072bc;
 
@@ -466,6 +469,15 @@ form.selection-form {
 .senator_dark {
    background-color: $senate_dark;
 }
+.minister_light {
+   background-color: $minister_light;
+}
+.minister_medium {
+   background-color: $minister_medium;
+}
+.minister_dark {
+   background-color: $minister_dark;
+}
 
 #politicians_container {
    width: 100%;
@@ -476,10 +488,11 @@ form.selection-form {
    .politician {
       height: 330px;
       min-width: 273px;
-      margin: 2px 0;
+      max-width: 273px;
+      margin: 5px 0;
       border: 1px solid #bbb;
       display: inline-block;
-      .mp_name, .senator_name, .constituency {
+      .mp_name, .senator_name, .constituency, .minister_name {
          display: inline-block;
          width: 100%;
          position: relative;
@@ -488,16 +501,39 @@ form.selection-form {
          height: 2.6em;
          text-align: left;
       }
+      .politician_position {
+         display: inline-block;
+         font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+         color: $white;
+         font-weight: 200;
+         letter-spacing: 2px;
+         padding-left: 10px;
+         width: 100%;
+         position: relative;
+         margin: 0;
+         height: 3.3em;
+         text-align: left;
+      }
       .politician_title {
          font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
          font-weight: 200;
          font-size: 1.2em;
          color: $white;
-         letter-spacing: 1px;
+         letter-spacing: 2px;
          padding-left: 10px;
       }
+      .minister-position {
+         font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+         font-weight: 200;
+         color: $white;
+         letter-spacing: 1px;
+         padding-left: 10px;
+         line-height: 4em;
+         font-size: 1em;
+      }
       .mp_name:after,
-      .senator_name:after {
+      .senator_name:after,
+      .minister_name:after {
          top: 100%;
          left: 10%;
          border: solid transparent;
@@ -515,6 +551,9 @@ form.selection-form {
       }
       .senator_name:after {
          border-top-color: $senate_medium;
+      }
+      .minister_name:after {
+         border-top-color: $minister_medium;
       }
    }
    img.politician_img {
@@ -789,6 +828,14 @@ form.selection-form {
          max-width: 230px;
          width: 230px;
          height: auto;
+         .politician_position {
+            height: 3.5em;
+            .minister_position {
+               padding-top: 3px;
+               font-size: 1em;
+               line-height: 1em;
+            }
+         }
          img.politician_img {
             height: 100px;
             vertical-align: top;
