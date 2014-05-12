@@ -23,7 +23,7 @@
                <img class="politician_img" src="http://www.openaustralia.org/{{ $rep->image }}">
             </div>
             <div class="large-6 medium-6 small-6 columns">
-               <a href="/maps/{{ $rep->map }}"><img class="politician_img" src="/images/map_thumb/{{ $rep->map_thumb }}"></a>
+               <a href="/maps/{{ $rep->map }}" target="_blank"><img class="politician_img" src="/images/map_thumb/{{ $rep->map_thumb }}"></a>
             </div>
          </div>
          <div class="politician_row2">

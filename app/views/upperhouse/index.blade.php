@@ -24,14 +24,14 @@
                <div class="sm-links">
                   <i class="fa fa-twitter smt"></i>
                   @if(!is_null($senator['twitter']))
-                    <a href="http://www.twitter.com/{{ $senator['twitter'] }}">Twitter</a>
+                    <a href="http://www.twitter.com/{{ $senator['twitter'] }}" target="_blank">Twitter</a>
                   @else
                     <span class="dark_text">N/A</span>
                   @endif
                   <br><br>
                   <i class="fa fa-facebook smf"></i>
                   @if(!is_null($senator['facebook']))
-                    <a href="{{ $senator['facebook'] }}">Facebook</a>
+                    <a href="{{ $senator['facebook'] }}" target="_blank">Facebook</a>
                   @else
                     <span class="dark_text">N/A</span>
                   @endif
