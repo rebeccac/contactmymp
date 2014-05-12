@@ -182,8 +182,11 @@ class PageController extends \BaseController {
 	}
 
 	public function getMinisters() {
+		$ministers = Minister::orderBy('last_name')->get();
+		$outerministers = Outerminister::orderBy('last_name')->get();
+		$secretaries = Secretary::orderBy('last_name')->get();
 		$page_title = "Email Ministers - Contact My MP";
-		return View::make('page.ministers')->with('page_title', $page_title);
+		return View::make('page.ministers', array('page_title' => $page_title, 'ministers' => $ministers, 'outerministers' => $outerministers, 'secretaries' => $secretaries));
 	}
 
 	public function findPolitician() {

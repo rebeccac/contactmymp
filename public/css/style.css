@@ -4933,7 +4933,7 @@ strong {
   min-width: 450px;
   max-width: 450px;
   background-color: #e6e6e6;
-  border: 3px solid #5c5c5c;
+  border: 1px solid #5c5c5c;
   font-family: 'Helvetica', sans-serif;
   font-weight: 200;
   color: #5c5c5c;
@@ -4988,12 +4988,13 @@ h3 {
   margin-left: 8%;
   letter-spacing: 2px; }
 
-.house-sub-heading {
+.house-sub-heading,
+.ministers-sub-heading {
   text-align: center;
   letter-spacing: 2px;
   color: #5c5c5c;
-  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-weight: 200;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 400;
   font-size: 2em;
   font-weight: 200; }
 
@@ -5353,9 +5354,18 @@ form.selection-form {
   min-height: 300px;
   margin: 10px;
   display: inline-block;
-  background-color: #e6e6e6;
-  border: 3px solid #5c5c5c;
-  vertical-align: top; }
+  vertical-align: top;
+  border: 1px solid #ccc; }
+  .search-box i {
+    text-align: center;
+    font-size: 2.3em;
+    margin-bottom: 25px; }
+  .search-box.postcode i {
+    color: #fbab6d; }
+  .search-box.mp i {
+    color: #91aa9d; }
+  .search-box.senator i {
+    color: #c18d8c; }
   .search-box form.politician-selection-form {
     width: 95%;
     margin: 0 auto; }
@@ -5367,20 +5377,22 @@ form.selection-form {
       text-align: center;
       margin: 15px 0 50px 0; }
     .search-box form.politician-selection-form label {
-      font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      font-family: 'Helvetica', sans-serif;
+      font-weight: 400;
       font-weight: 200;
       font-size: 1.7em;
       display: block;
       text-align: center;
-      margin: 15px 0 50px 0; }
+      margin: 15px 0 25px 0; }
     .search-box form.politician-selection-form select {
       width: auto;
       display: block;
-      margin: 0 auto 50px auto;
+      margin: 0 auto 25px auto;
       height: 40px;
       font-family: 'Helvetica', sans-serif;
       font-weight: 400; }
     .search-box form.politician-selection-form input[type=number] {
+      font-family: FontAwesome;
       width: 150px;
       margin: 0 auto 50px auto; }
     .search-box form.politician-selection-form input[type=submit] {
@@ -5691,7 +5703,8 @@ form.selection-form {
         font-size: 1em; }
   #politicians_container .house-results {
     margin-bottom: 30px; }
-    #politicians_container .house-results .house-sub-heading {
+    #politicians_container .house-results .house-sub-heading,
+    #politicians_container .house-results .ministers-sub-heading {
       font-size: 1.3em; }
 
   /* View a Politician */

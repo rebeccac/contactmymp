@@ -105,7 +105,7 @@ strong {
    min-width: 450px;
    max-width: 450px;
    background-color: lighten(#ccc, 10%);
-   border: 3px solid $dark_text;
+   border: 1px solid $dark_text;
    font-family: 'Helvetica', sans-serif;
    font-weight: 200;
    color: $dark_text;
@@ -170,11 +170,12 @@ h3 {
   letter-spacing: 2px;
 }
 
-.house-sub-heading {
+.house-sub-heading,
+.ministers-sub-heading {
    text-align: center;
    letter-spacing: 2px;
    color: $dark_text;
-   @include HelveticaNeue;
+   @include Helvetica;
    font-size: 2em;
    font-weight: 200;
 }
@@ -582,9 +583,28 @@ form.selection-form {
    min-height: 300px;
    margin: 10px;
    display: inline-block;
-   background-color: lighten(#ccc, 10%);
-   border: 3px solid $dark_text;
    vertical-align: top;
+   border: 1px solid #ccc;
+   i {
+      text-align: center;
+      font-size: 2.3em;
+      margin-bottom: 25px;
+   }
+   &.postcode {
+      i {
+         color: lighten($orange, 20%);
+      }
+   }
+   &.mp {
+      i {
+         color: $medium;
+      }
+   }
+   &.senator {
+      i {
+         color: lighten($senate_medium, 20%);
+      }
+   }
    form.politician-selection-form {
       width: 95%;
       margin: 0 auto;
@@ -596,21 +616,23 @@ form.selection-form {
          margin: 15px 0 50px 0;
       }
       label {
-         @include HelveticaNeue;
+         @include Helvetica;
+         font-weight: 200;
          font-size: 1.7em;
          display: block;
          text-align: center;
-         margin: 15px 0 50px 0;
+         margin: 15px 0 25px 0;
       }
       select {
          width: auto;
          display: block;
-         margin: 0 auto 50px auto;
+         margin: 0 auto 25px auto;
          height: 40px;
          @include Helvetica;
 
       }
       input[type=number] {
+         font-family: FontAwesome;
          width: 150px;
          margin: 0 auto 50px auto;
       }
@@ -1034,7 +1056,8 @@ form.selection-form {
       }
       .house-results {
          margin-bottom: 30px;
-         .house-sub-heading {
+         .house-sub-heading,
+         .ministers-sub-heading {
             font-size: 1.3em;
          }
       }
