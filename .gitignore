@@ -10,6 +10,8 @@ Thumbs.db
 /app/config/database.php
 /public/scss/mediaqueries2.scss
 /public/css/mediaqueries2.css
+/public/css/style2.css
+/public/scss/style2.scss
 /public/scss/frontpage_styles2.scss
 /public/css/frontpage_styles2.css
 /app/views/lowerhouse/show2.blade.php
