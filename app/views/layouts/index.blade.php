@@ -12,7 +12,7 @@
 <div class="container">
    <div class="row header">
      <div class="large-12 medium-12 columns">
-     <h1 class="heading dark_text">Contact My MP</h1>
+     <h1 class="heading dark_text">Contact My Politicians</h1>
      </div>
    </div> <!-- row header -->
    @include('includes/menu')
