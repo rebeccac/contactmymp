@@ -47,7 +47,15 @@
 
             </div>
             <div class="large-4 medium-4 s-m-i columns" data-equalizer-watch>
-              <i class="fa fa-twitter"></i><i class="fa fa-facebook"></i><i class="fa fa-envelope-o"></i>
+              <a href="http://www.twitter.com/ContactMyMp" target="_blank">
+                 <i class="fa fa-twitter"></i>
+              </a>
+              <a href="http://www.facebook.com" target="_blank">
+                 <i class="fa fa-facebook"></i>
+              </a>
+              <a href="{{ URL::to('contact') }}">
+                 <i class="fa fa-envelope-o"></i>
+              </a>
             </div>
             <div class="large-4 medium-4 s-m-i columns" data-equalizer-watch>
 

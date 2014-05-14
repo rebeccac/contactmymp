@@ -8,8 +8,5 @@
       <script>
         $(document).foundation();
       </script>
-<!--       // <script>
-      //    $(".heading").fitText(0.55);
-      // </script> -->
   </body>
 </html>
