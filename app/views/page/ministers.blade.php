@@ -8,11 +8,11 @@
       @foreach($ministers as $minister)
          <div class="politician minister_light">
             <div class="politician_position minister_dark">
-               <p class="minister_position">{{ $minister['position'] }}</p>
+               <span class="minister_position">{{ $minister['position'] }}</span>
             </div>
             <div class="clear"></div>
             <div class="minister_name minister_medium">
-               <p class="politician_title">{{ $minister['first_name'] }} {{ $minister['last_name'] }}</p>
+               <span class="politician_title">{{ $minister['first_name'] }} {{ $minister['last_name'] }}</span>
             </div>
             <div class="politician_row1">
                   <img class="politician_img" src="/images/politicians/{{ $minister['image'] }}">
@@ -48,11 +48,11 @@
       @foreach($outerministers as $outerminister)
          <div class="politician minister_light">
             <div class="politician_position minister_dark">
-               <p class="minister_position">{{ $outerminister['position'] }}</p>
+               <span class="minister_position">{{ $outerminister['position'] }}</span>
             </div>
             <div class="clear"></div>
             <div class="minister_name minister_medium">
-               <p class="politician_title">{{ $outerminister['first_name'] }} {{ $outerminister['last_name'] }}</p>
+               <span class="politician_title">{{ $outerminister['first_name'] }} {{ $outerminister['last_name'] }}</span>
             </div>
             <div class="politician_row1">
                   <img class="politician_img" src="/images/politicians/{{ $outerminister['image'] }}">
@@ -88,11 +88,11 @@
       @foreach($secretaries as $secretary)
          <div class="politician minister_light">
             <div class="politician_position minister_dark">
-               <p class="minister_position">{{ $secretary['position'] }}</p>
+               <span class="minister_position">{{ $secretary['position'] }}</span>
             </div>
             <div class="clear"></div>
             <div class="minister_name minister_medium">
-               <p class="politician_title">{{ $secretary['first_name'] }} {{ $secretary['last_name'] }}</p>
+               <span class="politician_title">{{ $secretary['first_name'] }} {{ $secretary['last_name'] }}</span>
             </div>
             <div class="politician_row1">
                   <img class="politician_img" src="/images/politicians/{{ $secretary['image'] }}">

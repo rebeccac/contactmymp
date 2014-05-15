@@ -92,7 +92,7 @@ strong {
 
 #menu-button {
    i {
-      color: $dark_text;
+      color: lighten($dark_text, 15%);
    }
 }
 
@@ -157,7 +157,7 @@ h3 {
   color: $dark_text;
   text-align: right;
   padding-right: 0;
-  font-size: 6em;
+  font-size: 5.6em;
 }
 
 /* Select My MP Page */
@@ -206,7 +206,7 @@ h3 {
       position: relative;
       background-color: $medium;
       .constituency_title {
-font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;         font-weight: 200;
+         font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;         font-weight: 200;
          font-size: 1.5em;
          color: $white;
          letter-spacing: 2px;
@@ -511,8 +511,16 @@ form.selection-form {
          width: 100%;
          position: relative;
          margin: 0;
-         height: 3.3em;
+         height: 3.7em;
          text-align: left;
+         .minister_position {
+            font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-weight: 200;
+            color: $white;
+            letter-spacing: 1px;
+            line-height: 1.1em;
+            font-size: 1.1em;
+         }
       }
       .politician_title {
          font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -522,15 +530,7 @@ form.selection-form {
          letter-spacing: 2px;
          padding-left: 10px;
       }
-      .minister-position {
-         font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-         font-weight: 200;
-         color: $white;
-         letter-spacing: 1px;
-         padding-left: 10px;
-         line-height: 4em;
-         font-size: 1em;
-      }
+
       .mp_name:after,
       .senator_name:after,
       .minister_name:after {
@@ -743,7 +743,7 @@ form.selection-form {
 
 @media all and (max-width: 1023px) {
    .heading {
-      font-size: 4.85em;
+      font-size: 4em;
    }
 }
 
@@ -800,7 +800,7 @@ form.selection-form {
    }
 
    .heading {
-      font-size: 4em;
+      font-size: 3.5em;
    }
 
    .sub-heading {
@@ -880,7 +880,7 @@ form.selection-form {
    }
 
    .heading {
-      font-size: 3.5em;
+      font-size: 2.6em;
    }
 
    .sub-heading {
@@ -917,6 +917,10 @@ form.selection-form {
 
 
 @media all and (max-width: 570px) {
+   .heading {
+      font-size: 2.3em;
+   }
+
    .box {
       min-width: 399px;
       max-width: 399px;
@@ -1020,8 +1024,13 @@ form.selection-form {
       border: 0;
    }
 
+   .header {
+      right: 10px;
+      top: 10px;
+   }
    .heading {
-      font-size: 2.2em;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 1.4em;
    }
 
    .box {
@@ -1056,9 +1065,17 @@ form.selection-form {
 }
 
 @media all and (max-width: 320px) {
+   .header {
+      right: 10px;
+      top: 10px;
+   }
 
    .heading {
-      font-size: 1.9em;
+      position: absolute;
+      top: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 1.3em;
+      margin-right: 0;
    }
 
    .sub-heading {
