@@ -4605,7 +4605,7 @@ body {
 .heading {
   font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 5.6em;
+  font-size: 6em;
   letter-spacing: 2px;
   color: #f2f2f2;
   text-align: right;
@@ -4672,7 +4672,7 @@ footer {
 /* Media Queries */
 @media all and (max-width: 1024px) {
   .heading {
-    font-size: 4em; } }
+    font-size: 4.85em; } }
 @media all and (max-width: 768px) {
   .page-body {
     overflow-x: hidden;
@@ -4685,7 +4685,7 @@ footer {
     left: 120px; }
 
   .heading {
-    font-size: 3.5em;
+    font-size: 4.8em;
     font-weight: 100; }
 
   .postcode-search {
@@ -4721,8 +4721,7 @@ footer {
     left: 120px; }
 
   .heading {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 2.1em; }
+    font-size: 3.5em; }
 
   .postcode-search .postcode-form {
     background-color: rgba(255, 255, 255, 0.35);
@@ -4734,12 +4733,12 @@ footer {
       margin: 3px 8px;
       padding: 9px 0;
       display: inline-block; } }
-@media all and (max-width: 320px) {
+@media all and (max-width: 480px) {
   .heading {
     position: absolute;
     top: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.7em; } }
+    right: 0;
+    font-size: 2.2em; } }
 @media all and (max-width: 768px) {
   .menu {
     display: none; }

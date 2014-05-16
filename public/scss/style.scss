@@ -51,7 +51,11 @@ body {
 
 .container {
    width: 100%;
-   height: 100%;
+   // height: 100%;
+
+   min-height: 100%;
+   height: auto !important;
+   margin: 0 auto -2em;
 }
 
 .content {
@@ -157,7 +161,13 @@ h3 {
   color: $dark_text;
   text-align: right;
   padding-right: 0;
-  font-size: 5.6em;
+  font-size: 6em;
+}
+
+.sub-heading {
+  margin-left: 8%;
+  letter-spacing: 2px;
+  font-size: 2.2em;
 }
 
 /* Select My MP Page */
@@ -166,11 +176,6 @@ h3 {
    position: relative;
    z-index: 1;
    width: 100%;
-}
-
-.sub-heading {
-  margin-left: 8%;
-  letter-spacing: 2px;
 }
 
 .house-sub-heading,
@@ -242,23 +247,23 @@ h3 {
     }
   }
 
-  .radio_button {
-     width: 100%;
-     position: relative;
-     top: 0;
-    fieldset {
-      width: 100%;
-      position: relative;
-      left: -2px;
-      bottom: 0;
-      border: 0;
-      input[type=radio] {
-         width: 25px;
-         margin: 20px auto 0 auto;
-         display: block;
-      }
-    }
-  }
+  // .radio_button {
+  //    width: 100%;
+  //    position: relative;
+  //    top: 0;
+  //   fieldset {
+  //     width: 100%;
+  //     position: relative;
+  //     left: -2px;
+  //     bottom: 0;
+  //     border: 0;
+  //     input[type=radio] {
+  //        width: 25px;
+  //        margin: 20px auto 0 auto;
+  //        display: block;
+  //     }
+  //   }
+  // }
 
   .submit_button {
     margin-top: 50px;
@@ -271,9 +276,18 @@ h3 {
 #mp_email_submit,
 #contact_form_submit {
    @include Submit;
-   margin-left: 8%;
    text-align: center;
 }
+
+#electorate_submit,
+#mp_email_submit {
+   margin-left: 8%;
+}
+
+#contact_form_submit {
+   margin-left: 2%;
+}
+
 
 .light-bg {
    background-color: $light;
@@ -281,6 +295,14 @@ h3 {
 
 .no-bg {
    background-color: transparent;
+}
+
+.constituency-heading {
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin-left: 2%;
+  letter-spacing: 2px;
+  font-size: 2.8em;
+  font-weight: 200;
 }
 
 .politician-info-container {
@@ -296,7 +318,7 @@ h3 {
    line-height: 1.5em;
    padding: 5px 5px 5px 10px;
    height: 46px;
-   margin: 0;
+   margin: 0 0 0 0;
 }
 
 .row.spacing {
@@ -326,6 +348,9 @@ h3 {
   a {
      color: $dark_text;
   }
+  img {
+     margin-top: 15px;
+  }
 }
 
 hr.med_grey {
@@ -347,7 +372,9 @@ hr.med_grey {
       @include Helvetica;
       font-weight: 500;
       font-size: 1em;
-      color: $dark;
+      color: $white;
+      background-color: $minister_medium;
+      padding: 5px 3px;
    }
    input[type=text],
    input[type=email],
@@ -390,7 +417,6 @@ hr.med_grey {
      background-color: transparent;
     img {
       float: right;
-      padding: 0;
     }
   }
 }
@@ -452,7 +478,8 @@ form.selection-form {
 
 /* Background colours */
 .mp_light {
-   background-color: $light;
+   // background-color: $light;
+   background: url(/images/lowerhousebg.jpg);
 }
 .mp_medium {
    background-color: $medium;
@@ -461,7 +488,8 @@ form.selection-form {
    background-color: $dark;
 }
 .senator_light {
-   background-color: $senate_light;
+   // background-color: $senate_light;
+   background: url(/images/upperhousebg.jpg);
 }
 .senator_medium {
    background-color: $senate_medium;
@@ -470,7 +498,8 @@ form.selection-form {
    background-color: $senate_dark;
 }
 .minister_light {
-   background-color: $minister_light;
+   // background-color: $minister_light;
+   background: url(/images/ministersbg.jpg);
 }
 .minister_medium {
    background-color: $minister_medium;
@@ -508,16 +537,17 @@ form.selection-form {
          font-weight: 200;
          letter-spacing: 2px;
          padding-left: 10px;
+         padding-top: 3px;
          width: 100%;
          position: relative;
          margin: 0;
-         height: 3.7em;
+         height: 4em;
          text-align: left;
          .minister_position {
             font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-weight: 200;
             color: $white;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             line-height: 1.1em;
             font-size: 1.1em;
          }
@@ -645,7 +675,7 @@ form.selection-form {
       }
    }
    form.politician-selection-form {
-      width: 95%;
+      width: 100%;
       margin: 0 auto;
       .title {
          @include HelveticaNeue;
@@ -660,7 +690,9 @@ form.selection-form {
          font-size: 1.7em;
          display: block;
          text-align: center;
-         margin: 15px 0 25px 0;
+         margin: 0 0 25px 0;
+         background-color: $blue;
+         color: $white;
       }
       select {
          width: auto;
@@ -741,9 +773,14 @@ form.selection-form {
    }
 }
 
+
 @media all and (max-width: 1023px) {
    .heading {
-      font-size: 4em;
+      font-size: 4.85em;
+   }
+
+   .sub-heading {
+      font-size: 2.2em;
    }
 }
 
@@ -800,16 +837,20 @@ form.selection-form {
    }
 
    .heading {
-      font-size: 3.5em;
+      font-size: 4em;
    }
 
    .sub-heading {
-      font-size: 2.8em;
+      font-size: 2.2em;
    }
    .container {
       width: 100%;
       height: 100%;
       border-left: 10px solid transparent;
+
+      min-height: 100%;
+	   height: auto !important;
+	   margin: 0 auto -2em;
    }
 
    .content {
@@ -880,11 +921,11 @@ form.selection-form {
    }
 
    .heading {
-      font-size: 2.6em;
+      font-size: 3.5em;
    }
 
    .sub-heading {
-      font-size: 2.5em;
+      font-size: 2em;
    }
 
 .box {
@@ -918,7 +959,15 @@ form.selection-form {
 
 @media all and (max-width: 570px) {
    .heading {
-      font-size: 2.3em;
+      font-size: 2.8em;
+   }
+
+   .sub-heading {
+      font-size: 1.9em;
+   }
+
+   .constituency-heading {
+     font-size: 1.9em;
    }
 
    .box {
@@ -1029,8 +1078,15 @@ form.selection-form {
       top: 10px;
    }
    .heading {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 1.4em;
+      font-size: 2.2em;
+   }
+
+   .sub-heading {
+      font-size: 1.7em;
+   }
+
+   .constituency-heading {
+     font-size: 1.7em;
    }
 
    .box {
@@ -1073,21 +1129,20 @@ form.selection-form {
    .heading {
       position: absolute;
       top: 0;
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 1.3em;
+      font-size: 1.9em;
       margin-right: 0;
    }
 
    .sub-heading {
-      font-size: 1.7em;
+      font-size: 1.5em;
+   }
+
+   .constituency-heading {
+     font-size: 1.5em;
    }
 
    .content {
       padding-top: 70px;
-   }
-
-   .sub-heading {
-      font-size: 2.4em;
    }
 
    .box {

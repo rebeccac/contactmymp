@@ -16,7 +16,7 @@
       <div class="row header" data-equalizer>
         <div class="large-1 medium-1 small-1 columns" data-equalizer-watch></div>
         <div class="large-11 medium-11 small-11 columns title" data-equalizer-watch>
-          <h1 class="heading">Contact My Politicians</h1>
+          <h1 class="heading">Contact My MP</h1>
         </div>
       </div> <!-- row header -->
 

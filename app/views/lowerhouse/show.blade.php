@@ -4,7 +4,7 @@
 <div class="contact-form-content">
   <div class="row">
      <div class="large-12 medium-12 small-12 columns">
-        <h2 class="sub-heading dark_text">{{ $mp['constituency'] }}</h2>
+        <h2 class="constituency-heading dark_text">{{ $mp['constituency'] }}</h2>
      </div>
      <div class="politician-info-container">
 
@@ -23,7 +23,7 @@
            @endif
 
            <div class="row">
-             <div class="large-12 medium-12 small-12 columns pol_info3 mp_light">
+             <div class="large-12 medium-12 small-12 columns pol_info3">
 
                 <!-- 320px - 767px -->
                 <div class="small">
@@ -173,7 +173,6 @@
                               <i class="fa fa-facebook"></i>
                            @endif
                         </div>
-
                       </div>
                    </div>
 
@@ -236,19 +235,18 @@
                         <br>
                         <br>
                       </div>
-                      </div>
-
+                    </div>
                   </div>
              </div>
-
              <!-- end 768px+ -->
-
-
+          </div>
+      </div><!-- politician-container-box -->
             <!-- all sizes -->
              <div class="row" data-equalizer>
                 <div class="large-12 medium-12 small-12 pol_info1 mp_medium" data-equalizer-watch>
                    Email {{ $mp['first_name'] }} {{ $mp['last_name'] }}
                 </div>
+             </div>
              <div class="row" data-equalizer>
                 <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
                     {{ Form::open(array('url' => 'mp/sendemail', 'class' => 'contact_form')) }}
@@ -270,11 +268,6 @@
                     {{ Form::close() }}
                 </div>
              </div>
-
-           </div>
-
-</div><!-- politician-container-box -->
-  </div>
-</div>
-
+          </div>
+       </div>
 @stop

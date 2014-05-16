@@ -4,7 +4,7 @@
 <div class="contact-form-content">
   <div class="row">
      <div class="large-12 medium-12 small-12 columns">
-        <h2 class="sub-heading dark_text">{{ $senator['state'] }}</h2>
+        <h2 class="constituency-heading dark_text">{{ $senator['state'] }}</h2>
      </div>
      <div class="politician-info-container">
 
@@ -23,9 +23,9 @@
            @endif
 
            <div class="row">
-             <div class="large-12 medium-12 small-12 columns pol_info3 senator_light">
+             <div class="large-12 medium-12 small-12 columns pol_info3">
 
-                <!-- 320px -->
+                <!-- 320px -767px -->
                 <div class="small">
                 <div class="row" data-equalizer>
                    <div class="large-6 medium-6 small-6 columns" data-equalizer-watch>
@@ -132,7 +132,7 @@
                 </div>
              </div><!-- 12 pol_info3 senator_light -->
           </div>
-             <!-- end 320px -->
+             <!-- end 320px -767px -->
 
              <!-- 768px+ -->
              <div class="medium-large">
@@ -171,7 +171,6 @@
                               <i class="fa fa-facebook"></i>
                            @endif
                         </div>
-
                        </div>
                     </div>
 
@@ -233,41 +232,40 @@
                         @endif
                         <br>
                         <br>
-                       </div>
-                     </div>
-                 </div>
+                      </div>
+                  </div>
+                </div>
              </div>
              <!-- end 768px+ -->
-
+          </div>
+       </div><!-- politician-container-box -->
             <!-- all sizes -->
-             <div class="row" data-equalizer>
-                <div class="large-12 medium-12 small-12 pol_info1 senator_medium" data-equalizer-watch>
-                   Email {{ $senator['first_name'] }} {{ $senator['last_name'] }}
-                </div>
-             <div class="row" data-equalizer>
-                <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
-                    {{ Form::open(array('url' => 'mp/sendemail', 'class' => 'contact_form')) }}
-                       {{ Form::label('email', 'Your email address: ') }}
-                       <br>
-                       {{ Form::email('email', $value = null, $attributes = array('class' => 'inputs')); }}
-                       <br>
-                       {{ Form::label('subject', 'Subject:') }}
-                       <br>
-                       {{ Form::text('subject', $value = null, $attributes = array('class' => 'inputs')); }}
-                       <br>
-                       {{ Form::label('message', 'Message:') }}
-                       <br>
-                       {{ Form::textarea('message', $value = null, $attributes = array('class' => 'inputs')); }}
-                       <br>
-                       <div>
-                           <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
-                       </div>
-                    {{ Form::close() }}
-                </div>
+          <div class="row" data-equalizer>
+             <div class="large-12 medium-12 small-12 pol_info1 senator_medium" data-equalizer-watch>
+                Email {{ $senator['first_name'] }} {{ $senator['last_name'] }}
              </div>
-           </div>
-      </div><!-- politician-container-box -->
-  </div>
-</div>
-
+         </div>
+          <div class="row" data-equalizer>
+             <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
+                 {{ Form::open(array('url' => 'mp/sendemail', 'class' => 'contact_form')) }}
+                    {{ Form::label('email', 'Your email address: ') }}
+                    <br>
+                    {{ Form::email('email', $value = null, $attributes = array('class' => 'inputs')); }}
+                    <br>
+                    {{ Form::label('subject', 'Subject:') }}
+                    <br>
+                    {{ Form::text('subject', $value = null, $attributes = array('class' => 'inputs')); }}
+                    <br>
+                    {{ Form::label('message', 'Message:') }}
+                    <br>
+                    {{ Form::textarea('message', $value = null, $attributes = array('class' => 'inputs')); }}
+                    <br>
+                    <div>
+                        <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
+                    </div>
+                 {{ Form::close() }}
+             </div>
+          </div>
+       </div>
+    </div>
 @stop

@@ -4889,7 +4889,9 @@ body {
 
 .container {
   width: 100%;
-  height: 100%; }
+  min-height: 100%;
+  height: auto !important;
+  margin: 0 auto -2em; }
 
 .content {
   height: 100%;
@@ -4976,17 +4978,18 @@ h3 {
   color: #5c5c5c;
   text-align: right;
   padding-right: 0;
-  font-size: 5.6em; }
+  font-size: 6em; }
+
+.sub-heading {
+  margin-left: 8%;
+  letter-spacing: 2px;
+  font-size: 2.2em; }
 
 /* Select My MP Page */
 .contents {
   position: relative;
   z-index: 1;
   width: 100%; }
-
-.sub-heading {
-  margin-left: 8%;
-  letter-spacing: 2px; }
 
 .house-sub-heading,
 .ministers-sub-heading {
@@ -5049,20 +5052,6 @@ h3 {
       .constituency-form .constituency ul li {
         margin-top: 10px;
         color: #5c5c5c; }
-  .constituency-form .radio_button {
-    width: 100%;
-    position: relative;
-    top: 0; }
-    .constituency-form .radio_button fieldset {
-      width: 100%;
-      position: relative;
-      left: -2px;
-      bottom: 0;
-      border: 0; }
-      .constituency-form .radio_button fieldset input[type=radio] {
-        width: 25px;
-        margin: 20px auto 0 auto;
-        display: block; }
   .constituency-form .submit_button {
     margin-top: 50px;
     text-align: left; }
@@ -5077,14 +5066,27 @@ h3 {
   border: 0;
   color: #f2f2eb;
   font-size: 1em;
-  margin-left: 8%;
   text-align: center; }
+
+#electorate_submit,
+#mp_email_submit {
+  margin-left: 8%; }
+
+#contact_form_submit {
+  margin-left: 2%; }
 
 .light-bg {
   background-color: #d1dbbd; }
 
 .no-bg {
   background-color: transparent; }
+
+.constituency-heading {
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin-left: 2%;
+  letter-spacing: 2px;
+  font-size: 2.8em;
+  font-weight: 200; }
 
 .politician-info-container {
   margin: 0 10px; }
@@ -5098,7 +5100,7 @@ h3 {
   line-height: 1.5em;
   padding: 5px 5px 5px 10px;
   height: 46px;
-  margin: 0; }
+  margin: 0 0 0 0; }
 
 .row.spacing {
   padding: 15px 10px 10px 10px; }
@@ -5125,6 +5127,8 @@ h3 {
     font-size: 1.3em; }
   .pol_info3 a {
     color: #5c5c5c; }
+  .pol_info3 img {
+    margin-top: 15px; }
 
 hr.med_grey {
   margin-top: 20px;
@@ -5145,7 +5149,9 @@ hr.med_grey {
     font-weight: 400;
     font-weight: 500;
     font-size: 1em;
-    color: #3e606f; }
+    color: #f2f2eb;
+    background-color: #3399cc;
+    padding: 5px 3px; }
   .contact_form input[type=text],
   .contact_form input[type=email],
   .contact_form textarea {
@@ -5184,8 +5190,7 @@ hr.med_grey {
   .contact-form-content .image {
     background-color: transparent; }
     .contact-form-content .image img {
-      float: right;
-      padding: 0; }
+      float: right; }
 
 .empty {
   height: auto;
@@ -5238,7 +5243,7 @@ form.selection-form {
 
 /* Background colours */
 .mp_light {
-  background-color: #d1dbbd; }
+  background: url(/images/lowerhousebg.jpg); }
 
 .mp_medium {
   background-color: #91aa9d; }
@@ -5247,7 +5252,7 @@ form.selection-form {
   background-color: #3e606f; }
 
 .senator_light {
-  background-color: #eddfdf; }
+  background: url(/images/upperhousebg.jpg); }
 
 .senator_medium {
   background-color: #965251; }
@@ -5256,7 +5261,7 @@ form.selection-form {
   background-color: #643736; }
 
 .minister_light {
-  background-color: #add6eb; }
+  background: url(/images/ministersbg.jpg); }
 
 .minister_medium {
   background-color: #3399cc; }
@@ -5292,16 +5297,17 @@ form.selection-form {
       font-weight: 200;
       letter-spacing: 2px;
       padding-left: 10px;
+      padding-top: 3px;
       width: 100%;
       position: relative;
       margin: 0;
-      height: 3.7em;
+      height: 4em;
       text-align: left; }
       #politicians_container .politician .politician_position .minister_position {
         font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-weight: 200;
         color: #f2f2eb;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         line-height: 1.1em;
         font-size: 1.1em; }
     #politicians_container .politician .politician_title {
@@ -5399,7 +5405,7 @@ form.selection-form {
   .search-box.senator i {
     color: #c18d8c; }
   .search-box form.politician-selection-form {
-    width: 95%;
+    width: 100%;
     margin: 0 auto; }
     .search-box form.politician-selection-form .title {
       font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -5415,7 +5421,9 @@ form.selection-form {
       font-size: 1.7em;
       display: block;
       text-align: center;
-      margin: 15px 0 25px 0; }
+      margin: 0 0 25px 0;
+      background-color: #0072bc;
+      color: #f2f2eb; }
     .search-box form.politician-selection-form select {
       width: auto;
       display: block;
@@ -5482,7 +5490,10 @@ form.selection-form {
     padding: 0 8px; } }
 @media all and (max-width: 1023px) {
   .heading {
-    font-size: 4em; } }
+    font-size: 4.85em; }
+
+  .sub-heading {
+    font-size: 2.2em; } }
 @media all and (max-width: 768px) {
   .page-body {
     overflow-x: hidden;
@@ -5522,15 +5533,18 @@ form.selection-form {
     padding: 0 8px; }
 
   .heading {
-    font-size: 3.5em; }
+    font-size: 4em; }
 
   .sub-heading {
-    font-size: 2.8em; }
+    font-size: 2.2em; }
 
   .container {
     width: 100%;
     height: 100%;
-    border-left: 10px solid transparent; }
+    border-left: 10px solid transparent;
+    min-height: 100%;
+    height: auto !important;
+    margin: 0 auto -2em; }
 
   .content {
     max-width: 100%;
@@ -5582,10 +5596,10 @@ form.selection-form {
     border: 0; }
 
   .heading {
-    font-size: 2.6em; }
+    font-size: 3.5em; }
 
   .sub-heading {
-    font-size: 2.5em; }
+    font-size: 2em; }
 
   .box {
     width: 60%; }
@@ -5607,7 +5621,13 @@ form.selection-form {
         font-size: 0.9em; } }
 @media all and (max-width: 570px) {
   .heading {
-    font-size: 2.3em; }
+    font-size: 2.8em; }
+
+  .sub-heading {
+    font-size: 1.9em; }
+
+  .constituency-heading {
+    font-size: 1.9em; }
 
   .box {
     min-width: 399px;
@@ -5689,8 +5709,13 @@ form.selection-form {
     top: 10px; }
 
   .heading {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.4em; }
+    font-size: 2.2em; }
+
+  .sub-heading {
+    font-size: 1.7em; }
+
+  .constituency-heading {
+    font-size: 1.7em; }
 
   .box {
     width: 80%;
@@ -5721,18 +5746,17 @@ form.selection-form {
   .heading {
     position: absolute;
     top: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.9em;
     margin-right: 0; }
 
   .sub-heading {
-    font-size: 1.7em; }
+    font-size: 1.5em; }
+
+  .constituency-heading {
+    font-size: 1.5em; }
 
   .content {
     padding-top: 70px; }
-
-  .sub-heading {
-    font-size: 2.4em; }
 
   .box {
     width: 90%;
