@@ -4890,8 +4890,7 @@ body {
 .container {
   width: 100%;
   min-height: 100%;
-  height: auto !important;
-  margin: 0 auto -2em; }
+  height: auto !important; }
 
 .content {
   height: 100%;
@@ -4947,7 +4946,6 @@ strong {
     color: #b2b2b2; }
 
 h1 {
-  width: 100%;
   text-align: center;
   font-weight: 100;
   margin: 0; }
@@ -4968,7 +4966,6 @@ h3 {
 .header {
   position: absolute;
   top: 0;
-  right: 20px;
   z-index: 0; }
 
 .heading {
@@ -4977,8 +4974,22 @@ h3 {
   letter-spacing: 2px;
   color: #5c5c5c;
   text-align: right;
-  padding-right: 0;
-  font-size: 6em; }
+  line-height: 1em;
+  padding-right: 20px;
+  font-size: 3.8em;
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  float: right; }
+
+.logo {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+  padding-right: 15px;
+  float: right;
+  position: relative;
+  top: 20px; }
 
 .sub-heading {
   margin-left: 8%;
@@ -5150,8 +5161,8 @@ hr.med_grey {
     font-weight: 500;
     font-size: 1em;
     color: #f2f2eb;
-    background-color: #3399cc;
-    padding: 5px 3px; }
+    background-color: #1f5c7a;
+    padding: 5px 10px; }
   .contact_form input[type=text],
   .contact_form input[type=email],
   .contact_form textarea {
@@ -5159,7 +5170,7 @@ hr.med_grey {
     font-weight: 400;
     font-size: 1em;
     color: #3e606f;
-    border: 1px solid #91aa9d;
+    border: 1px solid #5c5c5c;
     background-color: #f2f2eb;
     padding: 5px 3px; }
   .contact_form textarea {
@@ -5490,7 +5501,7 @@ form.selection-form {
     padding: 0 8px; } }
 @media all and (max-width: 1023px) {
   .heading {
-    font-size: 4.85em; }
+    font-size: 3.8em; }
 
   .sub-heading {
     font-size: 2.2em; } }
@@ -5533,7 +5544,7 @@ form.selection-form {
     padding: 0 8px; }
 
   .heading {
-    font-size: 4em; }
+    font-size: 3.8em; }
 
   .sub-heading {
     font-size: 2.2em; }
@@ -5623,6 +5634,9 @@ form.selection-form {
   .heading {
     font-size: 2.8em; }
 
+  .logo {
+    width: 170px; }
+
   .sub-heading {
     font-size: 1.9em; }
 
@@ -5709,7 +5723,10 @@ form.selection-form {
     top: 10px; }
 
   .heading {
-    font-size: 2.2em; }
+    font-size: 2.3em; }
+
+  .logo {
+    width: 140px; }
 
   .sub-heading {
     font-size: 1.7em; }
@@ -5739,18 +5756,15 @@ form.selection-form {
       #politicians_container .politician .sm-links a {
         font-size: 1em; } }
 @media all and (max-width: 320px) {
-  .header {
-    right: 10px;
-    top: 10px; }
-
   .heading {
-    position: absolute;
-    top: 0;
-    font-size: 1.9em;
-    margin-right: 0; }
+    font-size: 1.9em; }
+
+  .logo {
+    width: 100px; }
 
   .sub-heading {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    margin-top: 35px; }
 
   .constituency-heading {
     font-size: 1.5em; }

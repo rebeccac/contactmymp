@@ -55,7 +55,7 @@ body {
 
    min-height: 100%;
    height: auto !important;
-   margin: 0 auto -2em;
+   // margin: 0 auto -2em;
 }
 
 .content {
@@ -127,7 +127,7 @@ strong {
 
 
 h1 {
-  width: 100%;
+  // width: 100%;
   text-align: center;
   font-weight: 100;
   margin: 0;
@@ -150,7 +150,6 @@ h3 {
 .header {
    position: absolute;
    top: 0;
-   right: 20px;
    z-index: 0;
 }
 
@@ -160,8 +159,23 @@ h3 {
   letter-spacing: 2px;
   color: $dark_text;
   text-align: right;
-  padding-right: 0;
-  font-size: 6em;
+  line-height: 1em;
+  padding-right: 20px;
+  font-size: 3.8em;
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  float: right;
+}
+
+.logo {
+   width: 200px;
+   height: auto;
+   display: inline-block;
+   padding-right: 15px;
+   float: right;
+   position: relative;
+   top: 20px;
 }
 
 .sub-heading {
@@ -247,24 +261,6 @@ h3 {
     }
   }
 
-  // .radio_button {
-  //    width: 100%;
-  //    position: relative;
-  //    top: 0;
-  //   fieldset {
-  //     width: 100%;
-  //     position: relative;
-  //     left: -2px;
-  //     bottom: 0;
-  //     border: 0;
-  //     input[type=radio] {
-  //        width: 25px;
-  //        margin: 20px auto 0 auto;
-  //        display: block;
-  //     }
-  //   }
-  // }
-
   .submit_button {
     margin-top: 50px;
     text-align: left;
@@ -287,7 +283,6 @@ h3 {
 #contact_form_submit {
    margin-left: 2%;
 }
-
 
 .light-bg {
    background-color: $light;
@@ -373,8 +368,8 @@ hr.med_grey {
       font-weight: 500;
       font-size: 1em;
       color: $white;
-      background-color: $minister_medium;
-      padding: 5px 3px;
+      background-color: $minister_dark;
+      padding: 5px 10px;
    }
    input[type=text],
    input[type=email],
@@ -382,7 +377,7 @@ hr.med_grey {
       @include Helvetica;
       font-size: 1em;
       color: $dark;
-      border: 1px solid $medium;
+      border: 1px solid $dark_text;
       background-color: $white;
       padding:5px 3px;
    }
@@ -478,7 +473,6 @@ form.selection-form {
 
 /* Background colours */
 .mp_light {
-   // background-color: $light;
    background: url(/images/lowerhousebg.jpg);
 }
 .mp_medium {
@@ -488,7 +482,6 @@ form.selection-form {
    background-color: $dark;
 }
 .senator_light {
-   // background-color: $senate_light;
    background: url(/images/upperhousebg.jpg);
 }
 .senator_medium {
@@ -498,7 +491,6 @@ form.selection-form {
    background-color: $senate_dark;
 }
 .minister_light {
-   // background-color: $minister_light;
    background: url(/images/ministersbg.jpg);
 }
 .minister_medium {
@@ -776,7 +768,7 @@ form.selection-form {
 
 @media all and (max-width: 1023px) {
    .heading {
-      font-size: 4.85em;
+      font-size: 3.8em;
    }
 
    .sub-heading {
@@ -837,7 +829,7 @@ form.selection-form {
    }
 
    .heading {
-      font-size: 4em;
+      font-size: 3.8em;
    }
 
    .sub-heading {
@@ -962,6 +954,10 @@ form.selection-form {
       font-size: 2.8em;
    }
 
+   .logo {
+      width: 170px;
+   }
+
    .sub-heading {
       font-size: 1.9em;
    }
@@ -998,8 +994,6 @@ form.selection-form {
          }
       }
    }
-
-
 
    /* View a Politician */
    .small {
@@ -1078,7 +1072,11 @@ form.selection-form {
       top: 10px;
    }
    .heading {
-      font-size: 2.2em;
+      font-size: 2.3em;
+   }
+
+   .logo {
+      width: 140px;
    }
 
    .sub-heading {
@@ -1122,19 +1120,21 @@ form.selection-form {
 
 @media all and (max-width: 320px) {
    .header {
-      right: 10px;
-      top: 10px;
+      // right: 10px;
+      // top: 10px;
    }
 
    .heading {
-      position: absolute;
-      top: 0;
       font-size: 1.9em;
-      margin-right: 0;
+      // margin-right: 0;
    }
 
+   .logo {
+      width: 100px;
+   }
    .sub-heading {
       font-size: 1.5em;
+      margin-top: 35px;
    }
 
    .constituency-heading {

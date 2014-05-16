@@ -11,15 +11,6 @@
                </div>
             </a>
          </li>
-         <li class="menu-section">
-            <a href="{{ URL::to('/about') }}">
-               <div class="section-contents">
-                  <i class="fa fa-info"></i>
-                  <br>
-                  About
-               </div>
-            </a>
-         </li>
       <li class="menu-section">
          <ul class="sub-menu">
             <li class="sub-menu-section top">
@@ -52,6 +43,15 @@
                <i class="fa fa-user"></i>
                <br>
                Email Ministers
+            </div>
+         </a>
+      </li>
+      <li class="menu-section">
+         <a href="{{ URL::to('/about') }}">
+            <div class="section-contents">
+               <i class="fa fa-info"></i>
+               <br>
+               About
             </div>
          </a>
       </li>
@@ -80,15 +80,6 @@
                </div>
             </a>
          </li>
-         <li class="menu-section">
-            <a href="{{ URL::to('about') }}">
-               <div class="section-contents">
-                  <i class="fa fa-info"></i>
-                  <br>
-                  About
-               </div>
-            </a>
-         </li>
       <li class="menu-section">
          <ul class="sub-menu">
             <li class="sub-menu-section top">
@@ -121,6 +112,15 @@
                <i class="fa fa-user"></i>
                <br>
                Email Ministers
+            </div>
+         </a>
+      </li>
+      <li class="menu-section">
+         <a href="{{ URL::to('about') }}">
+            <div class="section-contents">
+               <i class="fa fa-info"></i>
+               <br>
+               About
             </div>
          </a>
       </li>

@@ -249,15 +249,12 @@
              <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
                  {{ Form::open(array('url' => 'mp/sendemail', 'class' => 'contact_form')) }}
                     {{ Form::label('email', 'Your email address: ') }}
-                    <br>
                     {{ Form::email('email', $value = null, $attributes = array('class' => 'inputs')); }}
                     <br>
                     {{ Form::label('subject', 'Subject:') }}
-                    <br>
                     {{ Form::text('subject', $value = null, $attributes = array('class' => 'inputs')); }}
                     <br>
                     {{ Form::label('message', 'Message:') }}
-                    <br>
                     {{ Form::textarea('message', $value = null, $attributes = array('class' => 'inputs')); }}
                     <br>
                     <div>
