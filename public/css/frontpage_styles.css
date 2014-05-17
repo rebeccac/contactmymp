@@ -4580,6 +4580,9 @@ body {
 .clear {
   clear: both; }
 
+h1 {
+  margin: 0; }
+
 #menu-button.white_text i {
   color: rgba(255, 255, 255, 0.8); }
 
@@ -4599,17 +4602,31 @@ body {
 .header {
   width: 100%;
   position: absolute;
-  top: 20px;
+  top: 0;
   vertical-align: middle; }
 
 .heading {
   font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 6em;
   letter-spacing: 2px;
   color: #f2f2f2;
   text-align: right;
-  padding-right: 20px; }
+  line-height: 1em;
+  padding-right: 20px;
+  font-size: 3.8em;
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  float: right; }
+
+.logo {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+  padding-right: 15px;
+  float: right;
+  position: relative;
+  top: 20px; }
 
 .postcode-search {
   width: 100%;
@@ -4672,7 +4689,7 @@ footer {
 /* Media Queries */
 @media all and (max-width: 1024px) {
   .heading {
-    font-size: 4.85em; } }
+    font-size: 3.8em; } }
 @media all and (max-width: 768px) {
   .page-body {
     overflow-x: hidden;
@@ -4683,10 +4700,6 @@ footer {
 
   .page-body-pushed {
     left: 120px; }
-
-  .heading {
-    font-size: 4.8em;
-    font-weight: 100; }
 
   .postcode-search {
     top: 20%; }
@@ -4733,12 +4746,32 @@ footer {
       margin: 3px 8px;
       padding: 9px 0;
       display: inline-block; } }
+@media all and (max-width: 570px) {
+  .heading {
+    font-size: 2.8em; }
+
+  .logo {
+    width: 170px; } }
 @media all and (max-width: 480px) {
   .heading {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 2.2em; } }
+    font-size: 2.2em; }
+
+  .logo {
+    width: 90px; } }
+@media all and (max-width: 320px) {
+  .title {
+    margin: 0;
+    padding: 0; }
+
+  .header {
+    position: relative;
+    top: 0; }
+
+  .heading {
+    font-size: 1.7em; }
+
+  .logo {
+    width: 80px; } }
 @media all and (max-width: 768px) {
   .menu {
     display: none; }

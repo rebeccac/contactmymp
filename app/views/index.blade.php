@@ -14,9 +14,10 @@
               @include('includes/menu')
             <div id="menu-button" class="menu-button-left white_text"><i class="fa fa-bars"></i></div>
       <div class="row header" data-equalizer>
-        <div class="large-1 medium-1 small-1 columns" data-equalizer-watch></div>
-        <div class="large-11 medium-11 small-11 columns title" data-equalizer-watch>
-          <h1 class="heading">Contact My MP</h1>
+        <div class="large-2 medium-2 small-2 columns" data-equalizer-watch></div>
+        <div class="large-10 medium-10 small-10 columns title" data-equalizer-watch>
+          <h1 class="heading dark_text">Contact<br>My MP</h1>
+          <img class="logo" src="/images/logo_200.png" alt="Contact My MP logo">
         </div>
       </div> <!-- row header -->
 
