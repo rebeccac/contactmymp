@@ -127,7 +127,6 @@ strong {
 
 
 h1 {
-  // width: 100%;
   text-align: center;
   font-weight: 100;
   margin: 0;
@@ -182,6 +181,16 @@ h3 {
   margin-left: 8%;
   letter-spacing: 2px;
   font-size: 2.2em;
+}
+
+/* About Us Page */
+
+.text-box {
+   width: 84%;
+   margin: 20px auto;
+   text-align: justify;
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 1em;
 }
 
 /* Select My MP Page */
@@ -1119,10 +1128,6 @@ form.selection-form {
 }
 
 @media all and (max-width: 320px) {
-   .header {
-      // right: 10px;
-      // top: 10px;
-   }
 
    .heading {
       font-size: 1.9em;
