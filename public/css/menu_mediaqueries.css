@@ -1,3 +1,16 @@
+footer.menu-footer {
+  position: absolute;
+  bottom: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.7em;
+  font-weight: 200;
+  color: #f2f2f2;
+  width: 100%;
+  text-align: center; }
+  footer.menu-footer i {
+    font-size: 2em;
+    padding: 5px; }
+
 @media all and (max-width: 768px) {
   .menu {
     display: none; }

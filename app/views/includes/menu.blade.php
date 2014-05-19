@@ -65,6 +65,12 @@
          </a>
       </li>
    </ul>
+   <footer class="menu-footer">
+      <a href="http://www.twitter.com/ContactMyMp" target="_blank"><i class="fa fa-twitter"></i></a><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a><a href="{{ URL::to('contact') }}"><i class="fa fa-envelope"></i></a>
+      <br>
+      &copy; contactmymp.com
+      <br> 2014
+   </footer>
 </div><!-- menu -->
 
 
@@ -134,4 +140,10 @@
          </a>
       </li>
    </ul>
+   <footer class="menu-footer">
+      <a href="http://www.twitter.com/ContactMyMp" target="_blank"><i class="fa fa-twitter"></i></a><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a><a href="{{ URL::to('contact') }}"><i class="fa fa-envelope"></i></a>
+      <br>
+      &copy; contactmymp.com
+      <br> 2014
+   </footer>
 </div><!-- menu -->

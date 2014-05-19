@@ -7,6 +7,21 @@ $white: #f2f2f2;
 $orange: #f8720a;
 $dark_text: #5c5c5c;
 
+footer.menu-footer {
+   position: absolute;
+   bottom: 0;
+   font-family: 'Helvetica Neue', sans-serif;
+   font-size: 0.7em;
+   font-weight: 200;
+   color: $white;
+   width: 100%;
+   text-align: center;
+   i {
+      font-size: 2em;
+      padding: 5px;
+   }
+}
+
 @media all and (max-width:768px) {
    .menu {
       display: none;

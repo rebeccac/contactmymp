@@ -4,7 +4,7 @@
    <h2 class="sub-heading">About Us</h2>
 
    <div class="text-box">
-      Contact My MP is not affiliated with the Australian Parliament or any Australian politicians.
+      <em>Contact My MP</em> is not affiliated with the Australian Parliament or any Australian politicians.
       <br><br>
       It is designed to faciliate easy communication between constituents and their MPs and Senators.
       <br><br>
