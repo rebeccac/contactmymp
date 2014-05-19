@@ -248,6 +248,9 @@
           <div class="row" data-equalizer>
              <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
                  {{ Form::open(array('url' => 'mp/sendemail', 'class' => 'contact_form')) }}
+                   {{ Form::label('name', 'Name:') }}
+                   {{ Form::text('name', $value = null, $attributes = array('class' => 'inputs')); }}
+                   <br>
                     {{ Form::label('email', 'Your email address: ') }}
                     {{ Form::email('email', $value = null, $attributes = array('class' => 'inputs')); }}
                     <br>

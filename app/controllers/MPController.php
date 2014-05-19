@@ -108,4 +108,41 @@ class MPController extends \BaseController {
 
 	}
 
+	public function sendEmail() {
+		$id = Input::get('id');
+		$mp = Electorate::find($id);
+		$data = Input::all();
+		$data['recipient_email'] = $mp->email;
+		$data['recipient_name'] = $mp->first_name." ".$mp->last_name;
+		$page_title = "$mp->first_name $mp->last_name - Member for $mp->constituency - Contact My MP";
+
+
+		//Validation
+		$rules = array (
+		'name' => 'required',
+		'email' => 'required|email',
+		'subject' => 'required',
+		'message' => 'required|min:25'
+		);
+
+		// Validate data
+		$validator = Validator::make ($data, $rules);
+
+		if ($validator -> passes()){
+
+
+			// Send email using Laravel send function
+			Mail::send('emails.contactpolitician', $data, function($message) use ($data) {
+				$message->from($data['email'] , $data['name']);
+				$message->to($data['recipient_email'], $data['recipient_name'])->subject($data['subject']);
+
+			});
+			return View::make('lowerhouse.emailsent', array('page_title' => "Your email has been sent to $mp->first_name $mp->last_name - Contact My MP", 'data' => $data));
+		}
+		else {
+			//return contact form with errors
+			return Redirect::to('/lowerhouse/show')->with('mp', $mp)->withErrors($validator)->with('page_title', $page_title)->withInput();
+		}
+	}
+
 }

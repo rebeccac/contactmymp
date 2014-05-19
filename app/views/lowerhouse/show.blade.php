@@ -249,18 +249,20 @@
              </div>
              <div class="row" data-equalizer>
                 <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
-                    {{ Form::open(array('url' => 'mp/sendemail', 'class' => 'contact_form')) }}
-                       {{ Form::label('email', 'Your email address: ') }}
+                    {{ Form::open(array('action' => 'MPController@sendEmail', 'class' => 'contact_form')) }}
+                       {{ Form::label('name', 'Name:') }}
+                       {{ Form::text('name', $value = null, $attributes = array('class' => 'inputs')); }}
                        <br>
+                       {{ Form::label('email', 'Your email address: ') }}
                        {{ Form::email('email', $value = null, $attributes = array('class' => 'inputs')); }}
                        <br>
                        {{ Form::label('subject', 'Subject:') }}
-                       <br>
                        {{ Form::text('subject', $value = null, $attributes = array('class' => 'inputs')); }}
                        <br>
                        {{ Form::label('message', 'Message:') }}
-                       <br>
                        {{ Form::textarea('message', $value = null, $attributes = array('class' => 'inputs')); }}
+
+                       {{ Form::hidden('id', $mp['id']) }}
                        <br>
                        <div>
                            <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
