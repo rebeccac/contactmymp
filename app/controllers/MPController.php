@@ -114,8 +114,8 @@ class MPController extends \BaseController {
 		$data = Input::all();
 		$data['recipient_email'] = $mp->email;
 		$data['recipient_name'] = $mp->first_name." ".$mp->last_name;
+		$data['date_time'] = date("F j, Y, g:i a");
 		$page_title = "$mp->first_name $mp->last_name - Member for $mp->constituency - Contact My MP";
-
 
 		//Validation
 		$rules = array (
@@ -129,15 +129,16 @@ class MPController extends \BaseController {
 		$validator = Validator::make ($data, $rules);
 
 		if ($validator -> passes()){
-
-
 			// Send email using Laravel send function
 			Mail::send('emails.contactpolitician', $data, function($message) use ($data) {
 				$message->from($data['email'] , $data['name']);
 				$message->to($data['recipient_email'], $data['recipient_name'])->subject($data['subject']);
-
 			});
-			return View::make('lowerhouse.emailsent', array('page_title' => "Your email has been sent to $mp->first_name $mp->last_name - Contact My MP", 'data' => $data));
+			return View::make('lowerhouse.emailsent',
+			 						array('page_title' => "Your email has been sent to $mp->first_name $mp->last_name - Contact My MP",
+			 								'data' => $data,
+											 'mp' => $mp
+										));
 		}
 		else {
 			//return contact form with errors

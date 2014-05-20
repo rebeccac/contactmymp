@@ -418,8 +418,39 @@ hr.med_grey {
 
 .contact-form-content {
    width: 100%;
-   height: auto;
-   margin-bottom: 50px;
+   padding-bottom: 100px;
+   .s-m-i {
+      text-align: center;
+      i {
+         margin: 0 auto;
+         padding: 20px 50px;
+         font-size: 4em;
+         color: #999;
+      }
+   }
+   #print {
+      font-size: 4em;
+      color: #888;
+      margin: 0 0 5px 20px;
+   }
+   .label {
+      width: 100%;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 1.1em;
+      color: black;
+      background-color: #ccc;
+      text-align: left;
+      margin-bottom: 10px;
+   }
+
+   .contact-text {
+      width: 95%;
+      margin: 0 auto;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 1em;
+      text-align: left;
+   }
+
   .image {
      background-color: transparent;
     img {
@@ -436,6 +467,8 @@ hr.med_grey {
 .info-section {
    padding-top: 30px;
 }
+
+
 
 /* All Politicians Pages */
 
@@ -1193,5 +1226,32 @@ form.selection-form {
 
    .pol_info1 {
       font-size: 0.9em;
+   }
+}
+
+
+@media print {
+   .menu,
+   #menu-button,
+   #slider,
+   .slidermenu {
+      display: none;
+   }
+   .logo {
+      width: 150px;
+   }
+   h1.heading {
+      font-size: 3em;
+      color: black;
+   }
+   h3 {
+      font-size: 1.5em;
+      color: black;
+   }
+   #print {
+      display: none;
+   }
+   .contact-text {
+      font-size: 0.8em;
    }
 }
