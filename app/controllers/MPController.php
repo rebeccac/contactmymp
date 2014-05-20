@@ -108,7 +108,7 @@ class MPController extends \BaseController {
 
 	}
 
-	public function sendEmail() {
+	public function mpemail() {
 		$id = Input::get('id');
 		$mp = Electorate::find($id);
 		$data = Input::all();
@@ -141,7 +141,10 @@ class MPController extends \BaseController {
 		}
 		else {
 			//return contact form with errors
-			return Redirect::to('/lowerhouse/show')->with('mp', $mp)->withErrors($validator)->with('page_title', $page_title)->withInput();
+			return Redirect::route('lowerhouse.show', $id)
+				->with('page_title', $page_title)
+				->withInput()
+				->withErrors($validator);
 		}
 	}
 

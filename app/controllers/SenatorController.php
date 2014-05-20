@@ -104,7 +104,7 @@ class SenatorController extends \BaseController {
 	}
 
 
-	public function sendEmail() {
+	public function senatoremail() {
 		$id = Input::get('id');
 		$senator = Senator::find($id);
 		$data = Input::all();
@@ -137,7 +137,10 @@ class SenatorController extends \BaseController {
 		}
 		else {
 			//return contact form with errors
-			return Redirect::to('/upperhouse/show')->with('senator', $senator)->withErrors($validator)->with('page_title', $page_title)->withInput();
+			return Redirect::route('upperhouse.show', $id)
+				->with('page_title', $page_title)
+				->withInput()
+				->withErrors($validator);
 		}
 	}
 

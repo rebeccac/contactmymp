@@ -10,8 +10,8 @@ Route::get('about', array('as' => 'about', 'uses' => 'PageController@getAbout'))
 Route::get('contact', array('as' => 'contact', 'uses' => 'PageController@getContact'));
 Route::post('contact', array('as' => 'contact', 'uses' => 'PageController@postContact'));
 Route::get('thankyou', array('as', 'thankyou', 'uses' => 'PageController@getThankYou'));
-Route::post('sendemail', array('as' => 'sendemail', 'uses' => 'MPController@sendEmail'));
-Route::post('sendemail', array('as' => 'sendemail', 'uses' => 'SenatorController@sendEmail'));
+Route::post('mpemail', array('as' => 'mpemail', 'uses' => 'MPController@mpemail'));
+Route::post('senatoremail', array('as' => 'senatoremail', 'uses' => 'SenatorController@senatoremail'));
 Route::get('findpolitician', array('as' => 'findpolitician', 'uses' => 'PageController@findPolitician'));
 Route::post('postFindPolitician', 'PageController@postFindPolitician');
 Route::get('ministers', array('as' => 'ministers', 'uses' => 'PageController@getMinisters'));
