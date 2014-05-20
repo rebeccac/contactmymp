@@ -104,4 +104,41 @@ class SenatorController extends \BaseController {
 	}
 
 
+	public function sendEmail() {
+		$id = Input::get('id');
+		$senator = Senator::find($id);
+		$data = Input::all();
+		$data['recipient_email'] = $senator->email;
+		$data['recipient_name'] = $senator->first_name." ".$senator->last_name;
+		$page_title = "$senator->first_name $senator->last_name - Senator for $senator->state - Contact My MP";
+
+
+		//Validation
+		$rules = array (
+		'name' => 'required',
+		'email' => 'required|email',
+		'subject' => 'required',
+		'message' => 'required|min:25'
+		);
+
+		// Validate data
+		$validator = Validator::make ($data, $rules);
+
+		if ($validator -> passes()){
+
+
+			// Send email using Laravel send function
+			Mail::send('emails.contactpolitician', $data, function($message) use ($data) {
+				$message->from($data['email'] , $data['name']);
+				$message->to($data['recipient_email'], $data['recipient_name'])->subject($data['subject']);
+
+			});
+			return View::make('upperhouse.emailsent', array('page_title' => "Your email has been sent to $senator->first_name $senator->last_name - Contact My MP", 'data' => $data));
+		}
+		else {
+			//return contact form with errors
+			return Redirect::to('/upperhouse/show')->with('senator', $senator)->withErrors($validator)->with('page_title', $page_title)->withInput();
+		}
+	}
+
 }

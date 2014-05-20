@@ -11,6 +11,7 @@ Route::get('contact', array('as' => 'contact', 'uses' => 'PageController@getCont
 Route::post('contact', array('as' => 'contact', 'uses' => 'PageController@postContact'));
 Route::get('thankyou', array('as', 'thankyou', 'uses' => 'PageController@getThankYou'));
 Route::post('sendemail', array('as' => 'sendemail', 'uses' => 'MPController@sendEmail'));
+Route::post('sendemail', array('as' => 'sendemail', 'uses' => 'SenatorController@sendEmail'));
 Route::get('findpolitician', array('as' => 'findpolitician', 'uses' => 'PageController@findPolitician'));
 Route::post('postFindPolitician', 'PageController@postFindPolitician');
 Route::get('ministers', array('as' => 'ministers', 'uses' => 'PageController@getMinisters'));

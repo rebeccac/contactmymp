@@ -247,7 +247,7 @@
          </div>
           <div class="row" data-equalizer>
              <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
-                 {{ Form::open(array('url' => 'mp/sendemail', 'class' => 'contact_form')) }}
+                 {{ Form::open(array('action' => 'SenatorController@sendEmail', 'class' => 'contact_form')) }}
                    {{ Form::label('name', 'Name:') }}
                    {{ Form::text('name', $value = null, $attributes = array('class' => 'inputs')); }}
                    <br>
@@ -259,7 +259,9 @@
                     <br>
                     {{ Form::label('message', 'Message:') }}
                     {{ Form::textarea('message', $value = null, $attributes = array('class' => 'inputs')); }}
-                    <br>
+
+                   {{ Form::hidden('id', $senator['id']) }}
+                   <br>
                     <div>
                         <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
                     </div>
