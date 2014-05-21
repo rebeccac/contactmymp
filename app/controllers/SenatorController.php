@@ -110,6 +110,7 @@ class SenatorController extends \BaseController {
 		$data = Input::all();
 		$data['recipient_email'] = $senator->email;
 		$data['recipient_name'] = $senator->first_name." ".$senator->last_name;
+		$data['date_time'] = date("F j, Y, g:i a");
 		$page_title = "$senator->first_name $senator->last_name - Senator for $senator->state - Contact My MP";
 
 
@@ -133,7 +134,12 @@ class SenatorController extends \BaseController {
 				$message->to($data['recipient_email'], $data['recipient_name'])->subject($data['subject']);
 
 			});
-			return View::make('upperhouse.emailsent', array('page_title' => "Your email has been sent to $senator->first_name $senator->last_name - Contact My MP", 'data' => $data));
+			return View::make('upperhouse.emailsent',
+			 						array(
+										'page_title' => "Your email has been sent to $senator->first_name $senator->last_name - Contact My MP",
+			 						  'data' => $data,
+										'senator' => $senator
+									));
 		}
 		else {
 			//return contact form with errors
