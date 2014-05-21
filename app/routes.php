@@ -14,6 +14,7 @@ Route::post('postFindPolitician', 'PageController@postFindPolitician');
 Route::get('ministers', array('as' => 'ministers', 'uses' => 'PageController@getMinisters'));
 Route::get('/select', 'PageController@getSelect');
 Route::post('/select', 'PageController@postSelect');
+Route::get('privacy', 'PageController@privacy');
 Route::resource('lowerhouse', 'MPController');
 Route::resource('upperhouse', 'SenatorController');
 Route::controller('lowerhouse', 'MPController');

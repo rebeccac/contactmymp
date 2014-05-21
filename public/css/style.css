@@ -4571,10 +4571,16 @@ footer.menu-footer {
   font-weight: 200;
   color: #555;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 3px;
+  line-height: 1em; }
   footer.menu-footer i {
     font-size: 2em;
     padding: 5px; }
+  footer.menu-footer a {
+    color: #555; }
+    footer.menu-footer a:link, footer.menu-footer a:visited, footer.menu-footer a:hover, footer.menu-footer a:active {
+      color: #555; }
 
 @media all and (max-width: 768px) {
   .menu {
@@ -5166,6 +5172,12 @@ h3 {
   .pol_info3 img {
     margin-top: 15px; }
 
+.button_link {
+  margin-top: 25px;
+  padding: 5px 15px;
+  border: 0;
+  color: #f2f2eb; }
+
 hr.med_grey {
   margin-top: 20px;
   border: 0;
@@ -5218,6 +5230,16 @@ hr.med_grey {
   font-size: 1.6em;
   padding-top: 15px;
   padding-bottom: 15px; }
+
+.privacy_policy {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 0.8em;
+  font-weight: 200;
+  color: #555;
+  margin-left: 20px; }
+  .privacy_policy i {
+    color: #888;
+    font-size: 1.2em; }
 
 .contact-form-content {
   width: 100%;
@@ -5433,11 +5455,6 @@ form.selection-form {
     font-weight: 400;
     letter-spacing: 1px;
     padding: 10px; }
-  .politician_row2 .button_link {
-    margin-top: 25px;
-    padding: 5px 15px;
-    border: 0;
-    color: #f2f2eb; }
 
 .search {
   width: auto;
@@ -5478,11 +5495,11 @@ form.selection-form {
       font-family: 'Helvetica', sans-serif;
       font-weight: 400;
       font-weight: 200;
-      font-size: 1.7em;
+      font-size: 1.3em;
       display: block;
       text-align: center;
       margin: 0 0 25px 0;
-      background-color: #0072bc;
+      background-color: #1f5c7a;
       color: #f2f2eb; }
     .search-box form.politician-selection-form select {
       width: auto;

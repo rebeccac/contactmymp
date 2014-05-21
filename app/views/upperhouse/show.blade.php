@@ -267,6 +267,9 @@
                    <br>
                     <div>
                         <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
+                        <a href="{{ URL::to('privacy') }}" target="_blank" class="privacy_policy">
+                           <i class="fa fa-info-circle"></i>Privacy Policy
+                        </a>
                     </div>
                  {{ Form::close() }}
              </div>

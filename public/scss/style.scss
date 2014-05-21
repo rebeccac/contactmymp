@@ -360,6 +360,13 @@ h3 {
   }
 }
 
+.button_link {
+   margin-top: 25px;
+   padding: 5px 15px;
+   border: 0;
+   color: $white;
+}
+
 hr.med_grey {
    margin-top: 20px;
    border: 0;
@@ -414,6 +421,18 @@ hr.med_grey {
    font-size: 1.6em;
    padding-top: 15px;
    padding-bottom: 15px;
+}
+
+.privacy_policy {
+   i {
+      color: #888;
+      font-size: 1.2em;
+   }
+   font-family: 'Helvetica', sans-serif;
+   font-size: 0.8em;
+   font-weight: 200;
+   color: #555;
+   margin-left: 20px;
 }
 
 .contact-form-content {
@@ -665,13 +684,6 @@ form.selection-form {
       letter-spacing: 1px;
       padding: 10px;
    }
-
-   .button_link {
-      margin-top: 25px;
-      padding: 5px 15px;
-      border: 0;
-      color: $white;
-   }
 }
 
 .search {
@@ -722,11 +734,11 @@ form.selection-form {
       label {
          @include Helvetica;
          font-weight: 200;
-         font-size: 1.7em;
+         font-size: 1.3em;
          display: block;
          text-align: center;
          margin: 0 0 25px 0;
-         background-color: $blue;
+         background-color: $minister_dark;
          color: $white;
       }
       select {
@@ -764,6 +776,7 @@ form.selection-form {
    background-color: lighten(#ccc, 10%);
    border: 3px solid $dark_text;
 }
+
 
 @media all and (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
    .contact-form-content {

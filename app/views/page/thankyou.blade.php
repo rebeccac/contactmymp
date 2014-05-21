@@ -1,16 +1,28 @@
 @extends('layouts.index')
 
 @section('content')
-   <h2 class="sub-heading">Thank you for your feedback</h2>
-   <div class="thankyou">
-      You have sent the following feedback:
+   <div class="contact-form-content">
+      <br>
+      <h3>Thank you for your feedback</h3>
       <br><br>
-      <strong>Name: </strong>{{ $data['name'] }}
+      <div class="label">Date:</div>
       <br>
-      <strong>Email: </strong>{{ $data['email'] }}
+      <div class="contact-text">{{ $data['date_time'] }}</div>
       <br>
-      <strong>Subject: </strong>{{ $data['subject'] }}
+      <div class="label">Name:</div>
       <br>
-      <strong>Message: </strong>{{ $data['message'] }}
+      <div class="contact-text">{{ $data['name'] }}</div>
+      <br>
+      <div class="label">Email:</div>
+      <br>
+      <div class="contact-text">{{ $data['email'] }}</div>
+      <br>
+      <div class="label">Subject:</div>
+      <br>
+      <div class="contact-text">{{ $data['subject'] }}</div>
+      <br>
+      <div class="label">Message:</div>
+      <br>
+      <div class="contact-text"><?php echo nl2br($data['message']); ?></div>
    </div>
 @stop

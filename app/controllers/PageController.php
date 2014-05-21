@@ -153,6 +153,7 @@ class PageController extends \BaseController {
 	public function postContact() {
 		$page_title = "Contact Us - Contact My MP";
 		$data = Input::all();
+		$data['date_time'] = date("F j, Y, g:i a");
 
 		//Validation
 		$rules = array (
@@ -219,6 +220,11 @@ class PageController extends \BaseController {
 	public function getThankYou() {
 		$page_title = "Thank you for your feedback - Contact My MP";
 		return View::make('page.thankyou', array('page_title' => $page_title, 'data' => $data));
+	}
+
+	public function privacy() {
+		$page_title = "Privacy Policy - Contact My MP";
+		return View::make('page.privacy', array('page_title' => $page_title));
 	}
 
 }

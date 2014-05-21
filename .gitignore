@@ -20,6 +20,7 @@ Thumbs.db
 /app/views/upperhouse/show2.blade.php
 /app/views/index2.blade.php
 /app/views/layouts/index2.blade.php
+/app/views/includes/menu2.blade.php
 /public/js/jquery.slidermenu.js
 /public/images/header_idea.psd
 /node_modules

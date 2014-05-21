@@ -16,9 +16,20 @@ footer.menu-footer {
    color: #555;
    width: 100%;
    text-align: center;
+   margin-bottom: 3px;
+   line-height: 1em;
    i {
       font-size: 2em;
       padding: 5px;
+   }
+   a {
+      color: #555;
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+         color: #555;
+      }
    }
 }
 
