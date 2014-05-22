@@ -4989,13 +4989,12 @@ h3 {
 .header {
   position: absolute;
   top: 0;
-  z-index: 0; }
+  z-index: 5; }
 
 .heading {
   font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 100;
   letter-spacing: 2px;
-  color: #5c5c5c;
   text-align: right;
   line-height: 1em;
   padding-right: 20px;
@@ -5004,6 +5003,11 @@ h3 {
   top: 20px;
   display: inline-block;
   float: right; }
+  .heading a {
+    text-decoration: none;
+    color: #5c5c5c; }
+    .heading a:link, .heading a:visited, .heading a:hover, .heading a:active {
+      color: #5c5c5c; }
 
 .logo {
   width: 200px;
@@ -5019,8 +5023,8 @@ h3 {
   letter-spacing: 2px;
   font-size: 2.2em; }
 
-/* About Us Page */
-.text-box {
+/* About Us, Privacy Policy Pages */
+.text-page {
   width: 84%;
   margin: 20px auto;
   text-align: justify;

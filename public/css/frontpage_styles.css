@@ -4618,6 +4618,11 @@ h1 {
   top: 20px;
   display: inline-block;
   float: right; }
+  .heading a {
+    text-decoration: none;
+    color: #f2f2f2; }
+    .heading a:link, .heading a:visited, .heading a:hover, .heading a:active {
+      color: #f2f2f2; }
 
 .logo {
   width: 200px;

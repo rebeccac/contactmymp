@@ -12,8 +12,8 @@
 <div class="container">
    <div class="row header">
      <div class="large-12 medium-12 columns">
-        <h1 class="heading dark_text">Contact<br>My MP</h1>
-        <img class="logo" src="/images/logo_200.png" alt="Contact My MP logo">
+        <h1 class="heading dark_text"><a href="{{ URL::to('/') }}">Contact<br>My MP</a></h1>
+        <a href="{{ URL::to('/') }}"><img class="logo" src="/images/logo_200.png" alt="Contact My MP logo"></a>
      </div>
    </div> <!-- row header -->
    @include('includes/menu')

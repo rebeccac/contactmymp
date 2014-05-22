@@ -16,8 +16,8 @@
       <div class="row header" data-equalizer>
         <div class="large-2 medium-2 small-2 columns" data-equalizer-watch></div>
         <div class="large-10 medium-10 small-10 columns title" data-equalizer-watch>
-          <h1 class="heading dark_text">Contact<br>My MP</h1>
-          <img class="logo" src="/images/logo_200.png" alt="Contact My MP logo">
+          <h1 class="heading dark_text"><a href="{{ URL::to('/') }}">Contact<br>My MP</a></h1>
+          <a href="{{ URL::to('/') }}"><img class="logo" src="/images/logo_200.png" alt="Contact My MP logo"></a>
         </div>
       </div> <!-- row header -->
 
