@@ -51,7 +51,7 @@
               <a href="http://www.twitter.com/ContactMyMp" target="_blank">
                  <i class="fa fa-twitter"></i>
               </a>
-              <a href="http://www.facebook.com" target="_blank">
+              <a href="https://www.facebook.com/contactmympaustralia" target="_blank">
                  <i class="fa fa-facebook"></i>
               </a>
               <a href="{{ URL::to('contact') }}">

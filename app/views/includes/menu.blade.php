@@ -66,10 +66,10 @@
       </li>
    </ul>
    <footer class="menu-footer">
-      <a href="http://www.twitter.com/ContactMyMp" target="_blank"><i class="fa fa-twitter"></i></a><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="http://www.twitter.com/ContactMyMp" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://www.facebook.com/contactmympaustralia" target="_blank"><i class="fa fa-facebook"></i></a>
       <br>&copy; contactmymp.com
       <br>2014
-      <br>Privacy Policy
+      <br><a href="{{ URL::to('/privacy') }}">Privacy Policy</a>
    </footer>
 </div><!-- menu -->
 
@@ -141,7 +141,7 @@
       </li>
    </ul>
    <footer class="menu-footer">
-      <a href="http://www.twitter.com/ContactMyMp" target="_blank"><i class="fa fa-twitter"></i></a><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="http://www.twitter.com/ContactMyMp" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://www.facebook.com/contactmympaustralia" target="_blank"><i class="fa fa-facebook"></i></a>
       <br>&copy; contactmymp.com
       <br>2014
       <br><a href="{{ URL::to('/privacy') }}">Privacy Policy</a>
