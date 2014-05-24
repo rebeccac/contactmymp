@@ -3,11 +3,14 @@
    <html>
      <head>
        <title>Contact My MP</title>
+       <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
+		 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.jpg">
        <meta name="viewport" content="width=device-width, initial-scale=1, content=minimal-ui">
 
       <link rel "stylesheet" href="{{ URL::asset('css/menu_mediaqueries.css') }}">
        <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
+      <meta name="google-site-verification" content="8TN4pcqS7FfgNgp_Xn3kwy359jSuYRFXT_RglU0QBXA" />
      </head>
      <body class="page-body page-body-left">
         <div class="row container">
@@ -29,7 +32,8 @@
         <div class="large-3 medium-3 columns postcode-form" data-equalizer-watch>
           <form class='form' action='/select' method='post'>
             <div class="top-row">
-              <label for='postcode'>Your Postcode: </label>
+              <h2>Find my MP & Senators</h2>
+              <label for='postcode'>My Postcode: </label>
               <input type='number' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
               <input type='submit' id='submit' name='submit' value='Submit'>
               @if (isset($error))
@@ -78,7 +82,7 @@
       <script>
         $(document).foundation();
       </script>
-      
+
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

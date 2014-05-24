@@ -4582,6 +4582,7 @@ footer.menu-footer {
     footer.menu-footer a:link, footer.menu-footer a:visited, footer.menu-footer a:hover, footer.menu-footer a:active {
       color: #555; }
 
+/* Sliding menu */
 @media all and (max-width: 768px) {
   .menu {
     display: none; }
@@ -4692,6 +4693,7 @@ footer.menu-footer {
     .slidermenu ul li.menu-section:hover > ul.sub-menu {
       position: absolute;
       left: 120px; } }
+/* Static menu */
 @media all and (min-width: 769px) {
   #menu-button {
     display: none; }
@@ -4726,7 +4728,7 @@ footer.menu-footer {
       .menu ul li.blank {
         list-style: none;
         width: 120px;
-        min-height: 90px; }
+        min-height: 30px; }
       .menu ul li.menu-section {
         list-style: none;
         text-align: center;
@@ -4785,6 +4787,7 @@ footer.menu-footer {
     .menu ul li.menu-section:hover > ul.sub-menu {
       position: absolute;
       left: 120px; } }
+/* Mobiles in landscape */
 @media all and (max-height: 360px) {
   .menu {
     display: none; }
@@ -4844,7 +4847,7 @@ footer.menu-footer {
         list-style: none;
         text-align: center;
         width: 120px;
-        min-height: 50px;
+        min-height: 30px;
         border-bottom: 1px solid #444;
         font-family: 'Helvetica Neue', sans-serif;
         color: #f2f2eb;
@@ -4856,13 +4859,13 @@ footer.menu-footer {
           vertical-align: middle;
           width: 120px;
           padding: 3px;
-          min-height: 50px;
+          min-height: 30px;
           font-size: 0.9em; }
       .slidermenu ul li.top {
         border-top: 1px solid #444; }
     .slidermenu i {
       color: #555;
-      font-size: 1.7em; }
+      font-size: 1.3em; }
     .slidermenu ul.sub-menu {
       display: block;
       width: 120px;
@@ -4873,7 +4876,7 @@ footer.menu-footer {
       background-color: #1d1d1d; }
       .slidermenu ul.sub-menu li.sub-menu-section {
         width: 120px;
-        height: 50px;
+        height: 30px;
         border-bottom: 1px solid #444;
         border-right: 5px solid transparent;
         display: table;
@@ -5138,9 +5141,9 @@ h3 {
   margin: 0 10px; }
 
 .pol_info1 {
-  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  letter-spacing: 2px;
-  font-weight: 200;
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
   color: #f2f2eb;
   font-size: 1.5em;
   line-height: 1.5em;
@@ -5152,9 +5155,9 @@ h3 {
   padding: 15px 10px 10px 10px; }
 
 .pol_info2 {
-  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-weight: 200;
-  letter-spacing: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
   color: #f2f2eb;
   font-size: 1.1em;
   line-height: 1.1em;
@@ -5390,15 +5393,15 @@ form.selection-form {
       height: 4em;
       text-align: left; }
       #politicians_container .politician .politician_position .minister_position {
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        font-weight: 200;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 400;
         color: #f2f2eb;
         letter-spacing: 2px;
         line-height: 1.1em;
         font-size: 1.1em; }
     #politicians_container .politician .politician_title {
-      font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-      font-weight: 200;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: 400;
       font-size: 1.2em;
       color: #f2f2eb;
       letter-spacing: 2px;

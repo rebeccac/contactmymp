@@ -326,9 +326,9 @@ h3 {
 }
 
 .pol_info1 {
-   font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-   letter-spacing: 2px;
-   font-weight: 200;
+   font-family: Helvetica, Arial, sans-serif;
+   letter-spacing: 1px;
+   font-weight: 400;
    color: $white;
    font-size: 1.5em;
    line-height: 1.5em;
@@ -342,8 +342,9 @@ h3 {
 }
 
 .pol_info2 {
-   @include HelveticaNeue;
-   letter-spacing: 2px;
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   letter-spacing: 1px;
    color: $white;
    font-size: 1.1em;
    line-height: 1.1em;
@@ -607,8 +608,8 @@ form.selection-form {
          height: 4em;
          text-align: left;
          .minister_position {
-            font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            font-weight: 200;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 400;
             color: $white;
             letter-spacing: 2px;
             line-height: 1.1em;
@@ -616,8 +617,8 @@ form.selection-form {
          }
       }
       .politician_title {
-         font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-         font-weight: 200;
+         font-family: Helvetica, Arial, sans-serif;
+         font-weight: 400;
          font-size: 1.2em;
          color: $white;
          letter-spacing: 2px;

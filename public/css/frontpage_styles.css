@@ -4583,6 +4583,14 @@ body {
 h1 {
   margin: 0; }
 
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #f2f2f2;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  padding: 5px 0; }
+
 #menu-button.white_text i {
   color: rgba(255, 255, 255, 0.8); }
 
@@ -4796,6 +4804,7 @@ footer.menu-footer {
     footer.menu-footer a:link, footer.menu-footer a:visited, footer.menu-footer a:hover, footer.menu-footer a:active {
       color: #555; }
 
+/* Sliding menu */
 @media all and (max-width: 768px) {
   .menu {
     display: none; }
@@ -4906,6 +4915,7 @@ footer.menu-footer {
     .slidermenu ul li.menu-section:hover > ul.sub-menu {
       position: absolute;
       left: 120px; } }
+/* Static menu */
 @media all and (min-width: 769px) {
   #menu-button {
     display: none; }
@@ -4940,7 +4950,7 @@ footer.menu-footer {
       .menu ul li.blank {
         list-style: none;
         width: 120px;
-        min-height: 90px; }
+        min-height: 30px; }
       .menu ul li.menu-section {
         list-style: none;
         text-align: center;
@@ -4999,6 +5009,7 @@ footer.menu-footer {
     .menu ul li.menu-section:hover > ul.sub-menu {
       position: absolute;
       left: 120px; } }
+/* Mobiles in landscape */
 @media all and (max-height: 360px) {
   .menu {
     display: none; }
@@ -5058,7 +5069,7 @@ footer.menu-footer {
         list-style: none;
         text-align: center;
         width: 120px;
-        min-height: 50px;
+        min-height: 30px;
         border-bottom: 1px solid #444;
         font-family: 'Helvetica Neue', sans-serif;
         color: #f2f2eb;
@@ -5070,13 +5081,13 @@ footer.menu-footer {
           vertical-align: middle;
           width: 120px;
           padding: 3px;
-          min-height: 50px;
+          min-height: 30px;
           font-size: 0.9em; }
       .slidermenu ul li.top {
         border-top: 1px solid #444; }
     .slidermenu i {
       color: #555;
-      font-size: 1.7em; }
+      font-size: 1.3em; }
     .slidermenu ul.sub-menu {
       display: block;
       width: 120px;
@@ -5087,7 +5098,7 @@ footer.menu-footer {
       background-color: #1d1d1d; }
       .slidermenu ul.sub-menu li.sub-menu-section {
         width: 120px;
-        height: 50px;
+        height: 30px;
         border-bottom: 1px solid #444;
         border-right: 5px solid transparent;
         display: table;

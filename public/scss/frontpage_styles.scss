@@ -35,6 +35,15 @@ h1 {
    margin: 0;
 }
 
+h2 {
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: 600;
+   color: $white;
+   font-size: 1.2em;
+   letter-spacing: 2px;
+   padding: 5px 0;
+}
+
 #menu-button.white_text {
    i {
       color: rgba(255,255,255,0.8);
