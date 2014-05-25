@@ -4946,6 +4946,31 @@ strong {
 .dark_text {
   color: #5c5c5c; }
 
+/* Background colours */
+.mp_light {
+  background-color: #ededed; }
+
+.mp_medium {
+  background-color: #91aa9d; }
+
+.mp_dark {
+  background-color: #3e606f; }
+
+.senator_medium {
+  background-color: #965251; }
+
+.senator_dark {
+  background-color: #643736; }
+
+.minister_light {
+  background-color: #ededed; }
+
+.minister_medium {
+  background-color: #2e8ab8; }
+
+.minister_dark {
+  background-color: #1f5c7a; }
+
 #menu-button i {
   color: #828282; }
 
@@ -4970,6 +4995,12 @@ strong {
   .box i {
     font-size: 2em;
     color: #b2b2b2; }
+
+.button_link {
+  margin-top: 25px;
+  padding: 5px 15px;
+  border: 0;
+  color: #f2f2eb; }
 
 h1 {
   text-align: center;
@@ -5035,11 +5066,6 @@ h3 {
   font-size: 1em; }
 
 /* Select My MP Page */
-.contents {
-  position: relative;
-  z-index: 1;
-  width: 100%; }
-
 .house-sub-heading,
 .ministers-sub-heading {
   text-align: center;
@@ -5052,58 +5078,6 @@ h3 {
 
 .house-results {
   margin-bottom: 100px; }
-
-.constituency-form {
-  position: relative; }
-  .constituency-form img.map {
-    height: 117px;
-    width: auto;
-    border: 0; }
-  .constituency-form .constituency {
-    margin: 20px auto;
-    width: 100%;
-    max-width: 300px;
-    font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    color: #3e606f;
-    background-color: #d1dbbd; }
-    .constituency-form .constituency .title {
-      width: 100%;
-      position: relative;
-      background-color: #91aa9d; }
-      .constituency-form .constituency .title .constituency_title {
-        font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        font-weight: 200;
-        font-size: 1.5em;
-        color: #f2f2eb;
-        letter-spacing: 2px;
-        padding-left: 10px; }
-    .constituency-form .constituency .title:after {
-      top: 100%;
-      left: 10%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-color: rgba(92, 92, 92, 0);
-      border-top-color: #91aa9d;
-      border-width: 8px;
-      margin-left: -8px; }
-    .constituency-form .constituency ul {
-      list-style: none;
-      margin: 0 1em;
-      font-family: 'Helvetica', sans-serif;
-      font-weight: 400; }
-      .constituency-form .constituency ul li:first-child {
-        margin-top: 0; }
-      .constituency-form .constituency ul li {
-        margin-top: 10px;
-        color: #5c5c5c; }
-  .constituency-form .submit_button {
-    margin-top: 50px;
-    text-align: left; }
 
 /* Submit buttons - Select your constituency & Email your MP */
 #electorate_submit,
@@ -5130,6 +5104,7 @@ h3 {
 .no-bg {
   background-color: transparent; }
 
+/* Show Politician Page */
 .constituency-heading {
   font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin-left: 2%;
@@ -5179,12 +5154,6 @@ h3 {
   .pol_info3 img {
     margin-top: 15px; }
 
-.button_link {
-  margin-top: 25px;
-  padding: 5px 15px;
-  border: 0;
-  color: #f2f2eb; }
-
 hr.med_grey {
   margin-top: 20px;
   border: 0;
@@ -5195,6 +5164,7 @@ hr.med_grey {
   background-image: -ms-linear-gradient(left, #cccccc, #aaaaaa, #cccccc);
   background-image: -o-linear-gradient(left, #cccccc, #aaaaaa, #cccccc); }
 
+/* Contact Form - Politician & Site Feedback */
 .contact_form {
   margin: 20px auto;
   padding-bottom: 30px;
@@ -5330,34 +5300,7 @@ form.selection-form {
   form.selection-form input[type=submit].senator_dark:hover {
     background-color: #643736; }
 
-/* Background colours */
-.mp_light {
-  background: url(/images/lowerhousebg.jpg); }
-
-.mp_medium {
-  background-color: #91aa9d; }
-
-.mp_dark {
-  background-color: #3e606f; }
-
-.senator_light {
-  background: url(/images/upperhousebg.jpg); }
-
-.senator_medium {
-  background-color: #965251; }
-
-.senator_dark {
-  background-color: #643736; }
-
-.minister_light {
-  background: url(/images/ministersbg.jpg); }
-
-.minister_medium {
-  background-color: #3399cc; }
-
-.minister_dark {
-  background-color: #1f5c7a; }
-
+/* Select a Politician / Show a Politician Page */
 #politicians_container {
   width: 100%;
   height: 100%;
@@ -5369,8 +5312,9 @@ form.selection-form {
     min-width: 273px;
     max-width: 273px;
     margin: 5px 0;
-    border: 1px solid #bbb;
-    display: inline-block; }
+    border: 1px solid #ddd;
+    display: inline-block;
+    /* Arrow */ }
     #politicians_container .politician .mp_name, #politicians_container .politician .senator_name, #politicians_container .politician .constituency, #politicians_container .politician .minister_name {
       display: inline-block;
       width: 100%;
@@ -5394,14 +5338,14 @@ form.selection-form {
       text-align: left; }
       #politicians_container .politician .politician_position .minister_position {
         font-family: Helvetica, Arial, sans-serif;
-        font-weight: 400;
+        font-weight: 200;
         color: #f2f2eb;
         letter-spacing: 2px;
         line-height: 1.1em;
         font-size: 1.1em; }
     #politicians_container .politician .politician_title {
       font-family: Helvetica, Arial, sans-serif;
-      font-weight: 400;
+      font-weight: 200;
       font-size: 1.2em;
       color: #f2f2eb;
       letter-spacing: 2px;
@@ -5425,7 +5369,7 @@ form.selection-form {
     #politicians_container .politician .senator_name:after {
       border-top-color: #965251; }
     #politicians_container .politician .minister_name:after {
-      border-top-color: #3399cc; }
+      border-top-color: #2e8ab8; }
   #politicians_container img.politician_img {
     height: 140px;
     width: auto;
@@ -5463,6 +5407,7 @@ form.selection-form {
     letter-spacing: 1px;
     padding: 10px; }
 
+/* Find a Politician Page */
 .search {
   width: auto;
   height: auto;
@@ -5634,10 +5579,6 @@ form.selection-form {
     max-width: 100%;
     left: 0; }
 
-  .contents {
-    left: 0;
-    border: 0; }
-
   #politicians_container .politician {
     margin-bottom: 10px;
     min-width: 230px;
@@ -5674,10 +5615,6 @@ form.selection-form {
     width: 100%;
     height: 100%;
     border-left: 10px solid transparent; }
-
-  .contents {
-    left: 0;
-    border: 0; }
 
   .heading {
     font-size: 3.5em; }
@@ -5786,10 +5723,6 @@ form.selection-form {
     width: 100%;
     height: 100%;
     border-left: 10px solid transparent; }
-
-  .contents {
-    left: 0;
-    border: 0; }
 
   .header {
     right: 10px;

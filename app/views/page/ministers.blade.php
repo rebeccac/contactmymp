@@ -43,6 +43,7 @@
             </div>
          </div><!-- politician minister_light -->
       @endforeach
+      <br><br>
       <h3 class="ministers-sub-heading">Outer Ministry</h3>
 
       @foreach($outerministers as $outerminister)
@@ -83,7 +84,7 @@
             </div>
          </div><!-- politician minister_light -->
       @endforeach
-
+      <br><br>
       <h3 class="ministers-sub-heading">Parliamentary Secretaries</h3>
       @foreach($secretaries as $secretary)
          <div class="politician minister_light">

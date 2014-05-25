@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="{{ URL::asset('css/theme.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('css/mediaqueries.css') }}">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
   <meta name="google-site-verification" content="8TN4pcqS7FfgNgp_Xn3kwy359jSuYRFXT_RglU0QBXA" />

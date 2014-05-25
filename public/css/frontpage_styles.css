@@ -4683,7 +4683,8 @@ footer {
   width: 100%; }
   footer .s-m {
     width: 100%;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    text-align: center; }
     footer .s-m .s-m-i {
       text-align: center; }
       footer .s-m .s-m-i i {

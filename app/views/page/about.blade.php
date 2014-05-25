@@ -12,7 +12,7 @@
       Your emails to MPs and Senators are completely private and not accessible by anyone involved with <em>Contact My MP</em>.
       For further information, please see the <a href="{{ URL::to('privacy') }}">Privacy Policy</a>.
       <br><br>
-      <em>Contact My MP</em> is not affiliated with the Australian Parliament or any Australian politicians.
+      <em>Contact My MP</em> is not affiliated with the Australian Parliament or any Australian politicians. It exists purely to enhance Australians' participation in our democracy. 
       <br><br>
       If you have any comments, we would love to hear from you via our <a href="{{URL::to('contact')}}">contact form</a>.
    </div>

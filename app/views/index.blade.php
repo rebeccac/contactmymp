@@ -6,8 +6,7 @@
        <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
 		 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.jpg">
        <meta name="viewport" content="width=device-width, initial-scale=1, content=minimal-ui">
-
-      <link rel "stylesheet" href="{{ URL::asset('css/menu_mediaqueries.css') }}">
+       <link rel "stylesheet" href="{{ URL::asset('css/menu_mediaqueries.css') }}">
        <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
       <meta name="google-site-verification" content="8TN4pcqS7FfgNgp_Xn3kwy359jSuYRFXT_RglU0QBXA" />
