@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="{{ URL::asset('css/jquery.slidermenu.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/general.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/theme.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/style.min.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>

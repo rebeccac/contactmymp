@@ -5346,9 +5346,9 @@ form.selection-form {
     #politicians_container .politician .politician_title {
       font-family: Helvetica, Arial, sans-serif;
       font-weight: 200;
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #f2f2eb;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       padding-left: 10px; }
     #politicians_container .politician .mp_name:after,
     #politicians_container .politician .senator_name:after,
@@ -5585,6 +5585,8 @@ form.selection-form {
     max-width: 230px;
     width: 230px;
     height: auto; }
+    #politicians_container .politician .politician_title {
+      font-size: 1em; }
     #politicians_container .politician .politician_position {
       height: 3.5em; }
       #politicians_container .politician .politician_position .minister_position {

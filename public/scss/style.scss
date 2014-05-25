@@ -562,9 +562,9 @@ form.selection-form {
       .politician_title {
          font-family: Helvetica, Arial, sans-serif;
          font-weight: 200;
-         font-size: 1.2em;
+         font-size: 1.1em;
          color: $white;
-         letter-spacing: 2px;
+         letter-spacing: 1px;
          padding-left: 10px;
       }
 
@@ -866,10 +866,6 @@ form.selection-form {
       left: 0;
    }
 
-   // .contents {
-   //    left: 0;
-   //    border: 0;
-   // }
    #politicians_container {
       .politician {
          margin-bottom: 10px;
@@ -877,6 +873,9 @@ form.selection-form {
          max-width: 230px;
          width: 230px;
          height: auto;
+         .politician_title {
+            font-size: 1em;
+         }
          .politician_position {
             height: 3.5em;
             .minister_position {
