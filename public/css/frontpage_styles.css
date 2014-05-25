@@ -4585,8 +4585,8 @@ h1 {
 
 h2 {
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  color: #f2f2f2;
+  font-weight: 500;
+  color: #292929;
   font-size: 1.2em;
   letter-spacing: 2px;
   padding: 5px 0; }
@@ -4646,7 +4646,7 @@ h2 {
   position: absolute;
   top: 30%; }
   .postcode-search .postcode-form {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 10px;
     border-radius: 50px 0 0 50px; }
   .postcode-search .form .top-row {
@@ -4655,8 +4655,8 @@ h2 {
     text-align: right; }
     .postcode-search .form .top-row label {
       font-family: Helvetica, Arial, sans-serif;
-      font-weight: 200;
-      color: #f2f2f2;
+      font-weight: 500;
+      color: #292929;
       font-size: 1.2em;
       letter-spacing: 2px;
       padding: 5px 0;
@@ -4728,7 +4728,7 @@ footer {
       position: absolute;
       top: 50px;
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.35);
+      background-color: rgba(255, 255, 255, 0.5);
       border-radius: 0; }
     .postcode-search .form .top-row {
       width: auto;
@@ -4758,7 +4758,7 @@ footer {
     font-size: 3.5em; }
 
   .postcode-search .postcode-form {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 0; }
   .postcode-search .form .top-row {
     width: auto;

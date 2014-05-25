@@ -37,8 +37,8 @@ h1 {
 
 h2 {
    font-family: Helvetica, Arial, sans-serif;
-   font-weight: 600;
-   color: $white;
+   font-weight: 500;
+   color: darken($dark_text, 20%);
    font-size: 1.2em;
    letter-spacing: 2px;
    padding: 5px 0;
@@ -113,7 +113,7 @@ h2 {
   top: 30%;
 
   .postcode-form {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.3);
     padding: 10px;
     border-radius: 50px 0 0 50px;
   }
@@ -124,8 +124,8 @@ h2 {
       text-align: right;
       label {
         font-family: Helvetica, Arial, sans-serif;
-        font-weight: 200;
-        color: $white;
+        font-weight: 500;
+        color: darken($dark_text, 20%);
         font-size: 1.2em;
         letter-spacing: 2px;
         padding: 5px 0;
@@ -216,7 +216,7 @@ footer {
          position: absolute;
          top: 50px;
          width: 100%;
-         background-color: rgba(255,255,255,0.35);
+         background-color: rgba(255,255,255,0.5);
          border-radius: 0;
       }
       .form {
@@ -262,7 +262,7 @@ footer {
 
    .postcode-search  {
       .postcode-form {
-         background-color: rgba(255,255,255,0.35);
+         background-color: rgba(255,255,255,0.6);
          border-radius: 0;
       }
       .form {

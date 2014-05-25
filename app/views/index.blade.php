@@ -20,7 +20,7 @@
           <h1 class="heading dark_text"><a href="{{ URL::to('/') }}">Contact<br>My MP</a></h1>
           <a href="{{ URL::to('/') }}"><img class="logo" src="/images/logo_200.png" alt="Contact My MP logo"></a>
         </div>
-      </div> <!-- row header -->
+      </div>
 
       <div class="clear"></div>
 

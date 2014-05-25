@@ -30,7 +30,12 @@ class PageController extends \BaseController {
 
 	public function getSelect() {
 		$page_title = "Select your Politician - Contact My MP";
-		return View::make('getselect')->with('page_title', $page_title);
+		if(!isset($_POST['electorate_submit'])) {
+			return Redirect::action('HomeController@index');
+		}
+		else {
+			return Redirect::action('PageController@postSelect');
+		}
 	}
 
 	public function postSelect() {
