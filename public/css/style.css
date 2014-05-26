@@ -5089,6 +5089,7 @@ h3 {
   border: 0;
   color: #f2f2eb;
   font-size: 1em;
+  background-color: #f8720a;
   text-align: center; }
 
 #electorate_submit,
@@ -5285,7 +5286,7 @@ form.selection-form {
     font-size: 1em;
     display: inline-block;
     width: 80px;
-    background-color: #5c5c5c;
+    background-color: #f8720a;
     margin-left: 15px; }
   form.selection-form input[type=submit].show_individual {
     margin: 10px auto 0 auto;
@@ -5463,7 +5464,7 @@ form.selection-form {
     .search-box form.politician-selection-form input[type=number] {
       font-family: FontAwesome;
       width: 150px;
-      margin: 0 auto 50px auto; }
+      margin: 0 auto 25px auto; }
     .search-box form.politician-selection-form input[type=submit] {
       display: block;
       width: 120px;
@@ -5472,6 +5473,7 @@ form.selection-form {
       border: 0;
       color: #f2f2eb;
       font-size: 1em;
+      background-color: #f8720a;
       margin: 0 auto; }
 
 /* Contact Us */

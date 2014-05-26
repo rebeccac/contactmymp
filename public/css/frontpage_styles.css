@@ -4585,7 +4585,7 @@ h1 {
 
 h2 {
   font-family: Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   color: #292929;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -4655,7 +4655,7 @@ h2 {
     text-align: right; }
     .postcode-search .form .top-row label {
       font-family: Helvetica, Arial, sans-serif;
-      font-weight: 500;
+      font-weight: 300;
       color: #292929;
       font-size: 1.2em;
       letter-spacing: 2px;
@@ -4696,7 +4696,7 @@ footer {
     color: #f2f2f2;
     font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-weight: 200;
-    font-size: 0.8em;
+    font-size: 0.9em;
     letter-spacing: 1px;
     margin-bottom: 5px; }
 
@@ -4800,6 +4800,12 @@ footer {
 
   .logo {
     width: 80px; } }
+@media screen and (device-aspect-ratio: 16 / 9), screen and (device-aspect-ratio: 16 / 10) {
+  .heading {
+    font-size: 1.4em; }
+
+  .logo {
+    width: 60px; } }
 footer.menu-footer {
   position: absolute;
   bottom: 0;

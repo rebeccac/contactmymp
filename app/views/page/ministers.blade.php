@@ -12,7 +12,15 @@
             </div>
             <div class="clear"></div>
             <div class="minister_name minister_medium">
-               <span class="politician_title">{{ $minister['first_name'] }} {{ $minister['last_name'] }}</span>
+               @if($minister['house'] == 1)
+                  <a href="/lowerhouse/{{ $minister->showid }}">
+                     <span class="politician_title">{{ $minister['first_name'] }} {{ $minister['last_name'] }}</span>
+                  </a>
+               @elseif($minister['house'] == 2)
+                  <a href="/upperhouse/{{ $minister->showid }}">
+                      <span class="politician_title">{{ $minister['first_name'] }} {{ $minister['last_name'] }}</span>
+                  </a>
+               @endif
             </div>
             <div class="politician_row1">
                   <img class="politician_img" src="/images/politicians/{{ $minister['image'] }}">
@@ -53,7 +61,15 @@
             </div>
             <div class="clear"></div>
             <div class="minister_name minister_medium">
-               <span class="politician_title">{{ $outerminister['first_name'] }} {{ $outerminister['last_name'] }}</span>
+               @if($outerminister['house'] == 1)
+                  <a href="/lowerhouse/{{ $outerminister->showid }}">
+                     <span class="politician_title">{{ $outerminister['first_name'] }} {{ $outerminister['last_name'] }}</span>
+                  </a>
+               @elseif($outerminister['house'] == 2)
+                  <a href="/upperhouse/{{ $outerminister->showid }}">
+                     <span class="politician_title">{{ $outerminister['first_name'] }} {{ $outerminister['last_name'] }}</span>
+                  </a>
+               @endif
             </div>
             <div class="politician_row1">
                   <img class="politician_img" src="/images/politicians/{{ $outerminister['image'] }}">
@@ -93,7 +109,15 @@
             </div>
             <div class="clear"></div>
             <div class="minister_name minister_medium">
-               <span class="politician_title">{{ $secretary['first_name'] }} {{ $secretary['last_name'] }}</span>
+               @if($secretary['house'] == 1)
+                  <a href="/lowerhouse/{{ $secretary->showid }}">
+                     <span class="politician_title">{{ $secretary['first_name'] }} {{ $secretary['last_name'] }}</span>
+                  </a>
+               @elseif($secretary['house'] == 2)
+                  <a href="/upperhouse/{{ $secretary->showid }}">
+                     <span class="politician_title">{{ $secretary['first_name'] }} {{ $secretary['last_name'] }}</span>
+                  </a>
+               @endif
             </div>
             <div class="politician_row1">
                   <img class="politician_img" src="/images/politicians/{{ $secretary['image'] }}">

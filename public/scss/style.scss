@@ -266,6 +266,7 @@ h3 {
 #mp_email_submit,
 #contact_form_submit {
    @include Submit;
+   background-color: $orange;
    text-align: center;
 }
 
@@ -493,7 +494,8 @@ form.selection-form {
       @include Submit;
       display: inline-block;
       width: 80px;
-      background-color: #5c5c5c;
+      // background-color: #5c5c5c;
+      background-color: $orange;
       margin-left: 15px;
    }
    input[type=submit].show_individual {
@@ -710,11 +712,12 @@ form.selection-form {
       input[type=number] {
          font-family: FontAwesome;
          width: 150px;
-         margin: 0 auto 50px auto;
+         margin: 0 auto 25px auto;
       }
       input[type=submit] {
          display: block;
          @include Submit;
+         background-color: $orange;
          margin: 0 auto;
       }
    }

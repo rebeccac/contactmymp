@@ -16,7 +16,7 @@
          </div>
          <div class="clear"></div>
          <div class="mp_name mp_medium">
-            <p class="politician_title">{{ $rep->first_name }} {{ $rep->last_name }}</p>
+            <a href="/lowerhouse/{{ $rep->id }}"><p class="politician_title">{{ $rep->first_name }} {{ $rep->last_name }}</p></a>
          </div>
          <div class="row politician_row1">
             <div class="large-6 medium-6 small-6 columns">

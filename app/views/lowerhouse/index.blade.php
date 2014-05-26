@@ -17,7 +17,7 @@
             </div>
             <div class="clear"></div>
             <div class="mp_name mp_medium">
-               <p class="politician_title">{{ $mp['first_name'] }} {{ $mp['last_name'] }}</p>
+               <a href="/lowerhouse/{{ $mp->id }}"><p class="politician_title">{{ $mp['first_name'] }} {{ $mp['last_name'] }}</p></a>
             </div>
             <div class="politician_row1">
                <img class="politician_img" src="/images/politicians/{{ $mp['image'] }}">

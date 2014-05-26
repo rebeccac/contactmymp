@@ -17,7 +17,7 @@
             </div>
             <div class="clear"></div>
             <div class="senator_name senator_medium">
-               <p class="politician_title">{{ $senator['first_name'] }} {{ $senator['last_name'] }}</p>
+               <a href="/upperhouse/{{ $senator->id }}"><p class="politician_title">{{ $senator['first_name'] }} {{ $senator['last_name'] }}</p></a>
             </div>
             <div class="politician_row1">
                <img class="politician_img" src="/images/politicians/{{ $senator['image'] }}">

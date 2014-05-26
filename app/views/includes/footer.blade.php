@@ -1,7 +1,7 @@
     </div> <!-- row content -->
 </div><!-- container -->
 
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="{{ URL::asset('js/jquery.menu.js') }}"></script>
       <script src="{{ URL::asset('js/jquery.fittext.js') }}"></script>
       <script src="{{ URL::asset('js/foundation/foundation.js') }}"></script>
@@ -9,7 +9,7 @@
       <script>
         $(document).foundation();
       </script>
-      
+
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

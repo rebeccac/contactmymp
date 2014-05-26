@@ -6,7 +6,7 @@
          </div>
          <div class="clear"></div>
          <div class="senator_name senator_medium">
-            <p class="politician_title">{{ $senator['first_name'] }} {{ $senator['last_name'] }}</p>
+            <a href="/upperhouse/{{ $senator['id'] }}"><p class="politician_title">{{ $senator['first_name'] }} {{ $senator['last_name'] }}</p></a>
          </div>
          <div class="row politician_row1">
             <div class="large-6 medium-6 small-6 columns">
