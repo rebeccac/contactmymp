@@ -4800,12 +4800,6 @@ footer {
 
   .logo {
     width: 80px; } }
-@media screen and (device-aspect-ratio: 16 / 9), screen and (device-aspect-ratio: 16 / 10) {
-  .heading {
-    font-size: 1.4em; }
-
-  .logo {
-    width: 60px; } }
 footer.menu-footer {
   position: absolute;
   bottom: 0;
