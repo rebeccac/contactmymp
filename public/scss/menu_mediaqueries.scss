@@ -425,5 +425,12 @@ footer.menu-footer {
            position: absolute;
            left: 120px;
         }
-      }
+     }
+}
+
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
+   .menu, .slidermenu {
+      display: none;
+   }
 }

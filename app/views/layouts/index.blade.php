@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
 </head>
 <body class="page-body page-body-left">
+   <div class="warning">
+      <i class="fa fa-warning"></i>
+      <br>Contact My MP is best viewed in portrait mode on mobile devices
+   </div>
 <div class="container">
    <div class="row header">
      <div class="large-12 medium-12 columns">

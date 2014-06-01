@@ -11,6 +11,10 @@
       <meta name="google-site-verification" content="8TN4pcqS7FfgNgp_Xn3kwy359jSuYRFXT_RglU0QBXA" />
      </head>
      <body class="page-body page-body-left">
+        <div class="warning">
+           <i class="fa fa-warning"></i>
+           <br>Contact My MP is best viewed in portrait mode on mobile devices
+        </div>
         <div class="row container">
               @include('includes/menu')
             <div id="menu-button" class="menu-button-left white_text"><i class="fa fa-bars"></i></div>

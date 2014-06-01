@@ -333,3 +333,6 @@ footer.menu-footer {
     .slidermenu ul li.menu-section:hover > ul.sub-menu {
       position: absolute;
       left: 120px; } }
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .menu, .slidermenu {
+    display: none; } }
