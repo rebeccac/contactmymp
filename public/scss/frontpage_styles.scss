@@ -333,34 +333,35 @@ footer {
 }
 
 @media screen and (max-height: 480px) and (orientation: landscape) {
-   body {
-      background: none;
-      max-width: 100%;
-      max-height: 100%;
+   .heading {
+      font-size: 2.5em;
    }
-   .warning {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 40%;
-      background-color: #fff;
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 1.1em;
-      text-align: center;
-      color: lighten($dark_text, 20%);
-      display: block;
-      i {
-         font-size: 3em;
-      }
+   .logo {
+      width: 150px;
    }
-
-   .row .container,
-   .header,
-   .logo,
-   .postcode-form,
-   #menu-button.white_text {
-      display: none;
+   h2 {
+      color: darken($dark_text, 30%);
+      margin-right: 5px;
    }
+   .postcode-search {
+     top: 60px;
+     .postcode-form {
+      background-color: rgba(255,255,255,0.6);
+      padding: 0;
+      border-radius: 0;
+     }
+     .form {
+       .top-row {
+         width: 100%;
+         label {
+           color: darken($dark_text, 30%);
+         }
+         input[type=submit] {
+           margin: 3px 5px 3px 8px;
+         }
+       }
+    }
+}
 }
 
 @import 'menu_mediaqueries'

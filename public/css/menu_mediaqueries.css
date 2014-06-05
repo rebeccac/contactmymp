@@ -18,7 +18,7 @@ footer.menu-footer {
       color: #555; }
 
 /* Sliding menu */
-@media all and (max-width: 768px) {
+@media all and (max-width: 768px) and (min-height: 481px) {
   .menu {
     display: none; }
 
@@ -36,7 +36,7 @@ footer.menu-footer {
     color: #5c5c5c;
     font-size: 2em; }
     #menu-button i {
-      color: #f2f2f2; }
+      color: #5c5c5c; }
 
   .menu-button-left {
     left: 20px; }
@@ -223,7 +223,7 @@ footer.menu-footer {
       position: absolute;
       left: 120px; } }
 /* Mobiles in landscape */
-@media all and (max-height: 360px) {
+@media screen and (max-height: 480px) {
   .menu {
     display: none; }
 
@@ -241,7 +241,7 @@ footer.menu-footer {
     color: #5c5c5c;
     font-size: 2em; }
     #menu-button i {
-      color: #f2f2f2; }
+      color: #5c5c5c; }
 
   .menu-button-left {
     left: 20px; }
@@ -282,7 +282,6 @@ footer.menu-footer {
         list-style: none;
         text-align: center;
         width: 120px;
-        min-height: 30px;
         border-bottom: 1px solid #444;
         font-family: 'Helvetica Neue', sans-serif;
         color: #f2f2eb;
@@ -294,24 +293,22 @@ footer.menu-footer {
           vertical-align: middle;
           width: 120px;
           padding: 3px;
-          min-height: 30px;
           font-size: 0.9em; }
       .slidermenu ul li.top {
         border-top: 1px solid #444; }
+    .slidermenu br {
+      display: none; }
     .slidermenu i {
-      color: #555;
-      font-size: 1.3em; }
+      display: none; }
     .slidermenu ul.sub-menu {
       display: block;
       width: 120px;
-      min-height: 120px;
       list-style: none;
       position: absolute;
       left: -9999px;
       background-color: #1d1d1d; }
       .slidermenu ul.sub-menu li.sub-menu-section {
         width: 120px;
-        height: 30px;
         border-bottom: 1px solid #444;
         border-right: 5px solid transparent;
         display: table;
@@ -329,10 +326,7 @@ footer.menu-footer {
     .slidermenu ul li.menu-section:hover {
       border-right: 5px solid #f8720a; }
       .slidermenu ul li.menu-section:hover i {
-        color: #999; }
+        display: none; }
     .slidermenu ul li.menu-section:hover > ul.sub-menu {
       position: absolute;
       left: 120px; } }
-@media screen and (max-height: 480px) and (orientation: landscape) {
-  .menu, .slidermenu {
-    display: none; } }
