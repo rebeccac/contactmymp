@@ -4667,7 +4667,8 @@ h2 {
     .postcode-search .form .top-row input[type=number] {
       font-family: FontAwesome;
       width: 90px;
-      display: inline-block; }
+      display: inline-block;
+      font-size: 16px; }
     .postcode-search .form .top-row input[type=submit] {
       font-family: Helvetica, Arial, sans-serif;
       width: 90px;

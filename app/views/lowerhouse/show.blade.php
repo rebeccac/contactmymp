@@ -249,7 +249,7 @@
              </div>
              <div class="row" data-equalizer>
                 <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
-                    {{ Form::open(array('action' => 'MPController@mpemail', 'class' => 'contact_form')) }}
+                    {{ Form::open(array('action' => 'MPController@mpemail', 'id' => 'mp-email', 'class' => 'contact_form')) }}
                        {{ Form::label('name', 'Name:') }}
                        {{ Form::text('name', $value = null, $attributes = array('class' => 'inputs')); }}
                        {{ $errors->first('name', '<p class="error">* :message</p>') }}

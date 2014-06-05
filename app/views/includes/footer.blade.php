@@ -18,7 +18,8 @@
 
         ga('create', 'UA-44449664-2', 'contactmymp.com');
         ga('send', 'pageview');
-
       </script>
+      <script src="{{ URL::asset('js/custom-tracking.js') }}"></script>
+
   </body>
 </html>

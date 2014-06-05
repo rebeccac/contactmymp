@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('content')
-<div class="contact-form-content">
+<div id="mp-email" class="contact-form-content">
    <br>
    <h3>Your email has been sent to {{ $mp->first_name }} {{ $mp->last_name }}</h3>
    <br><br>
