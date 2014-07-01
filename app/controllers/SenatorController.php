@@ -9,7 +9,8 @@ class SenatorController extends \BaseController {
 	 */
 	public function index()
 	{
-		$senators = Senator::all();
+		//$senators = Senator::all();
+		$senators = Senator::orderBy('last_name')->get();
 		$page_title = 'All Members of the Australian Senate - Contact My MP';
 		return View::make('upperhouse.index', array('senators' => $senators, 'page_title' => $page_title));
 	}
@@ -18,7 +19,7 @@ class SenatorController extends \BaseController {
 		if(isset($_POST['order'])) {
 			$order = $_POST['order'];
 			if ($order == 'state' ) {
-				$senators = Senator::orderBy('state')->get();
+				$senators = Senator::orderBy('state')->orderBy('last_name', 'ASC')->get();
 			}
 			else if ($order == 'last_name') {
 				$senators = Senator::orderBy('last_name')->get();

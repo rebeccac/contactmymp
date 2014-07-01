@@ -57,7 +57,7 @@ class PageController extends \BaseController {
       }
       else {
 				$state = Electorate::where('constituency', '=', $reps[0]->constituency)->first()->electorate_address_state;
-				$senators = Senator::where('state', '=', $state)->get();
+				$senators = Senator::where('state', '=', $state)->orderBy('last_name')->get();
 				$reps = Electorate::queryValues($reps);
 				return View::make('select', array('senators' => $senators, 'postcode' => $postcode, 'reps' => $reps, 'page_title' => $page_title));
       }
