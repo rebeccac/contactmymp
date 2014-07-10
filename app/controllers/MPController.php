@@ -22,6 +22,9 @@ class MPController extends \BaseController {
          if ($order == 'constituency' ) {
             $mps = Electorate::orderBy('constituency')->get();
          }
+			else if ($order == 'party') {
+				$mps = Electorate::orderBy('party')->orderBy('last_name', 'ASC')->get();
+			}
          else if ($order == 'last_name') {
             $mps = Electorate::orderBy('last_name')->get();
          }

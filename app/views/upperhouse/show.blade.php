@@ -247,31 +247,45 @@
          </div>
           <div class="row" data-equalizer>
              <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
-                 {{ Form::open(array('action' => 'SenatorController@senatoremail', 'id' => 'senator-email', 'class' => 'contact_form')) }}
-                   {{ Form::label('name', 'Name:') }}
-                   {{ Form::text('name', $value = null, $attributes = array('class' => 'inputs')); }}
-                      {{ $errors->first('name', '<p class="error">* :message</p>') }}
-                   <br>
-                    {{ Form::label('email', 'Your email address: ') }}
-                    {{ Form::email('email', $value = null, $attributes = array('class' => 'inputs')); }}
-                       {{ $errors->first('email', '<p class="error">* :message</p>') }}
-                    <br>
-                    {{ Form::label('subject', 'Subject:') }}
-                    {{ Form::text('subject', $value = null, $attributes = array('class' => 'inputs')); }}
-                       {{ $errors->first('subject', '<p class="error">* :message</p>') }}
-                    <br>
-                    {{ Form::label('message', 'Message:') }}
-                    {{ Form::textarea('message', $value = null, $attributes = array('class' => 'inputs')); }}
-                       {{ $errors->first('message', '<p class="error">* :message</p>') }}
-                   {{ Form::hidden('id', $senator['id']) }}
-                   <br>
-                    <div>
-                        <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
-                        <a href="{{ URL::to('privacy') }}" target="_blank" class="privacy_policy">
-                           <i class="fa fa-info-circle"></i>Privacy Policy
-                        </a>
-                    </div>
-                 {{ Form::close() }}
+
+                 @if(!is_null($senator['email']))
+                    {{ Form::open(array('action' => 'SenatorController@senatoremail', 'id' => 'senator-email', 'class' => 'contact_form')) }}
+                      {{ Form::label('name', 'Name:') }}
+                      {{ Form::text('name', $value = null, $attributes = array('class' => 'inputs')); }}
+                         {{ $errors->first('name', '<p class="error">* :message</p>') }}
+                      <br>
+                       {{ Form::label('email', 'Your email address: ') }}
+                       {{ Form::email('email', $value = null, $attributes = array('class' => 'inputs')); }}
+                          {{ $errors->first('email', '<p class="error">* :message</p>') }}
+                       <br>
+                       {{ Form::label('subject', 'Subject:') }}
+                       {{ Form::text('subject', $value = null, $attributes = array('class' => 'inputs')); }}
+                          {{ $errors->first('subject', '<p class="error">* :message</p>') }}
+                       <br>
+                       {{ Form::label('message', 'Message:') }}
+                       {{ Form::textarea('message', $value = null, $attributes = array('class' => 'inputs')); }}
+                          {{ $errors->first('message', '<p class="error">* :message</p>') }}
+                      {{ Form::hidden('id', $senator['id']) }}
+                      <br>
+                       <div>
+                           <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
+                           <a href="{{ URL::to('privacy') }}" target="_blank" class="privacy_policy">
+                              <i class="fa fa-info-circle"></i>Privacy Policy
+                           </a>
+                       </div>
+                    {{ Form::close() }}
+                   @else
+                      <p><br>Sorry, this Senator has chosen not to make an email address available to the public.
+                      <br><br>
+                      @if($senator['personal_contact_form'])
+                         @if($senator['gender'] == 'F')
+                            She
+                         @else
+                            He
+                         @endif
+                         can be <strong><a href="{{$senator['personal_contact_form']}}" target="_blank">contacted here</a></strong>.
+                      @endif</p>
+                   @endif
              </div>
           </div>
        </div>

@@ -4,7 +4,7 @@
    <div class="box">
       {{ Form::open(array('action' => 'MPController@postIndex', 'class' => 'selection-form'))}}
          {{ Form::label('order', 'Sort MPs by: ') }}
-         {{ Form::select('order', array('constituency' => 'Electorate', 'last_name' => 'Last Name')); }}
+         {{ Form::select('order', array('constituency' => 'Electorate', 'party' => 'Party', 'last_name' => 'Last Name')); }}
          {{ Form::submit('Submit'); }}
       {{ Form::close() }}
    </div>

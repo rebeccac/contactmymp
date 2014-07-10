@@ -21,6 +21,9 @@ class SenatorController extends \BaseController {
 			if ($order == 'state' ) {
 				$senators = Senator::orderBy('state')->orderBy('last_name', 'ASC')->get();
 			}
+			else if ($order == 'party') {
+				$senators = Senator::orderBy('party')->orderBy('last_name', 'ASC')->get();
+			}
 			else if ($order == 'last_name') {
 				$senators = Senator::orderBy('last_name')->get();
 			}

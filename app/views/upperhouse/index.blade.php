@@ -4,7 +4,7 @@
    <div class="box">
       {{ Form::open(array('action' => 'SenatorController@postIndex', 'class' => 'selection-form'))}}
          {{ Form::label('order', 'Sort Senators by: ') }}
-         {{ Form::select('order', array('state' => 'State', 'last_name' => 'Last Name')); }}
+         {{ Form::select('order', array('state' => 'State', 'party' => 'Party', 'last_name' => 'Last Name')); }}
          {{ Form::submit('Submit'); }}
       {{ Form::close() }}
    </div>
