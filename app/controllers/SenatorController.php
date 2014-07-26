@@ -9,10 +9,10 @@ class SenatorController extends \BaseController {
 	 */
 	public function index()
 	{
-		//$senators = Senator::all();
 		$senators = Senator::orderBy('last_name')->get();
-		$page_title = 'All Members of the Australian Senate - Contact My MP';
-		return View::make('upperhouse.index', array('senators' => $senators, 'page_title' => $page_title));
+		$page_title = 'Email Members of Federal Australian Senate | Contact My MP Australia';
+		$description = "Email Members of the Federal Australian Senate";
+		return View::make('upperhouse.index', array('senators' => $senators, 'page_title' => $page_title, 'description' => $description));
 	}
 
 	public function postIndex() {
@@ -31,8 +31,9 @@ class SenatorController extends \BaseController {
 		else {
 			$senators = Senator::orderBy('last_name')->get();
 		}
-		$page_title = "All Senators - Contact My MP";
-		return View::make('upperhouse.index', array('senators' => $senators, 'page_title' => $page_title));
+		$page_title = 'Email Members of Federal Australian Senate | Contact My MP Australia';
+		$description = "Email Members of the Federal Australian Senate";
+		return View::make('upperhouse.index', array('senators' => $senators, 'page_title' => $page_title, 'description' => $description));
 	}
 
 
@@ -67,8 +68,9 @@ class SenatorController extends \BaseController {
 	public function show($id)
 	{
 		$senator = Senator::find($id);
-		$page_title = "$senator->first_name $senator->last_name - $senator->state Senator - Contact My MP";
-		return View::make('upperhouse.show', array('senator' => $senator, 'page_title' => $page_title));
+		$page_title = "Email $senator->first_name $senator->last_name - $senator->state Senator | Contact My MP Australia";
+		$description = "Contact $senator->first_name $senator->last_name, Senator for $senator->state";
+		return View::make('upperhouse.show', array('senator' => $senator, 'page_title' => $page_title, 'description' => $description));
 	}
 
 
@@ -115,7 +117,8 @@ class SenatorController extends \BaseController {
 		$data['recipient_email'] = $senator->email;
 		$data['recipient_name'] = $senator->first_name." ".$senator->last_name;
 		$data['date_time'] = date("F j, Y, g:i a");
-		$page_title = "$senator->first_name $senator->last_name - Senator for $senator->state - Contact My MP";
+		$page_title = "Email $senator->first_name $senator->last_name - Senator for $senator->state | Contact My MP Australia";
+		$description = "Email $senator->first_name $senator->last_name - Senator for $senator->state in the Australian Senate";
 
 
 		//Validation
@@ -140,8 +143,9 @@ class SenatorController extends \BaseController {
 			});
 			return View::make('upperhouse.emailsent',
 			 						array(
-										'page_title' => "Your email has been sent to $senator->first_name $senator->last_name - Contact My MP",
-			 						  'data' => $data,
+										'page_title' => "Your email has been sent to $senator->first_name $senator->last_name | Contact My MP Australia",
+										'description' => $description,
+			 						  	'data' => $data,
 										'senator' => $senator
 									));
 		}
@@ -149,8 +153,9 @@ class SenatorController extends \BaseController {
 			//return contact form with errors
 			return Redirect::route('upperhouse.show', $id)
 				->with('page_title', $page_title)
-				->withInput()
-				->withErrors($validator);
+				->with('description', $description)
+				->withErrors($validator)
+				->withInput();
 		}
 	}
 

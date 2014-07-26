@@ -1,6 +1,7 @@
 @include('includes/dtd')
 <title>{{ $page_title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, content=minimal-ui">
+<meta description={{ $description }}>
 <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.ico">
 <link rel="stylesheet" href="{{ URL::asset('css/style.min.css') }}">

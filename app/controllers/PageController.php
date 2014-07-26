@@ -29,7 +29,7 @@ class PageController extends \BaseController {
 	}
 
 	public function getSelect() {
-		$page_title = "Select your Politician - Contact My MP";
+		$page_title = "Select your Politician - Contact My MP Australia";
 		if(!isset($_POST['electorate_submit'])) {
 			return Redirect::action('HomeController@index');
 		}
@@ -39,7 +39,8 @@ class PageController extends \BaseController {
 	}
 
 	public function postSelect() {
-		$page_title = "Select your Politician - Contact My MP";
+		$page_title = "Select your Politician - Contact My MP Australia";
+		$description = "Find and email your Australian Federal MP and Senators";
 		if(!isset($_POST['electorate_submit'])) {
 			$postcode = e(Input::get('postcode'));
 			$oaapi = $this->initialise();
@@ -59,7 +60,7 @@ class PageController extends \BaseController {
 				$state = Electorate::where('constituency', '=', $reps[0]->constituency)->first()->electorate_address_state;
 				$senators = Senator::where('state', '=', $state)->orderBy('last_name')->get();
 				$reps = Electorate::queryValues($reps);
-				return View::make('select', array('senators' => $senators, 'postcode' => $postcode, 'reps' => $reps, 'page_title' => $page_title));
+				return View::make('select', array('senators' => $senators, 'postcode' => $postcode, 'reps' => $reps, 'page_title' => $page_title, 'description' => $description));
       }
     }
 	}
@@ -146,17 +147,20 @@ class PageController extends \BaseController {
 	}
 
 	public function getAbout() {
-		$page_title = "About Us - Contact My MP";
-		return View::make('page.about')->with('page_title', $page_title);
+		$page_title = "About Us | Contact My MP Australia";
+		$description = "We hope that Contact My MP will help to faciliate easy communication between constituents and their representatives in the Australian Federal Parliament.";
+		return View::make('page.about', array('page_title' => $page_title, 'description' => $description));
 	}
 
 	public function getContact() {
-		$page_title = "Contact Us - Contact My MP";
-		return View::make('page.contact')->with('page_title', $page_title);
+		$page_title = "Contact Us | Contact My MP Australia";
+		$description = "Email Contact My MP Australia";
+		return View::make('page.contact', array('page_title' => $page_title, 'description' => $description));
 	}
 
 	public function postContact() {
-		$page_title = "Contact Us - Contact My MP";
+		$page_title = "Contact Us | Contact My MP Australia";
+		$description = "Email Contact My MP Australia";
 		$data = Input::all();
 		$data['date_time'] = date("F j, Y, g:i a");
 
@@ -179,34 +183,37 @@ class PageController extends \BaseController {
 				$message->to('support@contactmymp.com', 'Rebecca')->cc('rebecca.j.cordingley@gmail.com')->subject('Contact My MP Feedback');
 
 			});
-			return View::make('page.thankyou', array('page_title' => "Thank you for your feedback", 'data' => $data));
+			return View::make('page.thankyou', array('page_title' => "Thank you for your feedback", 'data' => $data, 'description' => "Thank you for your feedback. We will respond as quickly as possible."));
 		}
 		else {
 			//return contact form with errors
-			return Redirect::to('/contact')->withErrors($validator)->with('page_title', $page_title)->withInput();
+			return Redirect::to('/contact')->withErrors($validator)->with('page_title', $page_title)->with('description', $description)->withInput();
 		}
 	}
 
 	public function getMinisters() {
-		$page_title = "Email Ministers - Contact My MP";
+		$page_title = "Email Australian Government Ministers | Contact My MP Australia";
+		$description = "View and email current Australian Government Ministers, Outer Ministers and Parliamentary Secretaries";
 		$ministers = Minister::orderBy('last_name')->get();
 		$ministers = Minister::getMinistersDetails($ministers);
 		$outerministers = Outerminister::orderBy('last_name')->get();
 		$outerministers = Outerminister::getOuterMinistersDetails($outerministers);
 		$secretaries = Secretary::orderBy('last_name')->get();
 		$secretaries = Secretary::getSecretaryDetails($secretaries);
-		return View::make('page.ministers', array('page_title' => $page_title, 'ministers' => $ministers, 'outerministers' => $outerministers, 'secretaries' => $secretaries));
+		return View::make('page.ministers', array('page_title' => $page_title, 'description' => $description, 'ministers' => $ministers, 'outerministers' => $outerministers, 'secretaries' => $secretaries));
 	}
 
 	public function findPolitician() {
-		$page_title = "Find a Politician - Contact My MP";
+		$page_title = "Find an Australian Federal Politician | Contact My MP Australia";
+		$description = "Search for a member of the Federal Parliament of Australia";
 		$mps = Electorate::orderBy('last_name')->get();
 		$senators = Senator::orderBy('last_name')->get();
-		return View::make('page.findpolitician', array('page_title' => $page_title, 'mps' => $mps, 'senators' => $senators));
+		return View::make('page.findpolitician', array('page_title' => $page_title, 'description' => $description, 'mps' => $mps, 'senators' => $senators));
 	}
 
 	public function postFindPolitician() {
-		$page_title = "Find a Politician - Contact My MP";
+		$page_title = "Find an Australian Federal Politician | Contact My MP Australia";
+		$description = "Search for a member of the Federal Parliament of Australia";
 		if(isset($_POST['mp'])) {
 			$id = $_POST['mp'];
 			return Redirect::action('MPController@show', array('id' => $id));
@@ -223,13 +230,15 @@ class PageController extends \BaseController {
 	}
 
 	public function getThankYou() {
-		$page_title = "Thank you for your feedback - Contact My MP";
-		return View::make('page.thankyou', array('page_title' => $page_title, 'data' => $data));
+		$page_title = "Thank you for your feedback | Contact My MP Australia";
+		$description = "Thank you for your feedback";
+		return View::make('page.thankyou', array('page_title' => $page_title, 'description' => $description, 'data' => $data));
 	}
 
 	public function privacy() {
-		$page_title = "Privacy Policy - Contact My MP";
-		return View::make('page.privacy', array('page_title' => $page_title));
+		$page_title = "Privacy Policy | Contact My MP Australia";
+		$description = "Emails you send to members of the Parliament of Australia are private and not accessible by anyone involved with Contact My MP Australia";
+		return View::make('page.privacy', array('page_title' => $page_title, 'description' => $description));
 	}
 
 }

@@ -2,7 +2,8 @@
 <!-- Background image credit: JJ Harrison http://en.wikipedia.org/wiki/File:Parliament_House_Canberra_Dusk_Panorama.jpg -->
    <html>
      <head>
-       <title>Contact My MP</title>
+       <title>Email Australian Federal Politicians - MPs &amp; Senators | Contact My MP</title>
+       <meta name="description" content="Easily find and email your Australian Federal MP &amp; Senators and government Ministers.">
        <meta name="viewport" content="width=device-width, initial-scale=1, content=minimal-ui">
        <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
 		 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.ico">
@@ -22,7 +23,7 @@
         <div class="large-2 medium-2 small-2 columns" data-equalizer-watch></div>
         <div class="large-10 medium-10 small-10 columns title" data-equalizer-watch>
           <h1 class="heading dark_text"><a href="{{ URL::to('/') }}">Contact<br>My MP</a></h1>
-          <a href="{{ URL::to('/') }}"><img class="logo" src="/images/logo_200.png" alt="Contact My MP logo"></a>
+          <a href="{{ URL::to('/') }}"><img class="logo" src="/images/logo_200.png" alt="Contact My MP logo - email Australian politicians"></a>
         </div>
       </div>
 

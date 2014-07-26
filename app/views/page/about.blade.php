@@ -6,13 +6,13 @@
    <div class="text-page">
       Your MP and Senators represent you in the Australian Parliament and you have the right to
       contact them with any concerns or problems you might have.
-      We hope that <em>Contact My MP</em> will help to faciliate easy communication between constituents and
+      We hope that <em>Contact My MP Australia</em> will help to faciliate easy communication between constituents and
       their representatives in the Federal Parliament.
       <br><br>
-      Your emails to MPs and Senators are completely private and not accessible by anyone involved with <em>Contact My MP</em>.
+      Your emails to MPs and Senators are completely private and not accessible by anyone involved with <em>Contact My MP Australia</em>.
       For further information, please see the <a href="{{ URL::to('privacy') }}">Privacy Policy</a>.
       <br><br>
-      <em>Contact My MP</em> is not affiliated with the Australian Parliament or any Australian politicians. It exists purely to enhance Australians' participation in our democracy. 
+      <em>Contact My MP Australia</em> is not affiliated with the Australian Parliament or any Australian politicians. It exists purely to enhance Australians' participation in our democracy. 
       <br><br>
       If you have any comments, we would love to hear from you via our <a href="{{URL::to('contact')}}">contact form</a>.
    </div>

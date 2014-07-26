@@ -12,8 +12,9 @@ class MPController extends \BaseController {
 	public function index()
 	{
 		$mps = Electorate::orderBy('last_name')->get();
-		$page_title = 'All Members of the House of Representatives - Contact My MP';
-		return View::make('lowerhouse.index', array('mps' => $mps, 'page_title' => $page_title));
+		$page_title = 'Email Members of House of Representatives | Contact My MP Australia';
+		$description = "Email Members of the Australian House of Representatives";
+		return View::make('lowerhouse.index', array('mps' => $mps, 'page_title' => $page_title, 'description' => $description));
 	}
 
 	public function postIndex() {
@@ -32,8 +33,9 @@ class MPController extends \BaseController {
       else {
          $mps = Electorate::orderBy('last_name')->get();
       }
-      $page_title = "All Members of Parliament - Contact My MP";
-      return View::make('lowerhouse.index', array('mps' => $mps, 'page_title' => $page_title));
+		$page_title = 'Email Members of House of Representatives | Contact My MP Australia';
+		$description = "Email Members of the Australian House of Representatives";
+      return View::make('lowerhouse.index', array('mps' => $mps, 'page_title' => $page_title, 'description' => $description));
 	}
 
 	/**
@@ -67,8 +69,10 @@ class MPController extends \BaseController {
 	public function show($id)
 	{
 		$mp = Electorate::find($id);
-		$page_title = "$mp->first_name $mp->last_name - Member for $mp->constituency - Contact My MP";
-		return View::make('lowerhouse.show', array('mp' => $mp, 'page_title' => $page_title));
+		$page_title = "Email $mp->first_name $mp->last_name - Member for $mp->constituency | Contact My MP Australia";
+		$description = "Contact $mp->first_name $mp->last_name, Member of the Australian House of Representatives
+		 for the electorate of $mp->constituency.";
+		return View::make('lowerhouse.show', array('mp' => $mp, 'page_title' => $page_title, 'description' =>$description ));
 	}
 
 
@@ -118,7 +122,8 @@ class MPController extends \BaseController {
 		$data['recipient_email'] = $mp->email;
 		$data['recipient_name'] = $mp->first_name." ".$mp->last_name;
 		$data['date_time'] = date("F j, Y, g:i a");
-		$page_title = "$mp->first_name $mp->last_name - Member for $mp->constituency - Contact My MP";
+		$description = "Email $mp->first_name $mp->last_name - Member for $mp->constituency in the Australian House of Representatives";
+		$page_title = "Email $mp->first_name $mp->last_name - Member for $mp->constituency | Contact My MP Australia";
 
 		//Validation
 		$rules = array (
@@ -138,15 +143,17 @@ class MPController extends \BaseController {
 				$message->to($data['recipient_email'], $data['recipient_name'])->subject($data['subject']);
 			});
 			return View::make('lowerhouse.emailsent',
-			 						array('page_title' => "Your email has been sent to $mp->first_name $mp->last_name - Contact My MP",
-			 								'data' => $data,
-											 'mp' => $mp
+			 						array('page_title' => "Your email has been sent to $mp->first_name $mp->last_name | Contact My MP Australia",
+									'description' => $description,
+			 						'data' => $data,
+									'mp' => $mp
 										));
 		}
 		else {
 			//return contact form with errors
 			return Redirect::route('lowerhouse.show', $id)
 				->with('page_title', $page_title)
+				->with('description', $description)
 				->withInput()
 				->withErrors($validator);
 		}

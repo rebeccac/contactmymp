@@ -17,7 +17,7 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-		return View::make('index', array('page_title' => "Contact My MP"));
+		return View::make('index', array('page_title' => "Email Australian Federal Politicians - MPs & Senators | Contact My MP"));
 	}
 
 }
