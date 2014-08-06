@@ -4574,9 +4574,6 @@ body {
   font-size: 100%;
   background-color: #f2f2eb; }
 
-.warning {
-  display: none; }
-
 /* Basic Layout Boxes */
 .row, .column, .columns {
   padding: 0;
@@ -4724,6 +4721,21 @@ h3 {
   margin-left: 8%;
   letter-spacing: 2px;
   font-size: 2.2em; }
+
+/* ShareThis */
+.row.stlinks {
+  width: 100%;
+  position: absolute;
+  top: 22%; }
+  .row.stlinks .st {
+    width: auto;
+    float: right;
+    padding-right: 20px; }
+
+.content {
+  width: 100%;
+  position: relative;
+  top: 50px; }
 
 /* About Us, Privacy Policy Pages */
 .text-page {
@@ -5158,6 +5170,9 @@ form.selection-form {
   border: 3px solid #5c5c5c; }
 
 @media all and (min-width: 1024px), (min-width: 769px) and (max-width: 1023px) {
+  .stlinks {
+    top: 20%; }
+
   .contact-form-content {
     max-width: 900px;
     margin: 0 auto; }
@@ -5188,12 +5203,24 @@ form.selection-form {
   .padding {
     padding: 0 8px; } }
 @media all and (max-width: 1023px) {
+  .stlinks {
+    top: 15%; }
+
   .heading {
     font-size: 3.8em; }
 
   .sub-heading {
     font-size: 2.2em; } }
 @media all and (max-width: 768px) {
+  /* ShareThis */
+  .row.stlinks {
+    top: 17%; }
+
+  .content {
+    width: 100%;
+    position: relative;
+    top: 50px; }
+
   .page-body {
     overflow-x: hidden;
     position: relative; }
@@ -5322,6 +5349,15 @@ form.selection-form {
   .sub-heading {
     font-size: 1.9em; }
 
+  .row.stlinks {
+    width: 100%;
+    position: absolute;
+    top: 15%; }
+    .row.stlinks .st {
+      width: auto;
+      float: right;
+      padding-right: 20px; }
+
   .constituency-heading {
     font-size: 1.9em; }
 
@@ -5381,6 +5417,9 @@ form.selection-form {
   .medium-large {
     display: none; } }
 @media all and (max-width: 480px) {
+  .row.stlinks {
+    top: 25%; }
+
   .page-body {
     overflow-x: hidden;
     position: relative; }
@@ -5503,6 +5542,9 @@ form.selection-form {
 
   .contact-text {
     font-size: 0.8em; } }
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  .row.stlinks {
+    top: 40%; } }
 footer.menu-footer {
   position: absolute;
   bottom: 0;

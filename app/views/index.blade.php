@@ -5,30 +5,54 @@
        <title>Email Australian Federal Politicians - MPs &amp; Senators | Contact My MP</title>
        <meta name="description" content="Easily find and email your Australian Federal MP &amp; Senators and government Ministers.">
        <meta name="viewport" content="width=device-width, initial-scale=1, content=minimal-ui">
+       <meta name="robots" content="noindex, follow">
+       <link rel="canonical" href="http://www.contactmymp.com" />
        <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
 		 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.ico">
        <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.min.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
       <meta name="google-site-verification" content="8TN4pcqS7FfgNgp_Xn3kwy359jSuYRFXT_RglU0QBXA" />
+      <!-- ShareThis script -->
+      <script type="text/javascript">var switchTo5x=true;</script>
+      <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+      <script type="text/javascript">stLight.options({publisher: "ec7fc08b-7b94-46a6-bdba-63333d7f0444", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+      <!-- end ShareThis script -->
      </head>
      <body class="page-body page-body-left">
-        <div class="warning">
-           <i class="fa fa-warning"></i>
-           <br>Contact My MP is best viewed in portrait mode on mobile devices
-        </div>
+        <!-- Facebook Like script -->
+        <div id="fb-root"></div>
+         <script>(function(d, s, id) {
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));</script>
+         <!-- end Facebook Like script -->
         <div class="row container">
-              @include('includes/menu')
-            <div id="menu-button" class="menu-button-left white_text"><i class="fa fa-bars"></i></div>
+           <div id="menu-button" class="menu-button-left white_text"><i class="fa fa-bars"></i></div>
+
       <div class="row header" data-equalizer>
         <div class="large-2 medium-2 small-2 columns" data-equalizer-watch></div>
         <div class="large-10 medium-10 small-10 columns title" data-equalizer-watch>
-          <h1 class="heading dark_text"><a href="{{ URL::to('/') }}">Contact<br>My MP</a></h1>
+          <h1 class="heading dark_text"><a href="{{ URL::to('/') }}">Contact <br>My MP</a></h1>
           <a href="{{ URL::to('/') }}"><img class="logo" src="/images/logo_200.png" alt="Contact My MP logo - email Australian politicians"></a>
         </div>
       </div>
 
       <div class="clear"></div>
 
+      <div class="row stlinks" data-equalizer>
+         <div class="large-8 medium-8 columns" data-equalizer-watch></div>
+         <div class="large-4 medium-4 columns st" data-equalizer-watch>
+            <span class='st_twitter'></span>
+            <span class='st_facebook'></span>
+            <span class='st_googleplus'></span>
+            <span class='st_reddit'></span>
+            <span class='st_sharethis'></span>
+            <span class='st_email'></span>
+         </div><!-- end 3 st -->
+      </div><!-- end row stlinks -->
 
       <div class="row postcode-search" data-equalizer>
         <div class="large-9 medium-9 columns" data-equalizer-watch></div>
@@ -48,6 +72,9 @@
         </div>
       </div>
 
+
+
+      @include('includes/menu')
        </div><!-- container -->
        <footer>
           <div class="row s-m" data-equalizer>
@@ -55,15 +82,11 @@
 
             </div>
             <div class="large-4 medium-4 s-m-i columns" data-equalizer-watch>
-              <a href="http://www.twitter.com/ContactMyMp" target="_blank">
-                 <i class="fa fa-twitter"></i>
-              </a>
-              <a href="https://www.facebook.com/contactmympaustralia" target="_blank">
-                 <i class="fa fa-facebook"></i>
-              </a>
-              <a href="{{ URL::to('contact') }}">
-                 <i class="fa fa-envelope-o"></i>
-              </a>
+              <a href="https://twitter.com/ContactMyMP" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @ContactMyMP</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+              <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+
             </div>
             <div class="large-4 medium-4 s-m-i columns" data-equalizer-watch>
 
@@ -72,7 +95,7 @@
 
           <div class="row copyright" data-equalizer>
             <div class="large-12 medium-12 columns" data-equalizer-watch>
-              &copy; contactmymp.com 2014
+              &copy; contactmymp.com {{date("Y")}}
             </div>
           </div><!-- row copyright -->
 
