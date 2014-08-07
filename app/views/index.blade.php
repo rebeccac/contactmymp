@@ -70,13 +70,14 @@
             <div class="top-row">
               <h3>Search for MP & Senators</h3>
               <label for='postcode'>My Postcode: </label>
-              <input type='number' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
+              <input type='number' name='postcode' id='postcode' placeholder='&#xf041;'>
               <input type='submit' id='submit' name='submit' value='Submit'>
               @if (isset($error))
                 <div class="error">
                    {{ $error }}
                 </div>
               @endif
+           </div>
           </form>
         </div>
       </div>

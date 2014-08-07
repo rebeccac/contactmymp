@@ -8,7 +8,7 @@
       {{ Form::open(array('action' => 'PageController@postSelect', 'class' => 'politician-selection-form')) }}
          {{ Form::label('postcode', 'Find by Postcode') }}
          <i class="fa fa-search"></i>
-         <input type='number' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
+         <input type='number' name='postcode' id='postcode' placeholder='&#xf041;'>
          {{ Form::submit('Submit') }}
       {{ Form::close() }}
    </div>

@@ -33,7 +33,7 @@
             <div class="section-contents">
                <i class="fa fa-search"></i>
                   <br>
-                  Email MPs & Senators
+                  Email Politicians
             </div>
          </a>
       </li>
@@ -60,7 +60,7 @@
             <div class="section-contents">
                <i class="fa fa-envelope"></i>
                <br>
-               <a href="{{ URL::to('contact') }}">Contact Us</a>
+               Contact Us
             </div>
          </a>
       </li>
@@ -95,7 +95,7 @@
             </li>
             <li class="sub-menu-section">
                <div class="sub-menu-contents">
-                  <a href="{{ URL::to('lowerhouse') }}">All MPs</a>
+                  <a href="{{ URL::to('lowerhouse') }}">All Members of House of Reps</a>
                </div>
             </li>
                <li class="sub-menu-section">
@@ -108,7 +108,7 @@
             <div class="section-contents">
                <i class="fa fa-search"></i>
                   <br>
-                  Email MPs & Senators
+                  Email Politicians
             </div>
          </a>
       </li>

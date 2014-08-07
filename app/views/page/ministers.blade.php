@@ -24,7 +24,7 @@
                @endif
             </div>
             <div class="politician_row1">
-                  <img class="politician_img" src="/images/politicians/{{ $minister['image'] }}">
+                  <img class="politician_img" src="/images/politicians/{{ $minister['image'] }}" alt="{{ $minister['first_name'] }} {{ $minister['last_name'] }}">
                   <div class="sm-links">
                      <i class="fa fa-twitter smt"></i>
                      @if(!is_null($minister['twitter']))
@@ -73,7 +73,7 @@
                @endif
             </div>
             <div class="politician_row1">
-                  <img class="politician_img" src="/images/politicians/{{ $outerminister['image'] }}">
+                  <img class="politician_img" src="/images/politicians/{{ $outerminister['image'] }}"  alt="{{ $outerminister['first_name'] }} {{ $outerminister['last_name'] }}">
                   <div class="sm-links">
                      <i class="fa fa-twitter smt"></i>
                      @if(!is_null($outerminister['twitter']))
@@ -121,7 +121,7 @@
                @endif
             </div>
             <div class="politician_row1">
-                  <img class="politician_img" src="/images/politicians/{{ $secretary['image'] }}">
+                  <img class="politician_img" src="/images/politicians/{{ $secretary['image'] }}"  alt="{{ $secretary['first_name'] }} {{ $secretary['last_name'] }}">
                   <div class="sm-links">
                      <i class="fa fa-twitter smt"></i>
                      @if(!is_null($secretary['twitter']))

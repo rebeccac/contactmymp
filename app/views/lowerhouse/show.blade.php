@@ -1,6 +1,6 @@
 @extends('layouts.index')
 @section('content')
-
+<div itemscope itemtype="http://schema.org/Person">
 <div class="contact-form-content">
 
   <div class="row">
@@ -10,19 +10,19 @@
      <div class="politician-info-container">
         <div class="row">
            <div class="large-12 medium-12 small-12 columns">
-             <h3>Please use the form below to email {{ $mp['first_name'] }} {{ $mp['last_name'] }}, member for {{ $mp['constituency'] }}.</h3>
+             <h3>Please use the form below to email <span itemprop="name">{{ $mp['first_name'] }} {{ $mp['last_name'] }}</span>, <span itemprop="jobTitle">Member for {{ $mp['constituency'] }}</span>.</h3>
            </div>
         </div>
            <div class="row">
              <div class="large-12 medium-12 small-12 columns pol_info1 mp_medium">
-                {{ $mp['first_name'] }} {{ $mp['last_name'] }} | {{ $mp['party'] }}
+                <span itemprop="name">{{ $mp['first_name'] }} {{ $mp['last_name'] }}</span> | {{ $mp['party'] }}
              </div>
            </div>
 
            @if(isset($mp['positions']))
            <div class="row">
              <div class="large-12 medium-12 small-12 columns pol_info2 mp_dark">
-                {{ $mp['positions'] }}
+                <span itemprop="jobTitle">{{ $mp['positions'] }}</span>
              </div>
            </div>
            @endif
@@ -34,13 +34,13 @@
                 <div class="small">
                 <div class="row" data-equalizer>
                    <div class="large-6 medium-6 small-6 columns" data-equalizer-watch>
-                      <img src="/images/politicians/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}">
+                      <img src="/images/politicians/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}" itemprop="image">
                    </div>
                    <div class="large-6 medium-6 small-6 columns links" data-equalizer-watch>
                       <div class="s-l">
                          <i class="fa fa-link"></i>
                          @if(!is_null($mp['website']))
-                           <a href="{{ $mp['website'] }}" target="_blank">Website</a>
+                           <a href="{{ $mp['website'] }}" target="_blank" itemprop="url">Website</a>
                          @else
                            N/A
                          @endif
@@ -49,7 +49,7 @@
                       <div class="s-l">
                         <i class="fa fa-envelope"></i>
                          @if(!is_null($mp['email']))
-                           <a href="mailto:{{ $mp['email'] }}">Email</a>
+                           <a href="mailto:{{ $mp['email'] }}" itemprop="email">Email</a>
                          @else
                            N/A
                          @endif
@@ -80,32 +80,34 @@
                         <hr class="med_grey">
                         <strong>Electoral Office</strong>
                         <br><br>
-                        @if(!is_null($mp['electorate_address_line_1']))
-                          {{ $mp['electorate_address_line_1'] }}
-                          <br>
-                        @endif
-                        @if(!is_null($mp['electorate_address_line_2']))
-                          {{ $mp['electorate_address_line_2'] }}
-                          <br>
-                        @endif
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                           @if(!is_null($mp['electorate_address_line_1']))
+                             <span itemprop="streetAddress">{{ $mp['electorate_address_line_1'] }}</span>
+                             <br>
+                           @endif
+                           @if(!is_null($mp['electorate_address_line_2']))
+                             <span itemprop="streetAddress">{{ $mp['electorate_address_line_2'] }}</span>
+                             <br>
+                           @endif
+                           @if(!is_null($mp['electorate_address_suburb']))
+                              <span itemprop="addressLocality">{{ $mp['electorate_address_suburb'] }}</span>
+                           @endif
 
-                        @if(!is_null($mp['electorate_address_suburb']))
-                          {{ $mp['electorate_address_suburb'] }}
-                        @endif
-                        @if(!is_null($mp['electorate_address_state']))
-                          {{ $mp['electorate_address_state'] }}
-                        @endif
-                        @if(!is_null($mp['electorate_address_postcode']))
-                          {{ $mp['electorate_address_postcode'] }}
-                        @endif
+                           @if(!is_null($mp['electorate_address_state']))
+                             <span itemprop="addressRegion">{{ $mp['electorate_address_state'] }}</span>
+                           @endif
 
+                           @if(!is_null($mp['electorate_address_postcode']))
+                             <span itemprop="postalCode">{{ $mp['electorate_address_postcode'] }}</span>
+                           @endif
+                        </div><!-- itemprop address -->
                         <br><br>
                         @if(!is_null($mp['electorate_phone']))
-                          <i class="fa fa-phone"></i><strong>Phone: </strong> <a href="tel:{{ $mp['electorate_ph_dial'] }}">{{ $mp['electorate_phone'] }}</a>
+                          <span itemprop="telephone"><i class="fa fa-phone"></i><strong>Phone: </strong> <a href="tel:{{ $mp['electorate_ph_dial'] }}">{{ $mp['electorate_phone'] }}</a></span>
                         @endif
                         <br>
                         @if(!is_null($mp['electorate_fax']))
-                          <i class="fa fa-print"></i><strong>Fax: </strong>{{ $mp['electorate_fax'] }}
+                          <span itemprop="faxNumber"><i class="fa fa-print"></i><strong>Fax: </strong>{{ $mp['electorate_fax'] }}</span>
                         @endif
                       </div>
                    </div>
@@ -115,21 +117,24 @@
                         <hr class="med_grey">
                         <strong>Parliament Office</strong>
                         <br><br>
-                        PO Box 6022
-                        <br>
-                        House of Representatives
-                        <br>
-                        Parliament House
-                        <br>
-                        Canberra ACT 2600
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                           <span itemprop="streetAddress">PO Box 6022</span>
+                           <br>
+                           <span itemprop="streetAddress">House of Representatives</span>
+                           <br>
+                           <span itemprop="streetAddress">Parliament House</span>
+                           <br>
+                           <span itemprop="addressLocality">Canberra</span> <span itemprop="addressRegion">ACT</span> <span itemprop="postalCode">2600</span>
+                        </div><!-- itemprop address -->
                         <br><br>
-                        @if(!is_null($mp['parliament_phone']))
-                          <i class="fa fa-phone"></i><strong>Phone: </strong> <a href="tel:{{ $mp['parliament_ph_dial'] }}">{{ $mp['parliament_phone'] }}</a>
-                        @endif
+                           @if(!is_null($mp['parliament_phone']))
+                             <span itemprop="telephone"><i class="fa fa-phone"></i><strong>Phone: </strong> <a href="tel:{{ $mp['parliament_ph_dial'] }}">{{ $mp['parliament_phone'] }}</a></span>
+                           @endif
                         <br>
-                        @if(!is_null($mp['parliament_fax']))
-                          <i class="fa fa-print"></i><strong>Fax: </strong>{{ $mp['parliament_fax'] }}
-                        @endif
+
+                           @if(!is_null($mp['parliament_fax']))
+                             <span itemprop="faxNumber"><i class="fa fa-print"></i><strong>Fax: </strong>{{ $mp['parliament_fax'] }}</span>
+                           @endif
                         <br>
                         <br>
                       </div>
@@ -145,13 +150,13 @@
              <div class="medium-large">
                 <div class="row" data-equalizer>
                    <div class="large-3 medium-3 small-3 columns" data-equalizer-watch>
-                      <img src="/images/politicians/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}">
+                      <img src="/images/politicians/{{ $mp['image'] }}" alt="Photo of {{$mp['first_name']}} {{$mp['last_name']}}, Member for {{$mp['constituency']}}" itemprop="image">
                    </div>
                    <div class="large-9 medium-9 small-9 columns" data-equalizer-watch>
                       <div class="s-l-icons">
                         <div class="section">
                            @if(!is_null($mp['website']))
-                             <a href="{{ $mp['website'] }}" target="_blank"><i class="fa fa-home" style="color: #8c8c8c;"></i></a>
+                             <a href="{{ $mp['website'] }}" target="_blank" itemprop="url"><i class="fa fa-home" style="color: #8c8c8c;"></i></a>
                            @else
                               <i class="fa fa-home"></i>
                            @endif
@@ -159,7 +164,7 @@
                         <div class="section">
 
                             @if(!is_null($mp['email']))
-                              <a href="mailto:{{ $mp['email'] }}"><i class="fa fa-envelope" style="color: #8c8c8c;"></i></a>
+                              <a href="mailto:{{ $mp['email'] }}" itemprop="email"><i class="fa fa-envelope" style="color: #8c8c8c;"></i></a>
                             @else
                                <i class="fa fa-envelope"></i>
                             @endif
@@ -191,51 +196,60 @@
                       <div class="large-6 medium-6 small-6 columns pol_3 padding" data-equalizer-watch>
                            <strong>Electoral Office</strong>
                            <br><br>
-                           @if(!is_null($mp['electorate_address_line_1']))
-                             {{ $mp['electorate_address_line_1'] }}
-                             <br>
-                           @endif
-                           @if(!is_null($mp['electorate_address_line_2']))
-                             {{ $mp['electorate_address_line_2'] }}
-                             <br>
-                           @endif
+                           <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 
-                           @if(!is_null($mp['electorate_address_suburb']))
-                             {{ $mp['electorate_address_suburb'] }}
-                           @endif
-                           @if(!is_null($mp['electorate_address_state']))
-                             {{ $mp['electorate_address_state'] }}
-                           @endif
-                           @if(!is_null($mp['electorate_address_postcode']))
-                             {{ $mp['electorate_address_postcode'] }}
-                           @endif
+                                 @if(!is_null($mp['electorate_address_line_1']))
+                                   <span itemprop="streetAddress">{{ $mp['electorate_address_line_1'] }}</span>
+                                   <br>
+                                 @endif
 
+                                 @if(!is_null($mp['electorate_address_line_2']))
+                                   <span itemprop="streetAddress">{{ $mp['electorate_address_line_2'] }}</span>
+                                   <br>
+                                 @endif
+
+                                 @if(!is_null($mp['electorate_address_suburb']))
+                                   <span itemprop="addressLocality">{{ $mp['electorate_address_suburb'] }}</span>
+                                 @endif
+
+                                 @if(!is_null($mp['electorate_address_state']))
+                                   <span itemprop="addressRegion">{{ $mp['electorate_address_state'] }}</span>
+                                 @endif
+
+                                 @if(!is_null($mp['electorate_address_postcode']))
+                                   <span itemprop="postalCode">{{ $mp['electorate_address_postcode'] }}</span>
+                                 @endif
+                           </div><!-- itemprop address -->
                            <br><br>
+
                            @if(!is_null($mp['electorate_phone']))
-                             <i class="fa fa-phone"></i><strong>Phone: </strong> <a href="tel:{{ $mp['electorate_ph_dial'] }}">{{ $mp['electorate_phone'] }}</a>
+                             <span itemprop="telephone"><i class="fa fa-phone"></i><strong>Phone: </strong> <a href="tel:{{ $mp['electorate_ph_dial'] }}">{{ $mp['electorate_phone'] }}</a></span>
                            @endif
+
                            <br>
                            @if(!is_null($mp['electorate_fax']))
-                             <i class="fa fa-print"></i><strong>Fax: </strong>{{ $mp['electorate_fax'] }}
+                             <span itemprop="faxNumber"><i class="fa fa-print"></i><strong>Fax: </strong>{{ $mp['electorate_fax'] }}</span>
                            @endif
                          </div>
                       <div class="large-6 medium-6 small-6 columns pol_3 padding" data-equalizer-watch>
                         <strong>Parliament Office</strong>
                         <br><br>
-                        PO Box 6022
-                        <br>
-                        House of Representatives
-                        <br>
-                        Parliament House
-                        <br>
-                        Canberra ACT 2600
+                        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                           <span itemprop="streetAddress">PO Box 6022</span>
+                           <br>
+                           <span itemprop="streetAddress">House of Representatives</span>
+                           <br>
+                           <span itemprop="streetAddress">Parliament House</span>
+                           <br>
+                           <span itemprop="addressLocality">Canberra</span> <span itemprop="addressRegion">ACT</span> <span itemprop="postalCode">2600</span>
+                        </div><!-- itemprop address -->
                         <br><br>
                         @if(!is_null($mp['parliament_phone']))
-                          <i class="fa fa-phone"></i><strong>Phone: </strong> <a href="tel:{{ $mp['parliament_ph_dial'] }}">{{ $mp['parliament_phone'] }}</a>
+                          <span itemprop="telephone"><i class="fa fa-phone"></i><strong>Phone: </strong> <a href="tel:{{ $mp['parliament_ph_dial'] }}">{{ $mp['parliament_phone'] }}</a></span>
                         @endif
                         <br>
                         @if(!is_null($mp['parliament_fax']))
-                          <i class="fa fa-print"></i><strong>Fax: </strong>{{ $mp['parliament_fax'] }}
+                          <span itemprop="faxNumber"><i class="fa fa-print"></i><strong>Fax: </strong>{{ $mp['parliament_fax'] }}</span>
                         @endif
                         <br>
                         <br>
@@ -298,4 +312,5 @@
              </div>
           </div>
        </div>
+    </div><!-- end Person schema -->
 @stop

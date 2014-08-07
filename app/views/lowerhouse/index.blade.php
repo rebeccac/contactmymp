@@ -21,7 +21,7 @@
                <a href="/lowerhouse/{{ $mp->id }}"><p class="politician_title">{{ $mp['first_name'] }} {{ $mp['last_name'] }}</p></a>
             </div>
             <div class="politician_row1">
-               <img class="politician_img" src="/images/politicians/{{ $mp['image'] }}">
+               <img class="politician_img" src="/images/politicians/{{ $mp['image'] }}" alt="{{ $mp['first_name'] }} {{ $mp['last_name'] }}, MP for {{ $mp['constituency'] }}">
                <div class="sm-links">
                   <i class="fa fa-twitter smt"></i>
                   @if(!is_null($mp['twitter']))
