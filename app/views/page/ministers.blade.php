@@ -1,7 +1,8 @@
 @extends('layouts.index')
 @section('content')
    <h2 class="sub-heading">Contact Ministers</h2>
-   <h3 class="ministers-sub-heading">Ministry</h3>
+   <h3>Current Ministry &amp; Portfolios List for the 44th Australian Parliament</h3>
+   <h4 class="ministers-sub-heading">Ministry</h4>
 
    <div id="politicians_container">
 
@@ -52,7 +53,7 @@
          </div><!-- politician minister_light -->
       @endforeach
       <br><br>
-      <h3 class="ministers-sub-heading">Outer Ministry</h3>
+      <h4 class="ministers-sub-heading">Outer Ministry</h4>
 
       @foreach($outerministers as $outerminister)
          <div class="politician minister_light">
@@ -101,7 +102,7 @@
          </div><!-- politician minister_light -->
       @endforeach
       <br><br>
-      <h3 class="ministers-sub-heading">Parliamentary Secretaries</h3>
+      <h4 class="ministers-sub-heading">Parliamentary Secretaries</h4>
       @foreach($secretaries as $secretary)
          <div class="politician minister_light">
             <div class="politician_position minister_dark">

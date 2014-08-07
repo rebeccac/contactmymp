@@ -4681,8 +4681,11 @@ h2 {
 h3 {
   font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 200;
+  max-width: 75%;
+  margin: 0 auto;
   color: #3e606f;
-  font-size: 2em; }
+  font-size: 1.4em;
+  text-align: center; }
 
 /* Header */
 .header {
@@ -5092,7 +5095,7 @@ form.selection-form {
 .search {
   width: auto;
   height: auto;
-  margin: 80px auto 30px auto;
+  margin: 20px auto 30px auto;
   text-align: center; }
 
 .search-box {
@@ -5259,7 +5262,7 @@ form.selection-form {
     padding: 0 8px; }
 
   .heading {
-    font-size: 3.8em; }
+    font-size: 3.3em; }
 
   .sub-heading {
     font-size: 2.2em; }
@@ -5440,10 +5443,11 @@ form.selection-form {
     top: 10px; }
 
   .heading {
-    font-size: 2.3em; }
+    font-size: 2.5em; }
 
   .logo {
-    width: 140px; }
+    display: none;
+    width: 100px; }
 
   .sub-heading {
     font-size: 1.7em; }
@@ -5473,6 +5477,9 @@ form.selection-form {
       #politicians_container .politician .sm-links a {
         font-size: 1em; } }
 @media all and (max-width: 320px) {
+  h3 {
+    max-width: 90%; }
+
   .heading {
     font-size: 1.9em; }
 

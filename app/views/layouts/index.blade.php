@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, follow">
 <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.ico">
-<link rel="stylesheet" href="{{ URL::asset('css/style.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
 <!-- ShareThis script -->
 <script type="text/javascript">var switchTo5x=true;</script>
@@ -20,7 +20,7 @@
 
    <div class="row header">
      <div class="large-12 medium-12 columns">
-        <h1 class="heading dark_text"><a href="{{ URL::to('/') }}">Contact<br>My MP</a></h1>
+        <h1 class="heading dark_text"><a href="{{ URL::to('/') }}">Contact My <br>MP Australia</a></h1>
         <a href="{{ URL::to('/') }}"><img class="logo" src="/images/logo_200.png" alt="Contact My MP logo"></a>
      </div>
    </div> <!-- row header -->

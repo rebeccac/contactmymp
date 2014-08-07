@@ -2,6 +2,7 @@
 
 @section('content')
 <h2 class="sub-heading">Find a Politician</h2>
+<h3>Please use the following search options to write to a member of the Australian Parliament</h3>
 <div class="search">
    <div class="search-box postcode">
       {{ Form::open(array('action' => 'PageController@postSelect', 'class' => 'politician-selection-form')) }}

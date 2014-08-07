@@ -1,6 +1,8 @@
 @extends('layouts.index')
 @section('content')
    <h2 class="sub-heading">Contact Us</h2>
+   <h3>We'd love to hear your thoughts about <em>Contact My MP Australia</em>. Please use the form below if you experience any problems with the site or just to let us know what you think.</h3>
+
       <div class="contact-form-content">
          <div class="s-m-i">
             <a href="http://www.twitter.com/contactmymp" target="_blank"><i class="fa fa-twitter"></i></a>

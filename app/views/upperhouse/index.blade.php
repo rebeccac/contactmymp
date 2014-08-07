@@ -1,6 +1,7 @@
 @extends('layouts.index')
 @section('content')
-
+   <h2 class="sub-heading">All Australian Senators</h2>
+   <h3></h3>
    <div class="box">
       {{ Form::open(array('action' => 'SenatorController@postIndex', 'class' => 'selection-form'))}}
          {{ Form::label('order', 'Sort Senators by: ') }}

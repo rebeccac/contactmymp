@@ -129,10 +129,16 @@ h3 {
    }
 }
 
+.intro {
+   width: 100%;
+   position: absolute;
+   top: 25%
+}
+
 .postcode-search {
   width: 100%;
   position: absolute;
-  top: 25%;
+  top: 30%;
 
   .postcode-form {
     background-color: rgba(255,255,255,0.3);
@@ -254,8 +260,14 @@ footer {
       left: 120px;
    }
 
+.intro {
+   width: 100%;
+   position: absolute;
+   top: 21%
+}
+
    .postcode-search  {
-      top: 21%;
+      top: 30%;
       .postcode-form {
          position: absolute;
          top: 50px;
@@ -287,6 +299,10 @@ footer {
 
 
 @media all and (max-width: 640px) {
+
+   h2 {
+      font-size: 1.4em;
+   }
    .page-body {
       overflow-x: hidden;
         position: relative;
@@ -329,6 +345,11 @@ footer {
 }
 
 @media all and (max-width: 570px) {
+
+   h2 {
+      font-size: 1.2em;
+   }
+
    .heading {
       font-family: Helvetica, sans-serif;
       font-weight: 300;
@@ -355,13 +376,30 @@ footer {
       font-weight: 300;
    }
 
+   h2 {
+      font-size: 1.2em;
+   }
+
    .logo {
       display: none;
+   }
+
+   .intro {
+      width: 100%;
+      position: absolute;
+      top: 22%
+   }
+
+   .postcode-search {
+      top: 31%;
    }
 }
 
 @media all and (max-width: 320px) {
-
+   h2 {
+      font-size: 1.1em;
+      line-height: 1.2em;
+   }
 
    .title {
       margin: 0;
@@ -388,7 +426,7 @@ footer {
    .logo {
       width: 150px;
    }
-   h2 {
+   h3 {
       color: darken($dark_text, 30%);
       margin-right: 5px;
    }
@@ -396,6 +434,7 @@ footer {
    .stlinks {
       top: 100px;
    }
+
    .postcode-search {
      top: 100px;
      .postcode-form {

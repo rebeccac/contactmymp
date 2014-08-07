@@ -10,7 +10,7 @@
        <link rel="canonical" href="http://www.contactmymp.com" />
        <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
 		 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.ico">
-       <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.css') }}">
+       <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.min.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
       <meta name="google-site-verification" content="8TN4pcqS7FfgNgp_Xn3kwy359jSuYRFXT_RglU0QBXA" />
       <!-- ShareThis script -->
@@ -55,14 +55,20 @@
          </div><!-- end 3 st -->
       </div><!-- end row stlinks -->
 
-      <div class="row postcode-search" data-equalizer>
-        <div class="large-2 medium-2 columns" data-equalizer-watch></div>
-        <div class="large-7 medium-7 columns intro" data-equalizer-watch><h2>Find and write to your Australian federal MP and Senators</h2></div>
+      <div class="intro" data-equalizer>
+         <div class="large-2 medium-2 columns" data-equalizer-watch></div>
+         <div class="large-7 medium-7 columns introduction" data-equalizer-watch>
+            <h2>Find and write to your Australian Federal MP and Senators</h2>
+         </div>
+         <div class="large-3 medium-3 columns" data-equalizer-watch></div>
+      </div><!-- end intro -->
 
+      <div class="row postcode-search" data-equalizer>
+        <div class="large-9 medium-9 columns" data-equalizer-watch></div>
         <div class="large-3 medium-3 columns postcode-form" data-equalizer-watch>
           <form class='form' action='/select' method='post'>
             <div class="top-row">
-              <h3>Find my MP & Senators</h3>
+              <h3>Search for MP & Senators</h3>
               <label for='postcode'>My Postcode: </label>
               <input type='number' name='postcode' id='postcode' maxlength='4' placeholder='&#xf041;'>
               <input type='submit' id='submit' name='submit' value='Submit'>

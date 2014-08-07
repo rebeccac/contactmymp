@@ -180,8 +180,11 @@ h2 {
 
 h3 {
   @include HelveticaNeue;
+  max-width: 75%;
+  margin: 0 auto;
   color: $dark;
-  font-size: 2em;
+  font-size: 1.4em;
+  text-align: center;
 }
 
 /* Header */
@@ -668,7 +671,7 @@ form.selection-form {
 .search {
    width: auto;
    height: auto;
-   margin: 80px auto 30px auto;
+   margin: 20px auto 30px auto;
    text-align: center;
 }
 .search-box {
@@ -887,7 +890,7 @@ form.selection-form {
    }
 
    .heading {
-      font-size: 3.8em;
+      font-size: 3.3em;
    }
 
    .sub-heading {
@@ -1134,11 +1137,12 @@ form.selection-form {
       top: 10px;
    }
    .heading {
-      font-size: 2.3em;
+      font-size: 2.5em;
    }
 
    .logo {
-      width: 140px;
+      display: none;
+      width: 100px;
    }
 
    .sub-heading {
@@ -1181,6 +1185,10 @@ form.selection-form {
 }
 
 @media all and (max-width: 320px) {
+
+h3 {
+   max-width: 90%;
+}
 
    .heading {
       font-size: 1.9em;
