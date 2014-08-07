@@ -4776,7 +4776,8 @@ h3 {
   text-align: center; }
 
 #electorate_submit,
-#mp_email_submit {
+#mp_email_submit,
+.privacy_policy {
   margin-left: 8%; }
 
 #contact_form_submit {
@@ -4897,8 +4898,7 @@ hr.med_grey {
   font-family: 'Helvetica', sans-serif;
   font-size: 0.8em;
   font-weight: 200;
-  color: #555;
-  margin-left: 20px; }
+  color: #555; }
   .privacy_policy i {
     color: #888;
     font-size: 1.2em; }
@@ -5478,6 +5478,9 @@ form.selection-form {
       #politicians_container .politician .sm-links a {
         font-size: 1em; } }
 @media all and (max-width: 320px) {
+  .row.stlinks {
+    top: 22%; }
+
   h3 {
     max-width: 90%; }
 

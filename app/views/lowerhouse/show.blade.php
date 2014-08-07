@@ -5,7 +5,7 @@
 
   <div class="row">
      <div class="large-12 medium-12 small-12 columns">
-        <h2 class="constituency-heading dark_text">{{ $mp['constituency'] }}</h2>
+        <h2 class="constituency-heading dark_text">{{ $mp['constituency'] }}, {{ $mp['electorate_address_state'] }}</h2>
      </div>
      <div class="politician-info-container">
         <div class="row">
@@ -291,6 +291,7 @@
                           <br>
                           <div>
                               <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
+                              <br><br>
                               <a href="{{ URL::to('privacy') }}" target="_blank" class="privacy_policy">
                                  <i class="fa fa-info-circle"></i>Privacy Policy
                               </a>
@@ -313,4 +314,5 @@
           </div>
        </div>
     </div><!-- end Person schema -->
+</div>
 @stop

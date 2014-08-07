@@ -68,8 +68,15 @@ h3 {
    text-align: right;
 }
 
-.fb-like {
-   display: inline;
+// .fb-like,
+// #fb-root,
+// .twitter-follow-button {
+//    display: inline-block;
+// }
+.t-f,
+.f-l {
+   display: inline-block;
+   padding: 5px;
 }
 
 .container {
@@ -190,6 +197,7 @@ footer {
     padding-bottom: 15px;
     text-align: center;
     .s-m-i {
+      margin: 0 auto;
       text-align: center;
       i {
         color: rgba(255,255,255,0.4);

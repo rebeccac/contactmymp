@@ -20,7 +20,7 @@
             </li>
             <li class="sub-menu-section">
                <div class="sub-menu-contents">
-                  <a href="{{ URL::to('lowerhouse') }}">All MPs</a>
+                  <a href="{{ URL::to('lowerhouse') }}">All Members of House of Reps</a>
                </div>
             </li>
                <li class="sub-menu-section">

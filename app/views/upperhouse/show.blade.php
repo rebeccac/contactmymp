@@ -78,7 +78,7 @@
                       <div class="large-12 medium-12 small-12 pol_info3 padding" data-equalizer-watch>
                         <hr class="med_grey">
                         <strong>Electoral Office</strong>
-                        <br><r>
+                        <br><br>
                         <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                            @if(!is_null($senator['electorate_address_line_1']))
                              <span itemprop="streetAddress">{{ $senator['electorate_address_line_1'] }}</span>
@@ -280,6 +280,7 @@
                       <br>
                        <div>
                            <input type="submit" id="mp_email_submit" name="mp_email_submit" value="Submit">
+                           <br><br>
                            <a href="{{ URL::to('privacy') }}" target="_blank" class="privacy_policy">
                               <i class="fa fa-info-circle"></i>Privacy Policy
                            </a>
@@ -302,4 +303,5 @@
        </div>
     </div>
 </div><!-- schema person -->
+</div>
 @stop

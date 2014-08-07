@@ -293,7 +293,8 @@ h3 {
 }
 
 #electorate_submit,
-#mp_email_submit {
+#mp_email_submit,
+.privacy_policy {
    margin-left: 8%;
 }
 
@@ -435,7 +436,6 @@ hr.med_grey {
    font-size: 0.8em;
    font-weight: 200;
    color: #555;
-   margin-left: 20px;
 }
 
 // Show user form contents after it's been posted
@@ -1187,6 +1187,9 @@ form.selection-form {
 
 @media all and (max-width: 320px) {
 
+.row.stlinks {
+   top: 22%;
+}
 h3 {
    max-width: 90%;
 }
