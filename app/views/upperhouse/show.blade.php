@@ -7,7 +7,11 @@
         <h2 class="constituency-heading dark_text">{{ $senator['state'] }}</h2>
      </div>
      <div class="politician-info-container">
-
+        <div class="row">
+           <div class="large-12 medium-12 small-12 columns">
+             <h3>Please use the form below to email {{ $senator['first_name'] }} {{ $senator['last_name'] }}, Senator for {{ $senator['state'] }}.</h3>
+           </div>
+        </div>
            <div class="row">
              <div class="large-12 medium-12 small-12 columns  pol_info1 senator_medium">
                 {{ $senator['first_name'] }} {{ $senator['last_name'] }} | {{ $senator['party'] }}

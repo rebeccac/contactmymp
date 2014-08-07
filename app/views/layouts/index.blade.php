@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, follow">
 <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.ico">
-<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/style.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
 <!-- ShareThis script -->
 <script type="text/javascript">var switchTo5x=true;</script>

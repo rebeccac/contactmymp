@@ -1,5 +1,6 @@
 @extends('layouts.index')
 @section('content')
+   <h2 class="sub-heading">All Members of the House of Representatives</h2>
 
    <div class="box">
       {{ Form::open(array('action' => 'MPController@postIndex', 'class' => 'selection-form'))}}

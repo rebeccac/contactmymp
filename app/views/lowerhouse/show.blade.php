@@ -2,12 +2,17 @@
 @section('content')
 
 <div class="contact-form-content">
+
   <div class="row">
      <div class="large-12 medium-12 small-12 columns">
         <h2 class="constituency-heading dark_text">{{ $mp['constituency'] }}</h2>
      </div>
      <div class="politician-info-container">
-
+        <div class="row">
+           <div class="large-12 medium-12 small-12 columns">
+             <h3>Please use the form below to email {{ $mp['first_name'] }} {{ $mp['last_name'] }}, member for {{ $mp['constituency'] }}.</h3>
+           </div>
+        </div>
            <div class="row">
              <div class="large-12 medium-12 small-12 columns pol_info1 mp_medium">
                 {{ $mp['first_name'] }} {{ $mp['last_name'] }} | {{ $mp['party'] }}
