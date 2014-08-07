@@ -6,4 +6,4 @@ Contact My MP Australia allows users to find and contact their Australian federa
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Contact My MP Australia is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
