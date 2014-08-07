@@ -37,6 +37,15 @@ h1 {
 h2 {
    font-family: Helvetica, Arial, sans-serif;
    font-weight: 300;
+   color: $white;
+   font-size: 1.5em;
+   letter-spacing: 2px;
+   padding: 20px;
+}
+
+h3 {
+   font-family: Helvetica, Arial, sans-serif;
+   font-weight: 300;
    color: darken($dark_text, 20%);
    font-size: 1.2em;
    letter-spacing: 2px;
@@ -83,7 +92,7 @@ h2 {
   text-align: right;
   line-height: 1em;
   padding-right: 20px;
-  font-size: 3.8em;
+  font-size: 3em;
   position: relative;
   top: 20px;
   display: inline-block;
@@ -218,6 +227,15 @@ footer {
      -o-background-size: cover;
      background-size: cover;
    }
+   .heading {
+      font-family: Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 3em;
+   }
+
+   .logo {
+      width: 170px;
+   }
 
    .stlinks {
       top: 20%;
@@ -283,7 +301,12 @@ footer {
    }
 
    .heading {
-      font-size: 3.5em;
+      font-family: Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 2.7em;
+   }
+   .logo {
+      width: 160px;
    }
 
    .postcode-search  {
@@ -307,11 +330,13 @@ footer {
 
 @media all and (max-width: 570px) {
    .heading {
-      font-size: 2.8em;
+      font-family: Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 2.05em;
    }
 
    .logo {
-      width: 170px;
+      width: 140px;
    }
 }
 
@@ -325,11 +350,13 @@ footer {
    }
 
    .heading {
-      font-size: 2.2em;
+      font-family: Helvetica, sans-serif;
+      font-size: 2.1em;
+      font-weight: 300;
    }
 
    .logo {
-      width: 90px;
+      display: none;
    }
 }
 

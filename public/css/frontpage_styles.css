@@ -4586,6 +4586,14 @@ h1 {
 h2 {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
+  color: #f2f2f2;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  padding: 20px; }
+
+h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
   color: #292929;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -4624,7 +4632,7 @@ h2 {
   text-align: right;
   line-height: 1em;
   padding-right: 20px;
-  font-size: 3.8em;
+  font-size: 3em;
   position: relative;
   top: 20px;
   display: inline-block;
@@ -4730,6 +4738,14 @@ footer {
     -o-background-size: cover;
     background-size: cover; }
 
+  .heading {
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 3em; }
+
+  .logo {
+    width: 170px; }
+
   .stlinks {
     top: 20%; }
 
@@ -4776,7 +4792,12 @@ footer {
     left: 120px; }
 
   .heading {
-    font-size: 3.5em; }
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.7em; }
+
+  .logo {
+    width: 160px; }
 
   .postcode-search .postcode-form {
     background-color: rgba(255, 255, 255, 0.6);
@@ -4790,10 +4811,12 @@ footer {
       display: inline-block; } }
 @media all and (max-width: 570px) {
   .heading {
-    font-size: 2.8em; }
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.05em; }
 
   .logo {
-    width: 170px; } }
+    width: 140px; } }
 @media all and (max-width: 480px) {
   body {
     background: url(/images/background_480.jpg) no-repeat center center fixed;
@@ -4803,10 +4826,12 @@ footer {
     background-size: cover; }
 
   .heading {
-    font-size: 2.2em; }
+    font-family: Helvetica, sans-serif;
+    font-size: 2.1em;
+    font-weight: 300; }
 
   .logo {
-    width: 90px; } }
+    display: none; } }
 @media all and (max-width: 320px) {
   .title {
     margin: 0;
