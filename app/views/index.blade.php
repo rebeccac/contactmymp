@@ -10,7 +10,7 @@
        <link rel="canonical" href="http://www.contactmymp.com" />
        <LINK REL="apple-touch-icon-precomposed" href="http://www.contactmymp.com/images/apple-touch-icon.jpg" />
 		 <link rel="shortcut icon" href="http://www.contactmymp.com/images/favicon.ico">
-       <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.css') }}">
+       <link rel="stylesheet" href="{{ URL::asset('css/frontpage_styles.min.css') }}">
       <link rel="stylesheet" href="{{ URL::asset('font-awesome/css/font-awesome.min.css') }}">
       <meta name="google-site-verification" content="8TN4pcqS7FfgNgp_Xn3kwy359jSuYRFXT_RglU0QBXA" />
       <!-- ShareThis script -->
@@ -97,7 +97,7 @@
               <div class="f-l">
                  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
               </div>
-              
+
             </div>
 
           </div><!-- row s-m -->
